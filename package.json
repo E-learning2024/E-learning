@@ -7,7 +7,7 @@
     "build": "tsup src --out-dir dist",
     "seed": "npx prisma db seed",
     "studio": "npx prisma studio",
-    "update:prisma": "npx prisma generate --watch",
+    "update:prisma": "npx prisma generate ",
     "prisma:generate": "npx prisma generate"
   },
   "prisma": {
