@@ -1,0 +1,136 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Administrator {
+  id                   Int                    @id @default(autoincrement())
+  name                 String
+  email                String                 @unique
+  password             String
+  accessLevel        AccessLevel            @relation(fields: [accessLevelId], references: [id])
+  accessLevelId        Int
+  isActive             Boolean                @default(true)
+  createdAt            DateTime               @default(now())
+  updatedAt            DateTime               @updatedAt
+  contact              Contact[]
+  activityHistoryAdmin ActivityHistoryAdmin[]
+
+  @@map("administrator")
+}
+
+model Contact {
+  id              Int           @id @default(autoincrement())
+  administrator   Administrator @relation(fields: [administratorId], references: [id])
+  administratorId Int
+  email           String
+  phone           String?
+  address         String?
+  @@map("contact")
+}
+
+model AccessLevel {
+  id             Int             @id @default(autoincrement())
+  level          String          @unique
+  administrators Administrator[]
+
+  @@map("accessLevel")
+}
+
+model ActivityHistoryAdmin {
+  id              Int           @id @default(autoincrement())
+  administrator   Administrator @relation(fields: [administratorId], references: [id])
+  administratorId Int
+  title           String?
+  description     String?
+
+  @@map("activityHistoryAdmin")
+}
+
+model Student {
+  id          Int       @id @default(autoincrement())
+  Studentname String    @unique
+  email       String    @unique
+  password    String
+  firstName   String
+  lastName    String
+  dateOfBirth DateTime?
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Add more fields or relationships as needed
+  activityHistoryStudent ActivityHistoryStudent[]
+  enrollment             Enrollment[]
+
+  @@map("Student")
+}
+
+model ActivityHistoryStudent {
+  id          Int     @id @default(autoincrement())
+  Student     Student @relation(fields: [StudentId], references: [id])
+  StudentId   Int
+  title       String?
+  description String?
+
+  @@map("activityHistoryStudent")
+}
+
+model Instructor {
+  id        Int         @id @default(autoincrement())
+  name      String
+  email     String      @unique
+  bio       String?
+  isActive  Boolean     @default(true)
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  specialty Specialty[]
+  Formation Formation[]
+}
+
+model Specialty {
+  id           Int        @id @default(autoincrement())
+  name         String
+  description  String?
+  instructor   Instructor @relation(fields: [instructorId], references: [id])
+  instructorId Int
+}
+
+model Formation {
+  id           Int          @id @default(autoincrement())
+  title        String
+  description  String?
+  startDate    DateTime
+  endDate      DateTime
+  isActive     Boolean      @default(true)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  instructor   Instructor   @relation(fields: [instructorId], references: [id])
+  instructorId Int
+  enrollment   Enrollment[]
+  material     Material[]
+}
+
+model Material {
+  id          Int       @id @default(autoincrement())
+  title       String
+  description String?
+  fileUrl     String
+  formation   Formation @relation(fields: [formationId], references: [id])
+  formationId Int
+}
+
+model Enrollment {
+  id          Int       @id @default(autoincrement())
+  student     Student   @relation(fields: [studentId], references: [id])
+  studentId   Int
+  formation   Formation @relation(fields: [formationId], references: [id])
+  formationId Int
+}

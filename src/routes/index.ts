@@ -1,6 +1,6 @@
 import { Router } from "express";
 import userRouter from "../modules/students/user.routes";
-import funcionarioRouter from "../modules/instructor/funcionario.router";
+import funcionarioRouter from "../modules/instructor/instructor.routes";
 import adminRouter from "../modules/admin/admin.routes";
 
 const routes = Router()

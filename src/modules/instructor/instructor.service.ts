@@ -1,5 +1,5 @@
-import { Funcionario } from "./dto/funcionario.dto";
-import { funcionarioRepository } from "./repository/funcionario.repository";
+import { Funcionario } from "./dto/instructor-create";
+import { funcionarioRepository } from "./repository/instructor.repository";
 
 export const EmployeeService ={
     async  validation(data:Funcionario):Promise <any> {

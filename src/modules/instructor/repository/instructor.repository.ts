@@ -1,5 +1,5 @@
 import prisma from "../../../config/lib/prisma";
-import { Funcionario } from "../dto/funcionario.dto";
+import { Funcionario } from "../dto/instructor-create";
 
 export const funcionarioRepository = {
   async findAllFuncionario() {
