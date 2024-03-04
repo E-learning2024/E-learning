@@ -34,6 +34,12 @@ Não terão acesso a funcionalidades específicas de alunos, como inscrições e
     { level: 'Support Admin' },
     { level: 'Restricted Admin' },
   ];
+     { level: 'Super Administrador' },
+    { level: 'Administrador' },
+    { level: 'Moderador' },
+    { level: 'Editor de Conteúdo' },
+    { level: 'Administrador de Suporte' },
+    { level: 'Administrador Restrito' },
 
   Aqui estão alguns exemplos de níveis de acesso que você pode definir para administradores em seu aplicativo:
 
