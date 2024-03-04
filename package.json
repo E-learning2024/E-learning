@@ -4,11 +4,12 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "prod": "node dist/server.js",
     "build": "tsup src --out-dir dist",
+    "migrate:create": "npx prisma migrate dev",
+    "update:prisma": "npx prisma generate --watch",
     "seed": "npx prisma db seed",
-    "studio": "npx prisma studio",
-    "update:prisma": "npx prisma generate ",
-    "prisma:generate": "npx prisma generate"
+    "studio": "npx prisma studio"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
