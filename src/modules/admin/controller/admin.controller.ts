@@ -1,10 +1,18 @@
+import { Request, Response } from 'express';
+import { AdmimService } from '../../service/admin.service';
+import { CreateAdministratorDTO } from '../dto/create-admin.dto';
 
-import { Response, Request } from "express";
+export class InspectionController {
+  constructor(private readonly adminService: AdmimService) {}
 
-
-export  async  function PainelControlArea(req: Request, res: Response) {
-    try { /* empty */ } catch (error) {
+  async createAdmin(req: Request, res: Response, createAdministratorDTO: CreateAdministratorDTO): Promise<unknown> {
+    try { 
+      
+      const createdInspection = await Promise.resolve(this.adminService.create(createAdministratorDTO));
+      return res.json(createdInspection);
+    } catch (error) {
       console.log(error);
       res.redirect("/");
     }
+  }
 }
