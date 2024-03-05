@@ -1,14 +1,13 @@
 import { Request, Response } from 'express';
 import { AdmimService } from '../../service/admin.service';
-import { CreateAdministratorDTO } from '../dto/create-admin.dto';
 
 export class InspectionController {
   constructor(private readonly adminService: AdmimService) {}
 
-  async createAdmin(req: Request, res: Response, createAdministratorDTO: CreateAdministratorDTO): Promise<unknown> {
+  async createAdmin(req: Request, res: Response, ): Promise<unknown> {
     try { 
-      
-      const createdInspection = await Promise.resolve(this.adminService.create(createAdministratorDTO));
+    
+      const createdInspection = await Promise.resolve(this.adminService.create(req.body));
       return res.json(createdInspection);
     } catch (error) {
       console.log(error);

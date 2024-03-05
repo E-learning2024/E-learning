@@ -12,29 +12,16 @@ export default function middlewareValidation(
 ) {
   const errors = validationResult(req);
 
-  // check if the request contain any validation error
   if (!errors.isEmpty()) {
-    // @ts-ignore
+    
     const result = handleWithExpressValidationErrors(req, errors.array());
-
-    // check if our function extract the error
     if (result && result.hasError) {
-      return responses.sendError(
-        res,
-        result.error.code,
-        result.error.message,
-        result.error.status
-      );
-    } else {
-      console.log(errors.array());
-      // send a default message to guaranted that the error pass to our program
-      return responses.sendError(
-        res,
-        Codes.UNKNOWN_ERROR,
-        "Your request did not match if our specification and we could not find the reason",
-        HttpStatus.INTERNAL_SERVER_ERROR
-      );
-    }
+      return {
+        code:result.error.code,
+       message: result.error.message,
+        status:result.error.status
+      }
+    } 
   } else {
     next();
   }
