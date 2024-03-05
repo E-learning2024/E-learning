@@ -3,7 +3,7 @@ import * as responses from "@utils/formaters/responses";
 import { Codes } from "@utils/constants/codes";
 import { HttpStatus } from "@utils/constants/httpStatus";
 import { validationResult } from "express-validator/check";
-import { handleWithExpressValidationErrors } from "@utils/formaters/validations";
+
 
 export default function middlewareValidation(
   req: Request,
