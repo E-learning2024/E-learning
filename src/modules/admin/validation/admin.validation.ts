@@ -1,56 +1,60 @@
-import { body } from "express-validator/check";
-import { Codes } from "@utils/constants/codes";
-import { HttpStatus } from "@utils/constants/httpStatus";
-import { i18nKeys } from "@utils/constants/i18n";
-import i18next from "i18next";
-import iban from "iban";
-import middlewareValidation from "@utils/middlewares/validations";
+import { body, validationResult } from 'express-validator';
+import { Request, Response, NextFunction } from 'express';
+import { errorResponse } from '../../handler/responseHandler';
 
-export const nameValidation = [
-  body("name")
-    .not()
-    .matches(/\d/)
-    .withMessage(() => ({
-      status: HttpStatus.UNPROCESSABLE_ENTITY,
-      code: Codes.REQUEST__INVALID_NAME,
-      message: i18next.t(i18nKeys.INVALID_FORMAT_NAME)
-    }))
-    .not()
-    .isEmpty()
-    .withMessage("should not be empty"),
-  middlewareValidation
-];
 
-export const removeVariantPicture = [
-  body("imageUrl")
-    .not()
-    .isEmpty()
-    .withMessage("should not be empty"),
-  middlewareValidation
-];
+export const createAdminValidationRules = () => {
+  return [
+    body('name')
+      .optional(),
+      
+    body('email')
+      .notEmpty()
+      .withMessage('O email não pode estar vazio')
+      .bail()
+      .isEmail()
+      .withMessage('O email deve ser válido'),
 
-export const createValidation = [
-  body("admins")
-    .not()
-    .isEmpty()
-    .withMessage("should not be empty"),
-  body("name")
-    .not()
-    .isEmpty()
-    .withMessage("should not be empty"),
-  body("email")
-    .not()
-    .isEmpty()
-    .withMessage("should not be empty"),
-  body("location")
-    .not()
-    .isEmpty()
-    .withMessage("should not be empty"),
-  body("address")
-    .not()
-    .isEmpty()
-    .withMessage("should not be empty"),
-  middlewareValidation
-];
+    body('password')
+      .optional(),
 
-// Importar isto na rota
+    body('accessLevelId')
+      .optional()
+      .isNumeric()
+      .withMessage('O accessLevelId deve ser um número'),
+
+    body('isActive')
+      .optional()
+      .isBoolean()
+      .withMessage('isActive deve ser um valor booleano'),
+
+      body('phone')
+      .notEmpty()
+      .withMessage('O contacto não pode estar vazio')
+      .custom((value) => {
+        const phoneRegex = /^\(\+244\)\s?\d{9}$/;
+        
+        if (!value.match(phoneRegex)) {
+          throw new Error('O número de telefone deve estar no formato (244) 930333042');
+        }
+
+        return true;
+      }),
+
+    body('nif')
+      .optional(),
+
+    body('avatarUrl')
+      .optional()
+  ];
+};
+
+export const validate = (req: Request, res: Response, next: NextFunction) => {
+  const errors = validationResult(req);
+  if (errors.isEmpty()) {
+    return next();
+  }
+  const errorMessages = errors.array().map(error => error.msg);
+ 
+  return  errorResponse(res,errorMessages,400)// res.status(400).json({ errors: errorMessages });
+};

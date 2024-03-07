@@ -1,15 +1,25 @@
 import prisma from "../../../config/lib/prisma";
-export const areasRepository = {
-async findAllAreas() {
-    try {
-      const areas = await prisma.tb_Area.findMany({
-        include: {
-          areaSuperior:true,
-        }
-      });
-      return areas;
-    } catch (error) {
-      throw new Error(`Erro ao buscar Area: ${error}`);
-    }
-  }
+import { CreateAdministratorDTO } from "../dto/create-admin.dto";
+export class AdmimRepository {
+async create(createAdministratorDTO: CreateAdministratorDTO) {
+     //   return prisma.regularInspection.create({
+    //     data: {
+    //       userId: createInspectionDto.userId,
+    //       vehicleInspection: {
+    //         createMany: {
+    //           data: createInspectionDto.vehicleInspectionDto,
+    //         },
+    //       },
+    //       anexos: {
+    //         createMany: {
+    //           data: createInspectionDto.createAnexosDto,
+    //         },
+    //       },
+    //     },
+    //     include: {
+    //       vehicleInspection: true,
+    //       anexos: true,
+    //     },
+    //   });
+}
 }
