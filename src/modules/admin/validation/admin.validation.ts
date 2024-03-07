@@ -16,8 +16,8 @@ export const createAdminValidationRules = () => {
       .withMessage('O email deve ser válido'),
 
     body('password')
-      .optional(),
-
+      .isString()
+      .withMessage('Adicione um senha valido'),
     body('accessLevelId')
       .optional()
       .isNumeric()
