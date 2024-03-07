@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,26 +11,18 @@ model Administrator {
   id                   Int                    @id @default(autoincrement())
   name                 String
   email                String                 @unique
+  nif                  String                 @unique
+  phone                String?                @unique
   password             String
-  accessLevel        AccessLevel            @relation(fields: [accessLevelId], references: [id])
+  accessLevel          AccessLevel            @relation(fields: [accessLevelId], references: [id])
   accessLevelId        Int
   isActive             Boolean                @default(true)
+  avatarUrl            String?
   createdAt            DateTime               @default(now())
   updatedAt            DateTime               @updatedAt
-  contact              Contact[]
   activityHistoryAdmin ActivityHistoryAdmin[]
 
   @@map("administrator")
-}
-
-model Contact {
-  id              Int           @id @default(autoincrement())
-  administrator   Administrator @relation(fields: [administratorId], references: [id])
-  administratorId Int
-  email           String
-  phone           String?
-  address         String?
-  @@map("contact")
 }
 
 model AccessLevel {
@@ -55,18 +44,18 @@ model ActivityHistoryAdmin {
 }
 
 model Student {
-  id          Int       @id @default(autoincrement())
-  Studentname String    @unique
-  email       String    @unique
-  password    String
-  firstName   String
-  lastName    String
-  dateOfBirth DateTime?
-  isActive    Boolean   @default(true)
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-
-  // Add more fields or relationships as needed
+  id                     Int                      @id @default(autoincrement())
+  Studentname            String
+  email                  String                   @unique
+  nif                    String                   @unique
+  phone                  String?                  @unique
+  password               String
+  firstName              String
+  lastName               String
+  dateOfBirth            DateTime?
+  isActive               Boolean                  @default(true)
+  createdAt              DateTime                 @default(now())
+  updatedAt              DateTime                 @updatedAt
   activityHistoryStudent ActivityHistoryStudent[]
   enrollment             Enrollment[]
 
@@ -87,12 +76,14 @@ model Instructor {
   id        Int         @id @default(autoincrement())
   name      String
   email     String      @unique
+  nif       String      @unique
+  phone     String?     @unique
   bio       String?
   isActive  Boolean     @default(true)
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
   specialty Specialty[]
-  Formation Formation[]
+  class     Class[]
 }
 
 model Specialty {
@@ -104,33 +95,46 @@ model Specialty {
 }
 
 model Formation {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  startDate   DateTime
+  endDate     DateTime
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  class       Class[]
+}
+
+model Class {
   id           Int          @id @default(autoincrement())
-  title        String
-  description  String?
-  startDate    DateTime
-  endDate      DateTime
-  isActive     Boolean      @default(true)
-  createdAt    DateTime     @default(now())
-  updatedAt    DateTime     @updatedAt
   instructor   Instructor   @relation(fields: [instructorId], references: [id])
   instructorId Int
-  enrollment   Enrollment[]
+  formation    Formation    @relation(fields: [formationId], references: [id])
+  formationId  Int
+  name         String?
+  description  String?
+  time         String?
+  duration     String?
   material     Material[]
+  enrollment   Enrollment[]
+
+  @@map("class")
 }
 
 model Material {
-  id          Int       @id @default(autoincrement())
+  id          Int     @id @default(autoincrement())
   title       String
   description String?
-  fileUrl     String
-  formation   Formation @relation(fields: [formationId], references: [id])
-  formationId Int
+  fileUrl     String?
+  class       Class   @relation(fields: [classId], references: [id])
+  classId     Int
 }
 
 model Enrollment {
-  id          Int       @id @default(autoincrement())
-  student     Student   @relation(fields: [studentId], references: [id])
-  studentId   Int
-  formation   Formation @relation(fields: [formationId], references: [id])
-  formationId Int
+  id        Int     @id @default(autoincrement())
+  student   Student @relation(fields: [studentId], references: [id])
+  studentId Int
+  class     Class   @relation(fields: [classId], references: [id])
+  classId   Int
 }

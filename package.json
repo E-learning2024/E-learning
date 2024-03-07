@@ -4,20 +4,24 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
+    "prod": "node dist/server.js",
     "build": "tsup src --out-dir dist",
-    "seed": "npx prisma db seed",
-    "studio": "npx prisma studio",
+    "migrate:create": "npx prisma migrate dev",
     "update:prisma": "npx prisma generate --watch",
-    "prisma:generate": "npx prisma generate"
+    "seed": "npx prisma db seed",
+    "studio": "npx prisma studio"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
   "license": "MIT",
   "dependencies": {
+    "@prisma/client": "^5.10.2",
+    "bcryptjs": "^2.4.3",
     "date-holidays": "^3.21.2",
     "express": "^4.18.2",
     "express-flash": "^0.0.2",
+    "express-validator": "^7.0.1",
     "firebase-admin": "^11.10.1",
     "firebase-functions": "^4.4.1",
     "just": "^0.1.8",
@@ -31,6 +35,7 @@
     "twilio": "^4.14.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/express": "^4.17.17",
     "@types/express-flash": "^0.0.5",
     "@types/follow-redirects": "^1.14.1",
