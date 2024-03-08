@@ -6,23 +6,23 @@ import { errorResponse } from '../../handler/responseHandler';
 export const createAdminValidationRules = () => {
   return [
     body('name')
-      .optional(),
-      
+      .optional(), 
     body('email')
       .notEmpty()
       .withMessage('O email não pode estar vazio')
       .bail()
       .isEmail()
       .withMessage('O email deve ser válido'),
-
     body('password')
+     .isLength({ min: 6 })
       .isString()
-      .withMessage('Adicione um senha valido'),
+      .withMessage('Adicione um senha valido e Forte'),
     body('accessLevelId')
       .optional()
       .isNumeric()
       .withMessage('O accessLevelId deve ser um número'),
-
+      body('nif').isNumeric().isLength({ min: 9, max: 9 })
+      .withMessage('O nif deve ser um valido'),
     body('isActive')
       .optional()
       .isBoolean()
@@ -35,7 +35,7 @@ export const createAdminValidationRules = () => {
         const phoneRegex = /^\(\+244\)\s?\d{9}$/;
         
         if (!value.match(phoneRegex)) {
-          throw new Error('O número de telefone deve estar no formato (244) 930333042');
+          throw new Error('O número de telefone deve estar no formato (+244) 930333042');
         }
 
         return true;

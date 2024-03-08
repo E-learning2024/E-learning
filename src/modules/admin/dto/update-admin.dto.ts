@@ -1,5 +1,6 @@
 
-  export class CreateAdministratorDTO {
+  export class UpdateAdministratorDTO {
+    id!:number
     name!: string;
     email!: string;
     password!: string;
