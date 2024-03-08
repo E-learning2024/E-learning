@@ -18,7 +18,7 @@ export class AdminController {
       return errorResponse(res,'Server Error',500)  
     }
   }
-  async findAlladmin(req: Request, res: Response, ): Promise<any> {
+  async findAlladmin(req: Request, res: Response, ): Promise<unknown> {
     try { 
       return successResponse(res,await this.adminService.findAll(),'',200);
     } catch (error) {
@@ -26,7 +26,7 @@ export class AdminController {
       return errorResponse(res,'Server Error',500)  
     }
   }
-  async updateAdmin (req: Request, res: Response, ): Promise<any> {
+  async updateAdmin (req: Request, res: Response, ): Promise<unknown> {
     try {
       const { id } = req.params;
    
@@ -37,7 +37,7 @@ export class AdminController {
       return errorResponse(res,'Server Error',500)   
     }
   }
-  async deleteAdmin (req: Request, res: Response, ): Promise<any> {
+  async deleteAdmin (req: Request, res: Response, ): Promise<unknown> {
     try {
       const { id } = req.params;
    
