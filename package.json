@@ -6,7 +6,7 @@
     "node": "18"
   },
   "scripts": {
-    "dev": "tsx watch src/server.ts",
+    "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
     "migration:dev": "npx prisma migrate dev",
     "migration:prod": "npx prisma migrate deploy",
     "migration:reset": "npx prisma migrate reset",
