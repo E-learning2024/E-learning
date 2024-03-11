@@ -8,7 +8,23 @@ const swaggerOptions: Options = {
       description: 'Descrição da minha API',
       version: '1.0.0',
     },
+    components: {
+      securitySchemes: {
+        jwt: {
+          type: 'apiKey',
+          in: 'header',
+          name: 'Authorization',
+          description: 'Bearer {token}',
+        },
+      },
+    },
+    security: [
+      {
+        jwt: [],
+      },
+    ],
   },
   apis: ['src/**/*.ts'], 
 };
+
 export default swaggerOptions;

@@ -46,6 +46,23 @@ export const createAdminValidationRules = () => {
 
     body('avatarUrl')
       .optional()
+
+  ];
+};
+export const signAdminValidationRules = () => {
+  return [
+
+    body('email')
+      .notEmpty()
+      .withMessage('O email não pode estar vazio')
+      .bail()
+      .isEmail()
+      .withMessage('O email deve ser válido'),
+    body('password')
+        .notEmpty()
+      .isString()
+      .withMessage('O Senha não pode estar vazio')
+      
   ];
 };
 
