@@ -6,7 +6,7 @@ import instructorRouter from "../modules/instructor/instructor.routes";
 const routes = Router()
 
 routes.use('/instructor',instructorRouter)
-routes.use('/admin',authenticateToken,adminRouter)
+routes.use('/admin',adminRouter)
 
 
 
