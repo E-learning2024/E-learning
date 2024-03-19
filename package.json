@@ -7,9 +7,9 @@
   },
   "scripts": {
     "dev": "tsnd --transpile-only --respawn --ignore-watch node_modules src/server.ts",
-    "migration:dev": "npx prisma migrate dev",
-    "migration:prod": "npx prisma migrate deploy",
-    "migration:reset": "npx prisma migrate reset",
+    "migrate:dev": "npx prisma migrate dev",
+    "migrate:prod": "npx prisma migrate deploy",
+    "migrate:reset": "npx prisma migrate reset",
     "update:prisma": "npx prisma generate ",
     "seed": "npx prisma db seed",
     "studio": "npx prisma studio",

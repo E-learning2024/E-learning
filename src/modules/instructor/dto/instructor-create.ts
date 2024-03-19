@@ -1,10 +1,9 @@
-
-export interface Funcionario {
-    funcionarioId?:number
-    nome: string,
-    sobre_nome: string,
-    fk_patente: number,
-    fk_situacao: number,
-    fk_area:number,
-    nip:string,
-  }
+export class CreateInstructorDTO {
+  name!: string;
+  email!: string;
+  password!: string;
+  accessLevelId!: number;
+  isActive!: boolean;
+  phone!: string;
+  nif!: string;
+}

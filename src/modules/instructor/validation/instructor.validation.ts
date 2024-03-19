@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import { errorResponse } from '../../handler/responseHandler';
 
 
-export const createAdminValidationRules = () => {
+export const createInstructorValidationRules = () => {
   return [
     body('name')
       .optional(), 
@@ -17,11 +17,9 @@ export const createAdminValidationRules = () => {
      .isLength({ min: 6 })
       .isString()
       .withMessage('Adicione um senha valido e Forte'),
-    body('accessLevelId')
-      .optional()
-      .isNumeric()
-      .withMessage('O accessLevelId deve ser um número'),
+ 
       body('nif').isNumeric().isLength({ min: 9, max: 9 })
+      .optional()
       .withMessage('O nif deve ser um valido'),
     body('isActive')
       .optional()
@@ -41,15 +39,10 @@ export const createAdminValidationRules = () => {
         return true;
       }),
 
-    body('nif')
-      .optional(),
-
-    body('avatarUrl')
-      .optional()
 
   ];
 };
-export const signAdminValidationRules = () => {
+export const signInstructorValidationRules = () => {
   return [
 
     body('email')
