@@ -9,13 +9,13 @@ export class AdminRepository {
         return await prisma.administrator.findMany({ where: { isActive: true } })
     }
     async findById(Id: number) {
-        return await prisma.administrator.findFirstOrThrow({ where: { id: Id } })
+        return await prisma.administrator.findFirst({ where: { id: Id } })
     }
     async findByEmail(email: string) {
-        return await prisma.administrator.findFirstOrThrow({ where: { email: email } })
+        return await prisma.administrator.findFirst({ where: { email: email } })
     }
     async findPhone(phone: string) {
-        return await prisma.administrator.findFirstOrThrow({ where: { phone: phone } })
+        return await prisma.administrator.findFirst({ where: { phone: phone } })
     }
     async update(Id: number, data: UpdateAdministratorDTO) {
         return await prisma.administrator.update({ where: { id: Id }, data })
