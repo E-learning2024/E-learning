@@ -12,82 +12,113 @@ const formationController = new FormationController(formationService);
 const formationRouter = Router()
 /**
  * @swagger
- * /admin/createAdmin:
+ * /formation/create:
  *   post:
- *     summary: Create a new admin
- *     tags: [Admin]
+ *     summary: Create a new formation
+ *     tags: [Formation]
  *     requestBody:
  *       required: true
  *       content:
  *         application/json:
  *           schema:
- *             type: object
- *             properties:
- *               name:
- *                 type: string
- *                 example: "Gelson Mesquita"
- *               email:
- *                 type: string
- *                 example: "email@example.com"
- *               nif:
- *                 type: string
- *                 example: "123456789"
- *               phone:
- *                 type: string
- *                 example: "(+244) 930333042"
- *               password:
- *                 type: string
- *                 example: "senha123"
- *               accessLevelId:
- *                 type: number
- *                 example: 1
- *               isActive:
- *                 type: boolean
- *                 example: true
- *               avatarUrl:
- *                 type: string
- *                 example: "https://example.com/avatar.jpg"
+ *             $ref: '#/components/schemas/CreateFormationDTO'
  *     responses:
  *       201:
- *         description: Admin created successfully
+ *         description: Formation created successfully
  *       400:
  *         description: Bad request
  */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CreateFormationDTO:
+ *       type: object
+ *       required:
+ *         - title
+ *         - description
+ *         - startDate
+ *         - endDate
+ *         - isActive
+ *       properties:
+ *         title:
+ *           type: string
+ *           example: "Web Development Bootcamp"
+ *         description:
+ *           type: string
+ *           example: "A comprehensive bootcamp covering all aspects of web development."
+ *         startDate:
+ *           type: string
+ *           example: "2024-04-01"
+ *           description: Date when the formation starts (YYYY-MM-DD)
+ *         endDate:
+ *           type: string
+ *           example: "2024-09-30"
+ *           description: Date when the formation ends (YYYY-MM-DD)
+ *         isActive:
+ *           type: boolean
+ *           example: true
+ */
+
 formationRouter.post('/create',createFormationRules(),validate, formationController.create.bind(formationController))
 /**
  * @swagger
- * /admin/findAlladmin:
+ * /formation/findAll-formation':
  *   get:
- *     summary: listar todos os administradores
- *     tags: [Admin]
+ *     summary: listar todas as formação
+ *     tags: [Formation]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
  *       201:
- *         description: Admin criado com sucesso
+ *         description: formação localizado 
  *       400:
  *         description: Requisição inválida
  */
 formationRouter.get('/findAll-formation', formationController.findAllFormation.bind(formationController))
 /**
  * @swagger
- * /admin/findOneadmin/{id}:
+ * /formation/findOne-formation/{id}:
  *   get:
- *     summary: Get a single admin by ID
- *     tags: [Admin]
+ *     summary: Get a single formation by ID
+ *     tags: [Formation]
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
  *         schema:
  *           type: integer
- *         description: ID of the admin to retrieve
+ *         description: ID of the formation to retrieve
  *     responses:
  *       200:
- *         description: Admin retrieved successfully
+ *         description: Formation retrieved successfully
  *       404:
- *         description: Admin not found
+ *         description: Formation not found
  */
 formationRouter.get('/findOne-formation/:Id', formationController.findOneFormation.bind(formationController))
+/**
+ * @swagger
+ * /formation/delete/{id}:
+ *   delete:
+ *     summary: Delete an formation
+ *     tags: [Formation]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the formation to delete
+ *     responses:
+ *       200:
+ *         description: formation deleted successfully
+ *       404:
+ *         description: formation not found
+ *       500:
+ *         description: Internal server error
+ */
+
+formationRouter.delete('/delete/:Id', formationController.deleteFormation.bind(formationController))
 
 export default formationRouter;

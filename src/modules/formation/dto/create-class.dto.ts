@@ -5,5 +5,6 @@
     name!: string;
     description!: string;
     time!: string;
+    student_quantity!: number;
   }
 

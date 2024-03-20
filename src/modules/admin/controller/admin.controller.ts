@@ -84,9 +84,12 @@ export class AdminController {
   async deleteAdmin (req: Request, res: Response, ): Promise<unknown> {
     try {
       const { id } = req.params;
-   
+      const admin = await this.adminService.findByid(parseInt(id, 10));
+      if(!admin){
+        return errorResponse(res,'Admin not found !',401)  
+      }
       const updateAdmin = await this.adminService.update(parseInt(id, 10),req.body);
-      return successResponse(res,updateAdmin,'Admin Atualizado com sucesso',200);
+      return successResponse(res,updateAdmin,'Admin deletado com sucesso',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   

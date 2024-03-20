@@ -115,6 +115,28 @@ adminRouter.get('/findOneadmin/:Id', adminController.findOneadmin.bind(adminCont
  *       401:
  *         description: Credenciais inválidas
  */
-
 adminRouter.post('/sign', adminController.sign.bind(adminController))
+/**
+ * @swagger
+ * /admin/delete/{id}:
+ *   delete:
+ *     summary: Delete an Admin
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Admin to delete
+ *     responses:
+ *       200:
+ *         description: Admin deleted successfully
+ *       404:
+ *         description: Admin not found
+ *       500:
+ *         description: Internal server error
+ */
+
+adminRouter.delete('/delete/:id' ,adminController.deleteAdmin.bind(adminController))
 export default adminRouter;

@@ -30,7 +30,7 @@ export class AdminService {
     return await this.adminRepository.update(id, updateAdministratorDTO);
   }
 
-  async remove(id: number) {
+  async delete(id: number) {
     return await this.adminRepository.delete(id);
   }
 }

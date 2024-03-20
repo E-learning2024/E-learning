@@ -23,7 +23,7 @@ export class FormationService {
     return await this.formationRepository.update(id, updateAdministratorDTO);
   }
 
-  async remove(id: number) {
+  async delete(id: number) {
     return await this.formationRepository.delete(id);
   }
 }

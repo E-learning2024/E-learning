@@ -37,5 +37,18 @@ export class FormationController {
       return errorResponse(res,'Server Error',500)  
     }
   }
+  async deleteFormation(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const { id } = req.params;
+      const instructor = await this.formationService.findByid(parseInt(id, 10));
+      if(!instructor){
+        return errorResponse(res,'formation not found !',401)  
+      }
+      return successResponse(res,await this.formationService.delete(parseInt(id, 10)),'Instructor Deletado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
  
 }

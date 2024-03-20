@@ -15,12 +15,7 @@ export class ClassRepository {
         return await prisma.class.update({ where: { id: Id }, data })
     }
     async delete(Id: number) {
-        return await prisma.formation.delete({ where: { id: Id } })
+        return await prisma.class.delete({ where: { id: Id } })
     }
-    async activateFormation(Id: number) {
-        return await prisma.formation.update({ where: { id: Id }, data: { isActive: true } })
-    }
-     async deactivateFormation(Id: number) {
-        return await prisma.formation.update({ where: { id: Id }, data: { isActive: false } })
-    }
+
 }
