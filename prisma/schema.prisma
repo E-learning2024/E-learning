@@ -67,7 +67,7 @@ model Student {
   password               String
   firstName              String
   lastName               String
-  dateOfBirth            DateTime?
+  dateOfBirth            String?
   isActive               Boolean                  @default(true)
   createdAt              DateTime                 @default(now())
   updatedAt              DateTime                 @updatedAt
