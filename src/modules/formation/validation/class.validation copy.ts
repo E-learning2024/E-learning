@@ -3,21 +3,21 @@ import { Request, Response, NextFunction } from 'express';
 import { errorResponse } from '../../handler/responseHandler';
 
 
-export const createFormationRules = () => {
+export const createClassRules = () => {
   return [
-    body('title')
+    body('instructorId')
       .optional(), 
-       body('description')
+       body('formationId')
       .notEmpty()
       .withMessage('A description não pode estar vazio'),
-    body('startDate')
+    body('name')
       .isString()
       .withMessage('A startDate não pode estar vazio'),
-    body('endDate')
+    body('description')
     .isString()
     .notEmpty()
       .withMessage('A endDate não pode estar vazio'),
-    body('isActive')
+    body('time')
       .optional()
       .isBoolean()
       .withMessage('isActive deve ser um valor booleano'),
@@ -25,7 +25,6 @@ export const createFormationRules = () => {
 
   ];
 };
-
 
 export const validate = (req: Request, res: Response, next: NextFunction) => {
   const errors = validationResult(req);

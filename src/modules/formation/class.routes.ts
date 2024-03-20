@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { createFormationRules, validate } from "./validation/formation.validation";
 import { ClassRepository } from "./repository/class.repository";
 import { ClassService } from "./service/class.service";
 import { ClassController } from "./controller/class.controller";
+import { createClassRules ,validate} from "./validation/class.validation copy";
 
 const classRepository = new ClassRepository()
 const classService = new ClassService(classRepository); 
@@ -28,7 +28,6 @@ const classRouter = Router()
  *       400:
  *         description: Bad request
  */
-
 /**
  * @swagger
  * components:
@@ -61,15 +60,14 @@ const classRouter = Router()
  *           description: Description of the class
  *         time:
  *           type: string
- *           example: "2024-04-01T09:00:00Z"
- *           description: Date and time of the class (ISO 8601 format)
+ *           example: "12:30:00"
+ *           description:  time of the class (ISO 8601 format)
  *         student_quantity:
  *           type: number
- *           example: 20
+ *           example: 0
  *           description: Number of students in the class
  */
-
-classRouter.post('/create',createFormationRules(),validate, classController.create.bind(classController))
+classRouter.post('/create',createClassRules(),validate, classController.create.bind(classController))
 /**
  * @swagger
  * /class/findAll-class:
@@ -126,7 +124,5 @@ classRouter.get('/findOne-formation/:Id', classController.findOneClass.bind(clas
  *       500:
  *         description: Internal server error
  */
-
 classRouter.delete('/delete/:Id', classController.deleteClass.bind(classController))
-
 export default classRouter;
