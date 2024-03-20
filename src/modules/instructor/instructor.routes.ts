@@ -113,4 +113,27 @@ instructorRouter.get('/findAllinstructor' ,instructorController.findAllinstructo
  *         description: Credenciais inválidas
  */
 instructorRouter.post('/sign' ,signInstructorValidationRules(),validate,instructorController.sign.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/delete/{id}:
+ *   delete:
+ *     summary: Delete an instructor
+ *     tags: [Instructor]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the instructor to delete
+ *     responses:
+ *       200:
+ *         description: Instructor deleted successfully
+ *       404:
+ *         description: Instructor not found
+ *       500:
+ *         description: Internal server error
+ */
+
+instructorRouter.delete('/delete/:id' ,instructorController.deleteInstructor.bind(instructorController))
 export default instructorRouter;

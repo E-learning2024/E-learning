@@ -81,16 +81,18 @@ export class InstructorController {
   //     return errorResponse(res,'Server Error',500)   
   //   }
   // }
-  // async deleteAdmin (req: Request, res: Response, ): Promise<unknown> {
-  //   try {
-  //     const { id } = req.params;
-   
-  //     const updateAdmin = await this.adminService.update(parseInt(id, 10),req.body);
-  //     return successResponse(res,updateAdmin,'Admin Atualizado com sucesso',200);
-  //   } catch (error) {
-  //     console.log(error);
-  //     return errorResponse(res,'Server Error',500)   
-  //   }
-  // }
+  async deleteInstructor(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const { id } = req.params;
+      const instructor = await this.instructorService.findById(parseInt(id, 10));
+      if(!instructor){
+        return errorResponse(res,'instructor not found !',401)  
+      }
+      return successResponse(res,await this.instructorService.delete(parseInt(id, 10)),'Instructor Deletado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
   
 }

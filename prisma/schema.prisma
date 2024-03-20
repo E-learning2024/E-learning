@@ -67,7 +67,7 @@ model Student {
   password               String
   firstName              String
   lastName               String
-  dateOfBirth            DateTime?
+  dateOfBirth            String?
   isActive               Boolean                  @default(true)
   createdAt              DateTime                 @default(now())
   updatedAt              DateTime                 @updatedAt
@@ -129,6 +129,8 @@ model Formation {
   description String?
   startDate   DateTime
   endDate     DateTime
+  cover     String?
+  duration     String?
   isActive    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -144,7 +146,7 @@ model Class {
   name         String?
   description  String?
   time         String?
-  duration     String?
+  student_quantity         Int?
   material     Material[]
   enrollment   Enrollment[]
 

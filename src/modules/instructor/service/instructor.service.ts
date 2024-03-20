@@ -17,6 +17,12 @@ export class InstructorService {
       async findAll() {
         return await this.instructorRepository.findAll();
       }
+      async delete(Id:number) {
+        return await this.instructorRepository.delete(Id);
+      }
+      async findById(Id:number) {
+        return await this.instructorRepository.findById(Id);
+      }
   
    
   }
