@@ -136,4 +136,88 @@ instructorRouter.post('/sign' ,signInstructorValidationRules(),validate,instruct
  */
 
 instructorRouter.delete('/delete/:id' ,instructorController.deleteInstructor.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/findOneInstr/{id}:
+ *   get:
+ *     summary: Get a single Instructor by ID
+ *     tags: [Instructor]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Instructor to retrieve
+ *     responses:
+ *       200:
+ *         description: Instructor retrieved successfully
+ *       404:
+ *         description: Instructor not found
+ */
+instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind(instructorController))
+/**
+* @swagger
+* /instructor/updateInstr/{id}:
+*   put:
+*     summary: Update an instructor
+*     tags: [Instructor]
+*     parameters:
+*       - in: path
+*         name: id
+*         schema:
+*           type: string
+*         required: true
+*         description: ID of the instructor to update
+*     requestBody:
+*       required: true
+*       content:
+*         application/json:
+*           schema:
+*             $ref: '#/components/schemas/UpdateInstructorDTO'
+*     responses:
+*       200:
+*         description: Instructor updated successfully
+*       400:
+*         description: Bad request
+*/
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     UpdateInstructorDTO:
+ *       type: object
+ *       properties:
+ *         name:
+ *           type: string
+ *           description: Name of the instructor
+ *           example: "Gelson Mesquita"
+ *         email:
+ *           type: string
+ *           description: Email of the instructor
+ *           example: "email@example.com"
+ *         nif:
+ *           type: string
+ *           description: NIF of the instructor
+ *           example: "123456789"
+ *         phone:
+ *           type: string
+ *           description: Phone number of the instructor
+ *           example: "(+244) 930333042"
+ *         bio:
+ *           type: string
+ *           description: Bio of the instructor
+ *           example: "Experienced instructor with a passion for teaching."
+ *         password:
+ *           type: string
+ *           description: Password of the instructor
+ *           example: "senha123"
+ *         isActive:
+ *           type: boolean
+ *           description: Whether the instructor is active
+ *           example: true
+ */
+
+instructorRouter.put('/updateInstr/:Id' ,instructorController.updateInstr.bind(instructorController))
 export default instructorRouter;

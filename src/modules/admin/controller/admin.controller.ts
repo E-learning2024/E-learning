@@ -70,11 +70,11 @@ export class AdminController {
       return errorResponse(res,'Server Error',500)  
     }
   }
-  async updateAdmin (req: Request, res: Response, ): Promise<unknown> {
+  async updateAdmin(req: Request, res: Response, ): Promise<unknown> {
     try {
-      const { id } = req.params;
-   
-      const updateAdmin = await this.adminService.update(parseInt(id, 10),req.body);
+      const { Id } = req.params;
+      const newRequest ={ ...req.body,password:await this.authenticationService.encryptPassword(req.body.password)}
+      const updateAdmin = await this.adminService.update(parseInt(Id, 10),newRequest);
       return successResponse(res,updateAdmin,'Admin Atualizado com sucesso',200);
     } catch (error) {
       console.log(error);
@@ -83,13 +83,13 @@ export class AdminController {
   }
   async deleteAdmin (req: Request, res: Response, ): Promise<unknown> {
     try {
-      const { id } = req.params;
-      const admin = await this.adminService.findByid(parseInt(id, 10));
+      const { Id } = req.params;
+      const admin = await this.adminService.findByid(parseInt(Id, 10));
       if(!admin){
         return errorResponse(res,'Admin not found !',401)  
       }
-      const updateAdmin = await this.adminService.update(parseInt(id, 10),req.body);
-      return successResponse(res,updateAdmin,'Admin deletado com sucesso',200);
+      const deleteAdmin = await this.adminService.update(parseInt(Id, 10),req.body);
+      return successResponse(res,deleteAdmin,'Admin deletado com sucesso',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   
