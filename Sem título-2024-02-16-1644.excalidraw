@@ -75,7 +75,7 @@
       "containerId": "j6w76HUksHiUNVUeir1Uo",
       "originalText": "Admin",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -165,7 +165,7 @@
       "containerId": "GEKmtLwn6CyyjGdNtu311",
       "originalText": "Avaliação",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -243,7 +243,7 @@
       "containerId": "sQQ2_G7E_D4PJyWzaSqPH",
       "originalText": "Tipo de Avaliação",
       "lineHeight": 1.25,
-      "baseline": 44
+      "baseline": 45
     },
     {
       "type": "rectangle",
@@ -325,7 +325,7 @@
       "containerId": "7YGYNm5j-WHFffblL4gEO",
       "originalText": "Questões",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -407,7 +407,7 @@
       "containerId": "DNPTVrqJwVZApmreiN_Tf",
       "originalText": "Instrutores",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -493,7 +493,7 @@
       "containerId": "uRhDKABgWfxXBeEV91lfX",
       "originalText": "Alunos",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -587,7 +587,7 @@
       "containerId": "HCk1mkcubJ_ETTLR0MazW",
       "originalText": "Resultados avaliaçoes",
       "lineHeight": 1.25,
-      "baseline": 44
+      "baseline": 45
     },
     {
       "type": "rectangle",
@@ -673,7 +673,7 @@
       "containerId": "nITx5kQqK_9RTl5D5Mr66",
       "originalText": "Aluno-Turma",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -755,7 +755,7 @@
       "containerId": "4gWyt9ICPKZ5mNL9GDVoj",
       "originalText": "Formacão",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -853,7 +853,7 @@
       "containerId": "KLuSE6-Ea5c0Doh-6EMvA",
       "originalText": "Turma",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "rectangle",
@@ -935,7 +935,7 @@
       "containerId": "IEuJPpGm4zD8hzJk4d_Nt",
       "originalText": " materiais didáticos",
       "lineHeight": 1.25,
-      "baseline": 44
+      "baseline": 45
     },
     {
       "type": "rectangle",
@@ -1013,7 +1013,7 @@
       "containerId": "nlvzez9SEBd_y03iSPt30",
       "originalText": "Regristro de presença",
       "lineHeight": 1.25,
-      "baseline": 44
+      "baseline": 45
     },
     {
       "type": "rectangle",
@@ -1087,7 +1087,7 @@
       "containerId": "OUBqj5bp-Muoi20fR90fE",
       "originalText": "Equipa",
       "lineHeight": 1.25,
-      "baseline": 19
+      "baseline": 20
     },
     {
       "type": "arrow",
@@ -1739,8 +1739,8 @@
     },
     {
       "type": "text",
-      "version": 156,
-      "versionNonce": 404669031,
+      "version": 158,
+      "versionNonce": 284398447,
       "isDeleted": false,
       "id": "MivL6Z_meEbMVor0ymGLv",
       "fillStyle": "solid",
@@ -1753,7 +1753,7 @@
       "y": 236,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 192.019775390625,
+      "width": 192.0198211669922,
       "height": 100,
       "seed": 1885034986,
       "groupIds": [],
@@ -1765,7 +1765,7 @@
           "type": "arrow"
         }
       ],
-      "updated": 1710863467455,
+      "updated": 1711486080937,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -1776,7 +1776,7 @@
       "containerId": null,
       "originalText": "Id_avaliacao\nId_aluno\nResultado\nOutras informaçoes",
       "lineHeight": 1.25,
-      "baseline": 93
+      "baseline": 92
     },
     {
       "type": "arrow",

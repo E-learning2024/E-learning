@@ -2,14 +2,20 @@ import { Request, Response } from 'express';
 import { errorResponse, successResponse } from '../../handler/responseHandler';
 import { AuthenticationService } from '../../../utils/authentication/authentication';
 import { InstructorService } from '../service/instructor.service';
+import { AttendanceInstructorService } from '../service/instructor.attendance.record.service';
+import { SpecialityInstructorService } from '../service/instructor.speciality.service';
 
 export class InstructorController { 
   constructor(
     private readonly instructorService: InstructorService,
-    private readonly authenticationService: AuthenticationService
+    private readonly authenticationService: AuthenticationService,
+    private readonly attendanceInstructorService:AttendanceInstructorService,
+    private readonly specialityInstructorService:SpecialityInstructorService
   ) {
     console.log('InstructorController constructor - instructorService:', this.instructorService);
     console.log('InstructorController constructor - authenticationService:', this.authenticationService);
+    console.log('AttendanceInstructorService constructor - attendanceInstructorService:', this.attendanceInstructorService);
+    console.log('SpecialityInstructorService constructor - specialityInstructorService:', this.specialityInstructorService);
   }
 
 
@@ -88,6 +94,14 @@ export class InstructorController {
         return errorResponse(res,'instructor not found !',401)  
       }
       return successResponse(res,await this.instructorService.delete(parseInt(id, 10)),'Instructor Deletado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async createAttendanceRecord(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      return successResponse(res,await this.attendanceInstructorService.createAttendance(req.body),'Presença Marcado com sucesso',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   

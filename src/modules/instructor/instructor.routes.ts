@@ -3,12 +3,20 @@ import  {InstructorController}  from './controller/instructor.controller';
 import { AuthenticationService } from "../../utils/authentication/authentication";
 import { InstructorRepository } from "./repository/instructor.repository";
 import { InstructorService } from "./service/instructor.service";
-import { createInstructorValidationRules, signInstructorValidationRules, validate } from "./validation/instructor.validation";
+import { createAttendanceRecordValidationRules, createInstructorValidationRules, signInstructorValidationRules, validate } from "./validation/instructor.validation";
+import { AttendanceInstructorService } from "./service/instructor.attendance.record.service";
+import { AttendanceInstructorRepository } from "./repository/instructor.attendance.record.repository";
+import { SpecialtyInstructorRepository } from "./repository/instructor.speciality.repository";
+import { SpecialityInstructorService } from "./service/instructor.speciality.service";
 
 const instructorRepository = new InstructorRepository()
 const instructorService = new InstructorService(instructorRepository); 
 const authenticationService = new AuthenticationService(); 
-const instructorController = new InstructorController(instructorService,authenticationService); 
+const attendanceInstructorRepository = new AttendanceInstructorRepository()
+const specialtyInstructorRepository = new SpecialtyInstructorRepository()
+const attendanceInstructorService = new AttendanceInstructorService(attendanceInstructorRepository)
+const specialityInstructorService = new SpecialityInstructorService(specialtyInstructorRepository)
+const instructorController = new InstructorController(instructorService,authenticationService,attendanceInstructorService,specialityInstructorService); 
 
 
 const instructorRouter = Router()
@@ -218,6 +226,47 @@ instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind
  *           description: Whether the instructor is active
  *           example: true
  */
-
 instructorRouter.put('/updateInstr/:Id' ,instructorController.updateInstr.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/createAttendanceRecord:
+ *   post:
+ *     summary: Create a new instructor attendance
+ *     tags: [Attendance]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/CreateAttendanceInstructorDTO'
+ *     responses:
+ *       201:
+ *         description: Instructor attendance created successfully
+ *       400:
+ *         description: Bad request
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CreateAttendanceInstructorDTO:
+ *       type: object
+ *       properties:
+ *         instructorId:
+ *           type: number
+ *           description: ID of the instructor
+ *           example: 1
+ *   
+ *         present:
+ *           type: boolean
+ *           description: Whether the instructor is present
+ *           example: true
+ *       required:
+ *         - instructorId
+ *         - date
+ *         - present
+ */
+
+instructorRouter.post('/createAttendanceRecord',createAttendanceRecordValidationRules(),validate ,instructorController.createAttendanceRecord.bind(instructorController))
 export default instructorRouter;

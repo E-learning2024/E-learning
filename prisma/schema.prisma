@@ -115,7 +115,7 @@ model Presence {
   id           Int        @id @default(autoincrement())
   instructor   Instructor @relation(fields: [instructorId], references: [id])
   instructorId Int
-  date         DateTime
+  date         DateTime @default(now())
   present      Boolean     
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
