@@ -137,6 +137,73 @@ adminRouter.post('/sign', adminController.sign.bind(adminController))
  *       500:
  *         description: Internal server error
  */
+adminRouter.delete('/delete/:Id' ,adminController.deleteAdmin.bind(adminController))
+/**
+ * @swagger
+ * /admin/updateAdmin/{id}:
+ *   put:
+ *     summary: Update an admin
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: string
+ *         required: true
+ *         description: ID of the admin to update
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/UpdateAdminDTO'
+ *     responses:
+ *       200:
+ *         description: Admin updated successfully
+ *       400:
+ *         description: Bad request
+ */
 
-adminRouter.delete('/delete/:id' ,adminController.deleteAdmin.bind(adminController))
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     UpdateAdminDTO:
+ *       type: object
+ *       properties:
+ *         name:
+ *           type: string
+ *           description: Name of the admin
+ *           example: "Gelson Mesquita"
+ *         email:
+ *           type: string
+ *           description: Email of the admin
+ *           example: "email@example.com"
+ *         nif:
+ *           type: string
+ *           description: NIF of the admin
+ *           example: "123456789"
+ *         phone:
+ *           type: string
+ *           description: Phone number of the admin
+ *           example: "(+244) 930333042"
+ *         password:
+ *           type: string
+ *           description: Password of the admin
+ *           example: "senha123"
+ *         accessLevelId:
+ *           type: number
+ *           description: ID of the access level of the admin
+ *           example: 1
+ *         isActive:
+ *           type: boolean
+ *           description: Whether the admin is active
+ *           example: true
+ *         avatarUrl:
+ *           type: string
+ *           description: URL of the admin's avatar
+ *           example: "https://example.com/avatar.jpg"
+ */
+
+adminRouter.put('/updateAdmin/:Id' ,adminController.updateAdmin.bind(adminController))
 export default adminRouter;

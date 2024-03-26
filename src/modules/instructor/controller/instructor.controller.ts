@@ -39,20 +39,19 @@ export class InstructorController {
       return errorResponse(res,'Server Error',500)  
     }
   }
-  // async findOneadmin(req: Request, res: Response, ): Promise<unknown> {
-  //   try { 
-  //     const {Id}=req.params
-  //     const admin = await this.adminService.findByid(parseInt(Id))
-  //     console.log(admin)
-  //     if(!admin){
-  //       return errorResponse(res,'Admin not found !',401)  
-  //     }
-  //     return successResponse(res,admin,'user found !',200);
-  //   } catch (error) {
-  //     console.log(error);
-  //     return errorResponse(res,'Server Error',500)  
-  //   }
-  // }
+  async findOneInstr(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {Id}=req.params
+      const Instructor = await this.instructorService.findById(parseInt(Id))
+      if(!Instructor){
+        return errorResponse(res,'Instructor not found !',401)  
+      }
+      return successResponse(res,Instructor,'Instructor found !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
   async sign(req: Request, res: Response, ): Promise<unknown> {
     try { 
       const admin = await this.instructorService.findByEmail(req.body.email)
@@ -70,17 +69,17 @@ export class InstructorController {
       return errorResponse(res,'Server Error',500)  
     }
   }
-  // async updateAdmin (req: Request, res: Response, ): Promise<unknown> {
-  //   try {
-  //     const { id } = req.params;
-   
-  //     const updateAdmin = await this.adminService.update(parseInt(id, 10),req.body);
-  //     return successResponse(res,updateAdmin,'Admin Atualizado com sucesso',200);
-  //   } catch (error) {
-  //     console.log(error);
-  //     return errorResponse(res,'Server Error',500)   
-  //   }
-  // }
+  async updateInstr (req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const { Id } = req.params;
+      const newRequest ={ ...req.body,password:await this.authenticationService.encryptPassword(req.body.password)}
+      const updateInstr = await this.instructorService.update(parseInt(Id, 10),newRequest);
+      return successResponse(res,updateInstr,'Instruct Atualizado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
   async deleteInstructor(req: Request, res: Response, ): Promise<unknown> {
     try {
       const { id } = req.params;

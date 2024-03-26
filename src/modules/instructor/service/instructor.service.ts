@@ -1,4 +1,5 @@
 import { CreateInstructorDTO } from "../dto/instructor-create";
+import { UpdateInstructorDTO } from "../dto/instructor-update";
 import { InstructorRepository } from "../repository/instructor.repository";
 
 export class InstructorService {
@@ -22,6 +23,9 @@ export class InstructorService {
       }
       async findById(Id:number) {
         return await this.instructorRepository.findById(Id);
+      }
+      async update(Id:number,updateInstructorDTO:UpdateInstructorDTO) {
+        return await this.instructorRepository.update(Id,updateInstructorDTO);
       }
   
    
