@@ -1,5 +1,6 @@
 import prisma from "../../../config/lib/prisma";
 import { CreateAdministratorDTO } from "../dto/create-admin.dto";
+import { CreateTeamAdministratorDTO } from "../dto/create-team-admin.dto copy";
 import { UpdateAdministratorDTO } from "../dto/update-admin.dto";
 export class AdminRepository {
     async create(createAdministratorDTO: CreateAdministratorDTO) {
@@ -29,4 +30,10 @@ export class AdminRepository {
     async deactivateAccount(Id: number) {
         return await prisma.administrator.update({ where: { id: Id }, data: { isActive: false } })
     }
+
+    async createTeam(data: CreateTeamAdministratorDTO) {
+        return await prisma.teamAdmin.create({ data})
+    }
+    
+
 }

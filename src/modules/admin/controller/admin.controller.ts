@@ -95,5 +95,33 @@ export class AdminController {
       return errorResponse(res,'Server Error',500)   
     }
   }
+  async deactivateAccount (req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const { Id } = req.params;
+      const admin = await this.adminService.findByid(parseInt(Id, 10));
+      if(!admin){
+        return errorResponse(res,'Admin not found !',401)  
+      }
+      const desative = await this.adminService.deactivateAccount(parseInt(Id, 10));
+      return successResponse(res,desative,'Admin desativado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async activateAccount (req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const { Id } = req.params;
+      const admin = await this.adminService.findByid(parseInt(Id, 10));
+      if(!admin){
+        return errorResponse(res,'Admin not found !',401)  
+      }
+      const active = await this.adminService.activateAccount(parseInt(Id, 10));
+      return successResponse(res,active,'Activado  com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
   
 }
