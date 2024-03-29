@@ -3,25 +3,25 @@ import { CreateFormationDTO } from "../dto/create-formation.dto";
 import { UpdateFormationDTO } from "../dto/update-formation.dto";
 export class FormationRepository {
     async create(createFormationDTO: CreateFormationDTO) {
-        return await prisma.formation.create({ data: createFormationDTO });
+        return await prisma.formations.create({ data: createFormationDTO });
     }
     async findAll() {
-        return await prisma.formation.findMany({ where: { isActive: true } })
+        return await prisma.formations.findMany({ where: { isActive: true } })
     }
     async findById(Id: number) {
-        return await prisma.formation.findFirst({ where: { id: Id } })
+        return await prisma.formations.findFirst({ where: { id: Id } })
     }
   
     async update(Id: number, data: UpdateFormationDTO) {
-        return await prisma.formation.update({ where: { id: Id }, data })
+        return await prisma.formations.update({ where: { id: Id }, data })
     }
     async delete(Id: number) {
-        return await prisma.formation.delete({ where: { id: Id } })
+        return await prisma.formations.delete({ where: { id: Id } })
     }
     async activateFormation(Id: number) {
-        return await prisma.formation.update({ where: { id: Id }, data: { isActive: true } })
+        return await prisma.formations.update({ where: { id: Id }, data: { isActive: true } })
     }
      async deactivateFormation(Id: number) {
-        return await prisma.formation.update({ where: { id: Id }, data: { isActive: false } })
+        return await prisma.formations.update({ where: { id: Id }, data: { isActive: false } })
     }
 }
