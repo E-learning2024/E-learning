@@ -135,6 +135,7 @@ model Formation {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   class       Class[]
+   @@map("formation")
 }
 
 model Class {
