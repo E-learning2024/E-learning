@@ -13,17 +13,17 @@ export class FormationController {
   async create(req: Request, res: Response, ): Promise<unknown> {
     try { 
       
-      const { startDate, endDate, ...rest } = req.body;
+      // const { startDate, endDate, ...rest } = req.body;
 
-      const startDateObject = new Date(startDate); // Converte a string para objeto Date
-      const endDateObject = new Date(endDate); // Converte a string para objeto Date
+      // const startDateObject = new Date(startDate); // Converte a string para objeto Date
+      // const endDateObject = new Date(endDate); // Converte a string para objeto Date
     
-      const newRequest = {
-        ...rest, // Copia o restante dos campos do req.body
-        startDate: startDateObject.toISOString(), // Substitui a string de startDate pelo objeto Date
-        endDate: endDateObject.toISOString(),     // Substitui a string de endDate pelo objeto Date
-      };
-       const create = await this.formationService.create(newRequest);
+      // const newRequest = {
+      //   ...rest, // Copia o restante dos campos do req.body
+      //   startDate: startDateObject.toISOString(), // Substitui a string de startDate pelo objeto Date
+      //   endDate: endDateObject.toISOString(),     // Substitui a string de endDate pelo objeto Date
+      // };
+       const create = await this.formationService.create( req.body);
       return successResponse(res,create,'Formação cadastrado com sucesso',201);
     } catch (error) {
       console.log(error);
@@ -64,18 +64,18 @@ export class FormationController {
   async updateFormation(req: Request, res: Response, ): Promise<unknown> {
     try {
       const { Id } = req.params;
-      const { startDate, endDate, ...rest } = req.body;
+      // const { startDate, endDate, ...rest } = req.body;
 
-      const startDateObject = new Date(startDate); // Converte a string para objeto Date
-      const endDateObject = new Date(endDate); // Converte a string para objeto Date
+      // const startDateObject = new Date(startDate); // Converte a string para objeto Date
+      // const endDateObject = new Date(endDate); // Converte a string para objeto Date
     
-      const newRequest = {
-        ...rest, // Copia o restante dos campos do req.body
-        startDate: startDateObject.toISOString(), // Substitui a string de startDate pelo objeto Date
-        endDate: endDateObject.toISOString(),     // Substitui a string de endDate pelo objeto Date
-      };
-      console.log(Id)
-      const formation = await this.formationService.update(parseInt(Id, 10),newRequest);
+      // const newRequest = {
+      //   ...rest, // Copia o restante dos campos do req.body
+      //   startDate: startDateObject.toISOString(), // Substitui a string de startDate pelo objeto Date
+      //   endDate: endDateObject.toISOString(),     // Substitui a string de endDate pelo objeto Date
+      // };
+    
+      const formation = await this.formationService.update(parseInt(Id, 10),req.body);
       return successResponse(res,formation,'formação Atualizado com sucesso',200);
     } catch (error) {
       console.log(error);
