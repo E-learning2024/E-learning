@@ -123,26 +123,26 @@ model Presence {
   @@map("presence")
 }
 
-model Formation {
+model Formations {
   id          Int      @id @default(autoincrement())
   title       String
   description String?
-  startDate   String?
-  endDate     String?
+  startDate   String
+  endDate     String
   cover       String?
   duration    String?
   isActive    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   class       Class[]
-   @@map("formation")
+   @@map("formations")
 }
 
 model Class {
   id               Int          @id @default(autoincrement())
   instructor       Instructor   @relation(fields: [instructorId], references: [id])
   instructorId     Int
-  formation        Formation    @relation(fields: [formationId], references: [id])
+  formation        Formations    @relation(fields: [formationId], references: [id])
   formationId      Int
   name             String?
   description      String?
