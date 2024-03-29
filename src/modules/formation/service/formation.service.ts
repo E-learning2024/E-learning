@@ -1,5 +1,5 @@
 import { CreateFormationDTO } from "../dto/create-formation.dto";
-import { UpdateAdministratorDTO } from "../dto/update-cours.dto";
+import { UpdateFormationDTO } from "../dto/update-formation.dto";
 import { FormationRepository } from "../repository/formation.repository";
 
 export class FormationService {
@@ -18,9 +18,9 @@ export class FormationService {
     return await this.formationRepository.findById(id);
   }
 
-  async update(id: number, updateAdministratorDTO: UpdateAdministratorDTO) {
+  async update(id: number, updateFormationDTO: UpdateFormationDTO) {
 
-    return await this.formationRepository.update(id, updateAdministratorDTO);
+    return await this.formationRepository.update(id, updateFormationDTO);
   }
 
   async delete(id: number) {

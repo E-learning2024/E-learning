@@ -1,7 +1,7 @@
 import { Router } from "express";
 import  {AdminController}  from './controller/admin.controller'; 
 import { AdminService } from './service/admin.service';
-import { createAdminValidationRules, validate } from "./validation/admin.validation";
+import { createAdminValidationRules, updateAdminValidationRules, validate } from "./validation/admin.validation";
 import { AdminRepository } from "./repository/admin.repository";
 import { AuthenticationService } from "../../utils/authentication/authentication";
 
@@ -205,5 +205,5 @@ adminRouter.delete('/delete/:Id' ,adminController.deleteAdmin.bind(adminControll
  *           example: "https://example.com/avatar.jpg"
  */
 
-adminRouter.put('/updateAdmin/:Id' ,adminController.updateAdmin.bind(adminController))
+adminRouter.put('/updateAdmin/:Id',updateAdminValidationRules(),validate ,adminController.updateAdmin.bind(adminController))
 export default adminRouter;

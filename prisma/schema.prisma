@@ -127,8 +127,8 @@ model Formation {
   id          Int      @id @default(autoincrement())
   title       String
   description String?
-  startDate   DateTime
-  endDate     DateTime
+  startDate   String
+  endDate     String
   cover     String?
   duration     String?
   isActive    Boolean  @default(true)

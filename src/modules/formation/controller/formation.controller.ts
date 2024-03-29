@@ -39,12 +39,22 @@ export class FormationController {
   }
   async deleteFormation(req: Request, res: Response, ): Promise<unknown> {
     try {
-      const { id } = req.params;
-      const instructor = await this.formationService.findByid(parseInt(id, 10));
+      const { Id } = req.params;
+      const instructor = await this.formationService.findByid(parseInt(Id, 10));
       if(!instructor){
         return errorResponse(res,'formation not found !',401)  
       }
-      return successResponse(res,await this.formationService.delete(parseInt(id, 10)),'Instructor Deletado com sucesso',200);
+      return successResponse(res,await this.formationService.delete(parseInt(Id, 10)),'formation Deletado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async updateFormation(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const { Id } = req.params;
+      const formation = await this.formationService.update(parseInt(Id, 10),req.body);
+      return successResponse(res,formation,'formação Atualizado com sucesso',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   
