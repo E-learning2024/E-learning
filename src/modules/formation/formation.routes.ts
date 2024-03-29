@@ -50,11 +50,11 @@ const formationRouter = Router()
  *           example: "A comprehensive bootcamp covering all aspects of web development."
  *         startDate:
  *           type: string
- *           example: "2024-04-01"
+ *           example: "2024-09-01T09:00:00Z"
  *           description: Date when the formation starts (YYYY-MM-DD)
  *         endDate:
  *           type: string
- *           example: "2024-09-01"
+ *           example: "2024-09-01T09:00:00Z"
  *           description: Date when the formation ends (YYYY-MM-DD)
  *         isActive:
  *           type: boolean
@@ -111,11 +111,11 @@ formationRouter.post('/create',createFormationRules(),validate, formationControl
  *           example: "A comprehensive bootcamp covering all aspects of web development."
  *         startDate:
  *           type: string
- *           example: "2024-04-01"
+ *           example: "2024-09-01T09:00:00Z"
  *           description: Date when the formation starts (YYYY-MM-DD)
  *         endDate:
  *           type: string
- *           example: "2024-09-01"
+ *           example: "2024-09-01T09:00:00Z"
  *           description: Date when the formation ends (YYYY-MM-DD)
  *         isActive:
  *           type: boolean
