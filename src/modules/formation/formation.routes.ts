@@ -2,7 +2,7 @@ import { Router } from "express";
 import { FormationRepository } from "./repository/formation.repository";
 import { FormationService } from "./service/formation.service";
 import { FormationController } from "./controller/formation.controller";
-import { createFormationRules, validate } from "./validation/formation.validation";
+import { createFormationRules, updateFormationRules, validate } from "./validation/formation.validation";
 
 const formationRepository = new FormationRepository()
 const formationService = new FormationService(formationRepository); 
@@ -50,11 +50,11 @@ const formationRouter = Router()
  *           example: "A comprehensive bootcamp covering all aspects of web development."
  *         startDate:
  *           type: string
- *           example: "2024-04-01T09:00:00Z"
+ *           example: "2024-04-01"
  *           description: Date when the formation starts (YYYY-MM-DD)
  *         endDate:
  *           type: string
- *           example: "2024-09-01T09:00:00Z"
+ *           example: "2024-09-01"
  *           description: Date when the formation ends (YYYY-MM-DD)
  *         isActive:
  *           type: boolean
@@ -62,6 +62,67 @@ const formationRouter = Router()
  */
 
 formationRouter.post('/create',createFormationRules(),validate, formationController.create.bind(formationController))
+/**
+ * @swagger
+ * /formation/edit/{Id}:
+ *   put:
+ *     summary: Edit a formation
+ *     tags: [Formation]
+ *     parameters:
+ *       - name: formationId
+ *         in: path
+ *         required: true
+ *         description: ID of the formation to edit
+ *         schema:
+ *           type: integer
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/EditFormationDTO'
+ *     responses:
+ *       200:
+ *         description: Formation edited successfully
+ *       400:
+ *         description: Bad request
+ *       404:
+ *         description: Formation not found
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     EditFormationDTO:
+ *       type: object
+ *       required:
+ *         - title
+ *         - description
+ *         - startDate
+ *         - endDate
+ *         - isActive
+ *       properties:
+ *         title:
+ *           type: string
+ *           example: "Web Development Bootcamp"
+ *         description:
+ *           type: string
+ *           example: "A comprehensive bootcamp covering all aspects of web development."
+ *         startDate:
+ *           type: string
+ *           example: "2024-04-01"
+ *           description: Date when the formation starts (YYYY-MM-DD)
+ *         endDate:
+ *           type: string
+ *           example: "2024-09-01"
+ *           description: Date when the formation ends (YYYY-MM-DD)
+ *         isActive:
+ *           type: boolean
+ *           example: true
+ */
+  
+formationRouter.put('/edit/:Id',updateFormationRules(),validate, formationController.updateFormation.bind(formationController))
 /**
  * @swagger
  * /formation/findAll-formation:

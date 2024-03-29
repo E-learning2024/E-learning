@@ -31,9 +31,9 @@ export class AdminRepository {
         return await prisma.administrator.update({ where: { id: Id }, data: { isActive: false } })
     }
 
-    async createTeam(data: CreateTeamAdministratorDTO) {
-        return await prisma.teamAdmin.create({ data})
-    }
+    // async createTeam(data: CreateTeamAdministratorDTO) {
+    //     return await prisma.teamAdmin.create({ data})
+    // }
     
 
 }
