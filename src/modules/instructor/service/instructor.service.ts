@@ -21,6 +21,12 @@ export class InstructorService {
       async delete(Id:number) {
         return await this.instructorRepository.delete(Id);
       }
+      async activateAccount(Id:number) {
+        return await this.instructorRepository.activateAccount(Id);
+      }
+      async deactivateAccount(Id:number) {
+        return await this.instructorRepository.deactivateAccount(Id);
+      }
       async findById(Id:number) {
         return await this.instructorRepository.findById(Id);
       }

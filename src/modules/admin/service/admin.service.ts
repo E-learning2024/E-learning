@@ -29,6 +29,12 @@ export class AdminService {
 
     return await this.adminRepository.update(id, updateAdministratorDTO);
   }
+  async activateAccount(id: number) {
+    return await this.adminRepository.activateAccount(id);
+  }
+  async deactivateAccount(id: number) {
+    return await this.adminRepository.deactivateAccount(id);
+  }
 
   async delete(id: number) {
     return await this.adminRepository.delete(id);

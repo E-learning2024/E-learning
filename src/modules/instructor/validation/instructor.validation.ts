@@ -58,6 +58,19 @@ export const signInstructorValidationRules = () => {
       
   ];
 };
+export const createAttendanceRecordValidationRules = () => {
+  return [
+
+    body('instructorId')
+      .notEmpty()
+      .withMessage('O instructorId não pode estar vazio'),
+      body('present')
+      .notEmpty()
+    .isBoolean()
+    .withMessage('Presença deve ser válido')
+      
+  ];
+};
 
 export const validate = (req: Request, res: Response, next: NextFunction) => {
   const errors = validationResult(req);
