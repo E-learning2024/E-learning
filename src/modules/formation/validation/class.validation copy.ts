@@ -18,9 +18,8 @@ export const createClassRules = () => {
     .notEmpty()
       .withMessage('A endDate não pode estar vazio'),
     body('time')
-      .optional()
-      .isBoolean()
-      .withMessage('isActive deve ser um valor booleano'),
+      .notEmpty()
+      .withMessage('informe a Hora !'),
 
 
   ];
