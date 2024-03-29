@@ -13,17 +13,19 @@ export class FormationController {
   async create(req: Request, res: Response, ): Promise<unknown> {
     try { 
       
-      // const { startDate, endDate, ...rest } = req.body;
+      const { startDate, endDate, ...rest } = req.body;
+      const dateTime = new Date(startDate + "T00:00:00.000Z")
+      const dateTime2 = new Date(endDate + "T00:00:00.000Z")
 
-      // const startDateObject = new Date(startDate); // Converte a string para objeto Date
-      // const endDateObject = new Date(endDate); // Converte a string para objeto Date
+      const startDateObject = dateTime.toISOString()
+      const endDateObject = dateTime2.toISOString()
     
-      // const newRequest = {
-      //   ...rest, // Copia o restante dos campos do req.body
-      //   startDate: startDateObject.toISOString(), // Substitui a string de startDate pelo objeto Date
-      //   endDate: endDateObject.toISOString(),     // Substitui a string de endDate pelo objeto Date
-      // };
-       const create = await this.formationService.create( req.body);
+      const newRequest = {
+        ...rest, // Copia o restante dos campos do req.body
+        startDate: startDateObject,
+        endDate: endDateObject
+      };
+       const create = await this.formationService.create(newRequest);
       return successResponse(res,create,'Formação cadastrado com sucesso',201);
     } catch (error) {
       console.log(error);
