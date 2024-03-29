@@ -3,7 +3,7 @@ import { CreateFormationDTO } from "../dto/create-formation.dto";
 import { UpdateFormationDTO } from "../dto/update-formation.dto";
 export class FormationRepository {
     async create(createFormationDTO: CreateFormationDTO) {
-        return await prisma.formations.create({ data: createFormationDTO });
+        return await prisma.formations.createMany({ data: createFormationDTO });
     }
     async findAll() {
         return await prisma.formations.findMany({ where: { isActive: true } })
