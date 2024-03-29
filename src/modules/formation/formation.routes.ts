@@ -64,12 +64,12 @@ const formationRouter = Router()
 formationRouter.post('/create',createFormationRules(),validate, formationController.create.bind(formationController))
 /**
  * @swagger
- * /formation/edit/{Id}:
+ * /formation/edit/{id}:
  *   put:
  *     summary: Edit a formation
  *     tags: [Formation]
  *     parameters:
- *       - name: formationId
+ *       - name: id
  *         in: path
  *         required: true
  *         description: ID of the formation to edit

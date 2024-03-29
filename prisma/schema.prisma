@@ -12,9 +12,9 @@ model Administrator {
   name                 String
   email                String                 @unique
   nif                  String                 @unique
-  phone                String               @unique
+  phone                String                 @unique
   password             String
-  accessLevel          AccessLevel?            @relation(fields: [accessLevelId], references: [id])
+  accessLevel          AccessLevel?           @relation(fields: [accessLevelId], references: [id])
   accessLevelId        Int?
   isActive             Boolean                @default(true)
   avatarUrl            String?
@@ -94,7 +94,7 @@ model Instructor {
   nif       String      @unique
   phone     String?     @unique
   bio       String?
-  password String 
+  password  String
   isActive  Boolean     @default(true)
   createdAt DateTime    @default(now())
   updatedAt DateTime    @updatedAt
@@ -115,8 +115,8 @@ model Presence {
   id           Int        @id @default(autoincrement())
   instructor   Instructor @relation(fields: [instructorId], references: [id])
   instructorId Int
-  date         DateTime @default(now())
-  present      Boolean     
+  date         DateTime   @default(now())
+  present      Boolean
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
 
@@ -129,8 +129,8 @@ model Formation {
   description String?
   startDate   String
   endDate     String
-  cover     String?
-  duration     String?
+  cover       String?
+  duration    String?
   isActive    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -138,17 +138,17 @@ model Formation {
 }
 
 model Class {
-  id           Int          @id @default(autoincrement())
-  instructor   Instructor   @relation(fields: [instructorId], references: [id])
-  instructorId Int
-  formation    Formation    @relation(fields: [formationId], references: [id])
-  formationId  Int
-  name         String?
-  description  String?
-  time         String?
-  student_quantity         Int?
-  material     Material[]
-  enrollment   Enrollment[]
+  id               Int          @id @default(autoincrement())
+  instructor       Instructor   @relation(fields: [instructorId], references: [id])
+  instructorId     Int
+  formation        Formation    @relation(fields: [formationId], references: [id])
+  formationId      Int
+  name             String?
+  description      String?
+  time             String?
+  student_quantity Int?
+  material         Material[]
+  enrollment       Enrollment[]
 
   @@map("class")
 }
