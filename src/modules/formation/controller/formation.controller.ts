@@ -12,7 +12,7 @@ export class FormationController {
 
   async create(req: Request, res: Response, ): Promise<unknown> {
     try { 
-    
+    console.log(req.body);
        const create = await this.formationService.create(req.body);
       return successResponse(res,create,'Formação cadastrado com sucesso',201);
     } catch (error) {
