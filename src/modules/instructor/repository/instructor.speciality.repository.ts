@@ -1,4 +1,4 @@
-import prisma from "../../../config/lib/prisma";
+import {prisma} from "../../../config/lib/prisma";
 import { CreatespecialityInstructorDTO } from "../dto/instructor-specialty-create";
 import {UpatespecialityInstructorDTO} from '../dto/instructor-specialty-update'
 export class SpecialtyInstructorRepository {

@@ -1,4 +1,4 @@
-import prisma from "../../../config/lib/prisma";
+import {prisma} from "../../../config/lib/prisma";
 import {CreateattendanceInstructorDTO} from '../dto/instructor-attendance-record-create'
 export class AttendanceInstructorRepository {
     async createAttendance(CreateattendanceInstructorDTO: CreateattendanceInstructorDTO) {
