@@ -1,4 +1,4 @@
-import prisma from "../../../config/lib/prisma";
+import {prisma} from "../../../config/lib/prisma";
 import { CreateFormationDTO } from "../dto/create-formation.dto";
 import { UpdateFormationDTO } from "../dto/update-formation.dto";
 export class FormationRepository {

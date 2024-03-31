@@ -135,18 +135,20 @@ model Formations {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   class       Class[]
-   @@map("formations")
+
+  @@map("formations")
 }
 
 model Class {
   id               Int          @id @default(autoincrement())
   instructor       Instructor   @relation(fields: [instructorId], references: [id])
   instructorId     Int
-  formation        Formations    @relation(fields: [formationId], references: [id])
+  formation        Formations   @relation(fields: [formationId], references: [id])
   formationId      Int
   name             String?
   description      String?
   time             String?
+  class_detail     String?
   student_quantity Int?
   material         Material[]
   enrollment       Enrollment[]

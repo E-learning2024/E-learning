@@ -1,4 +1,4 @@
-import prisma from "../../../config/lib/prisma";
+import {prisma} from "../../../config/lib/prisma";
 import { CreateInstructorDTO } from "../dto/instructor-create";
 import { UpdateInstructorDTO } from "../dto/instructor-update";
 export class InstructorRepository {
@@ -6,7 +6,7 @@ export class InstructorRepository {
         return await prisma.instructor.create({ data: createInstructorDTO });
     }
     async findAll() {
-        return await prisma.instructor.findMany({ where: { isActive: true } })
+        return await prisma.instructor.findMany({})
     }
     async findById(Id: number) {
         return await prisma.instructor.findUnique({ where: { id: Id } })

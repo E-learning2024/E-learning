@@ -59,6 +59,9 @@ export class AdminController {
       if(!admin){
         return errorResponse(res,'Admin not found !',401)  
       }
+      if(!admin.isActive){
+        return errorResponse(res,'A sua conta Esta desativada !',401)  
+      }
       const verify = await this.authenticationService.comparePasswords(req.body.password,admin.password)
      if(!verify){
       return errorResponse(res,'Senha Incorrecta !',401)  

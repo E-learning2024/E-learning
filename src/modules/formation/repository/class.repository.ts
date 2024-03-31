@@ -1,4 +1,4 @@
-import prisma from "../../../config/lib/prisma";
+import {prisma} from "../../../config/lib/prisma";
 import { CreateClassDTO } from "../dto/create-class.dto";
 export class ClassRepository {
     async create(createClassDTO: CreateClassDTO) {
