@@ -127,4 +127,55 @@ export class AdminController {
     }
   }
   
+  async createTeam (req: Request, res: Response, ): Promise<unknown> {
+    try {
+ 
+      const active = await this.adminService.createTeam(req.body);
+      return successResponse(res,active,'O Team Foi criado !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async findAllTeam (req: Request, res: Response, ): Promise<unknown> {
+    try {
+ 
+      const team = await this.adminService.findAllTeam();
+      return successResponse(res,team,'O Team Foi criado !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async findOneTeam (req: Request, res: Response, ): Promise<unknown> {
+    try {
+     const {Id}= req.params
+      const team = await this.adminService.findOneTeam(parseInt(Id));
+      return successResponse(res,team,'O Team Foi criado !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async deleteTeam (req: Request, res: Response, ): Promise<unknown> {
+    try {
+     const {Id}= req.params
+      const team = await this.adminService.deleteTeam(parseInt(Id));
+      return successResponse(res,team,'O Team Foi deletado !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async updateTeam (req: Request, res: Response, ): Promise<unknown> {
+    try {
+ const {Id} = req.params
+      const team = await this.adminService.updateTeam(req.body,parseInt(Id));
+      return successResponse(res,team,'O Team Foi Editado !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  
 }

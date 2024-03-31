@@ -1,6 +1,6 @@
-export class CreateAdministratorDTO {
-  name     !: string
-  description !: string
-  leaderId !: number
-  members !: [number]
+export class UpdateTeamAdministratorDTO {
+  name!: string;
+  description!: string;
+  leaderId!: number;
+  members?: { id: number }[];
 }

@@ -2,6 +2,11 @@
   "name": "e-learning",
   "version": "1.0.0",
   "main": "index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
   "engines": {
     "node": "18"
   },
@@ -31,6 +36,7 @@
     "express-validator": "^7.0.1",
     "firebase-admin": "^11.10.1",
     "firebase-functions": "^4.4.1",
+    "husky": "^9.0.11",
     "just": "^0.1.8",
     "mongodb": "^5.2.0",
     "mongoose": "^7.0.3",

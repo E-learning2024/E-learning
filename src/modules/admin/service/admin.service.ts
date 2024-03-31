@@ -1,6 +1,8 @@
 
 import { CreateAdministratorDTO } from "../../admin/dto/create-admin.dto";
+import { CreateTeamAdministratorDTO } from "../dto/create-team-admin.dto";
 import { UpdateAdministratorDTO } from "../dto/update-admin.dto";
+import { UpdateTeamAdministratorDTO } from "../dto/update-team-admin.dto";
 import { AdminRepository } from "../repository/admin.repository";
 
 export class AdminService {
@@ -38,5 +40,23 @@ export class AdminService {
 
   async delete(id: number) {
     return await this.adminRepository.delete(id);
+  }
+  
+ async createTeam(data: CreateTeamAdministratorDTO) {
+   
+    return await this.adminRepository.createTeam(data);
+  }
+  async updateTeam(data: UpdateTeamAdministratorDTO,Id:number) {
+   
+    return await this.adminRepository.updateTeam(data,Id);
+  }
+  async findAllTeam() {
+    return await this.adminRepository.findAllTeam();
+  }
+  async findOneTeam(Id:number) {
+    return await this.adminRepository.findOneTeam(Id);
+  }
+  async deleteTeam(Id:number) {
+    return await this.adminRepository.deleteTeam(Id);
   }
 }
