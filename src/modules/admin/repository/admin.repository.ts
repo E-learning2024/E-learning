@@ -8,16 +8,85 @@ export class AdminRepository {
     return await prisma.administrator.create({ data: createAdministratorDTO });
   }
   async findAll() {
-    return await prisma.administrator.findMany({});
+    return await prisma.administrator.findMany({  
+       select: {
+         id: true,
+         name: true,
+         email: true,
+         nif: true,
+         phone: true,
+         password: false,
+         accessLevelId: true,
+         isActive: true,
+         avatarUrl: true,
+         createdAt: true,
+         updatedAt: true,
+         accessLevel: true,
+         activityHistoryAdmin: true,
+         teamLeader: true,
+         teamMembers: true,
+         _count: true
+        }});
   }
   async findById(Id: number) {
-    return await prisma.administrator.findFirst({ where: { id: Id } });
+    return await prisma.administrator.findFirst({ where: { id: Id }, select: {
+      id: true,
+      name: true,
+      email: true,
+      nif: true,
+      phone: true,
+      password: false,
+      accessLevelId: true,
+      isActive: true,
+      avatarUrl: true,
+      createdAt: true,
+      updatedAt: true,
+      accessLevel: true,
+      activityHistoryAdmin: true,
+      teamLeader: true,
+      teamMembers: true,
+      _count: true
+  }});
   }
   async findByEmail(email: string) {
-    return await prisma.administrator.findFirst({ where: { email: email } });
+    return await prisma.administrator.findFirst({ where: { email: email }, select: {
+      id: true,
+      name: true,
+      email: true,
+      nif: true,
+      phone: true,
+      password: true,
+      accessLevelId: true,
+      isActive: true,
+      avatarUrl: true,
+      createdAt: true,
+      updatedAt: true,
+      accessLevel: true,
+      activityHistoryAdmin: true,
+      teamLeader: true,
+      teamMembers: true,
+      _count: true
+  }});
   }
   async findPhone(phone: string) {
-    return await prisma.administrator.findFirst({ where: { phone: phone } });
+    return await prisma.administrator.findFirst({ where: { phone: phone }, select: {
+      id: true,
+      name: true,
+      email: true,
+      nif: true,
+      phone: true,
+      password: false,
+      accessLevelId: true,
+      isActive: true,
+      avatarUrl: true,
+      createdAt: true,
+      updatedAt: true,
+      accessLevel: true,
+      activityHistoryAdmin: true,
+      teamLeader: true,
+      teamMembers: true,
+      _count: true
+  }});
   }
   async update(Id: number, data: UpdateAdministratorDTO) {
     return await prisma.administrator.update({ where: { id: Id }, data });
