@@ -20,15 +20,15 @@ export class AuthenticationService {
   }
   public async generateToken(payload: any): Promise<string> {
     try {
-      const secretKey = '@minhaChaveSecreta@';
-      const token: string = jwt.sign(payload, secretKey, { expiresIn: '1h' });
+      const secretKey = 'ISVALDO2024@minhaChaveSecreta@ISAAC';
+      const token: string = jwt.sign(payload, secretKey, { expiresIn: '3h' });
 
       return token;
     } catch (error) {
       throw new Error(`Erro ao gerar o token: ${error}`);
     }
   }
-  public async verifyToken(token: string): Promise<any> {
+  public async verifyToken(token: string): Promise<unknown> {
     try {
       const secretKey = '@minhaChaveSecreta@';
       const decoded = jwt.verify(token, secretKey);

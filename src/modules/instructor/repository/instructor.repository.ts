@@ -6,10 +6,41 @@ export class InstructorRepository {
         return await prisma.instructor.create({ data: createInstructorDTO });
     }
     async findAll() {
-        return await prisma.instructor.findMany({})
+        return await prisma.instructor.findMany({
+            select: {
+            id: true,
+            name: true,
+            email: true,
+            nif: true,
+            phone: true,
+            bio: true,
+            password: false,
+            isActive: true,
+            createdAt: true,
+            updatedAt: true,
+            specialty: true,
+            class: true,
+            presence: true,
+            _count: true
+            }})
     }
     async findById(Id: number) {
-        return await prisma.instructor.findUnique({ where: { id: Id } })
+        return await prisma.instructor.findUnique({ where: { id: Id },  select: {
+              id: true,
+              name: true,
+              email: true,
+              nif: true,
+              phone: true,
+              bio: true,
+              password: false,
+              isActive: true,
+              createdAt: true,
+              updatedAt: true,
+              specialty: true,
+              class: true,
+              presence: true,
+              _count: true
+              } })
     }
     async findByEmail(email: string) {
         return await prisma.instructor.findFirst({ where: { email: email } })

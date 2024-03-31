@@ -95,7 +95,7 @@ export const updateAdminValidationRules = () => {
 
   ];
 };
-export const signAdminValidationRules = () => {
+export const signStudentValidationRules = () => {
   return [
 
     body('email')
@@ -111,35 +111,6 @@ export const signAdminValidationRules = () => {
       
   ];
 };
-export const createTeamAdminValidationRules = () => {
-  return [
-    body('name')
-      .notEmpty()
-      .withMessage('O nome não pode estar vazio'),
-    body('description')
-      .notEmpty()
-      .withMessage('A descrição não pode estar vazia'),
-    body('leaderId')
-      .notEmpty()
-      .withMessage('O ID do líder não pode estar vazio')
-      .bail()
-      .isNumeric()
-      .withMessage('O ID do líder deve ser um número'),
-    body('members')
-      .custom((value) => {
-        if (!Array.isArray(value)) {
-          throw new Error('Os membros devem ser um array');
-        }
-        for (const member of value) {
-          if (typeof member.id !== 'number') {
-            throw new Error('Cada membro deve ter um ID numérico');
-          }
-        }
-        return true;
-      })
-  ];
-};
-
 export const validate = (req: Request, res: Response, next: NextFunction) => {
   const errors = validationResult(req);
   if (errors.isEmpty()) {

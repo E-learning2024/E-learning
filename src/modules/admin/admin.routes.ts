@@ -1,7 +1,7 @@
 import { Router } from "express";
 import  {AdminController}  from './controller/admin.controller'; 
 import { AdminService } from './service/admin.service';
-import { createAdminValidationRules, updateAdminValidationRules, validate } from "./validation/admin.validation";
+import { createAdminValidationRules, createTeamAdminValidationRules, updateAdminValidationRules, validate } from "./validation/admin.validation";
 import { AdminRepository } from "./repository/admin.repository";
 import { AuthenticationService } from "../../utils/authentication/authentication";
 
@@ -55,6 +55,7 @@ const adminRouter = Router()
  *       400:
  *         description: Bad request
  */
+
 adminRouter.post('/createAdmin',createAdminValidationRules(),validate, adminController.createAdmin.bind(adminController))
 /**
  * @swagger
@@ -206,4 +207,176 @@ adminRouter.delete('/delete/:Id' ,adminController.deleteAdmin.bind(adminControll
  */
 
 adminRouter.put('/updateAdmin/:Id',updateAdminValidationRules(),validate ,adminController.updateAdmin.bind(adminController))
+/**
+ * @swagger
+ * /admin/createTeam:
+ *   post:
+ *     summary: Create a new team
+ *     tags: [Admin]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/CreateTeamDTO'
+ *     responses:
+ *       201:
+ *         description: Team created successfully
+ *       400:
+ *         description: Bad request
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CreateTeamDTO:
+ *       type: object
+ *       required:
+ *         - name
+ *         - description
+ *         - leaderId
+ *         - members
+ *       properties:
+ *         name:
+ *           type: string
+ *           example: "Development Team"
+ *           description: The name of the team
+ *         description:
+ *           type: string
+ *           example: "Responsible for developing new features"
+ *           description: A description of the team
+ *         leaderId:
+ *           type: number
+ *           example: 1
+ *           description: The ID of the team leader
+ *         members:
+ *           type: array
+ *           items:
+ *             type: number
+ *           example: [{ id: 2 }, { id: 3 }]
+ *           description: An array of member IDs
+ */
+  
+adminRouter.post('/createTeam',createTeamAdminValidationRules(),validate ,adminController.createTeam.bind(adminController))
+
+/**
+ * @swagger
+ * /admin/findAll-team:
+ *   get:
+ *     summary: Get all team by ID
+ *     tags: [Admin]
+ *     responses:
+ *       200:
+ *         description: team retrieved successfully
+ *       404:
+ *         description: team not found
+ */
+adminRouter.get('/findAll-team', adminController.findAllTeam.bind(adminController))
+/**
+ * @swagger
+ * /admin/findOneTeam/{id}:
+ *   get:
+ *     summary: Get a single team by ID
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the team to retrieve
+ *     responses:
+ *       200:
+ *         description: team retrieved successfully
+ *       404:
+ *         description: team not found
+ */
+adminRouter.get('/findOneTeam/:Id', adminController.findOneTeam.bind(adminController))
+/**
+ * @swagger
+ * /admin/deleteTeam/{id}:
+ *   delete:
+ *     summary: Delete an Team
+ *     tags: [Admin]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Team to delete
+ *     responses:
+ *       200:
+ *         description: Team deleted successfully
+ *       404:
+ *         description: Team not found
+ *       500:
+ *         description: Internal server error
+ */
+adminRouter.delete('/deleteTeam/:Id' ,adminController.deleteTeam.bind(adminController))
+/**
+ * @swagger
+ * /admin/editTeam/{teamId}:
+ *   put:
+ *     summary: Edit a team
+ *     tags: [Admin]
+ *     parameters:
+ *       - name: teamId
+ *         in: path
+ *         required: true
+ *         description: ID of the team to edit
+ *         schema:
+ *           type: integer
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/EditTeamDTO'
+ *     responses:
+ *       200:
+ *         description: Team edited successfully
+ *       400:
+ *         description: Bad request
+ *       404:
+ *         description: Team not found
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     EditTeamDTO:
+ *       type: object
+ *       required:
+ *         - name
+ *         - description
+ *         - leaderId
+ *         - members
+ *       properties:
+ *         name:
+ *           type: string
+ *           example: "Development Team"
+ *           description: The name of the team
+ *         description:
+ *           type: string
+ *           example: "Responsible for developing new features"
+ *           description: A description of the team
+ *         leaderId:
+ *           type: number
+ *           example: 1
+ *           description: The ID of the team leader
+ *         members:
+ *           type: array
+ *           items:
+ *             type: number
+ *           example: [{ id: 2 }, { id: 3 }]
+ *           description: An array of member IDs
+ */
+
+  
+  
+adminRouter.put('/editTeam',createTeamAdminValidationRules(),validate ,adminController.updateTeam.bind(adminController))
+
 export default adminRouter;

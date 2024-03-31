@@ -60,15 +60,19 @@ export class InstructorController {
   }
   async sign(req: Request, res: Response, ): Promise<unknown> {
     try { 
-      const admin = await this.instructorService.findByEmail(req.body.email)
-      if(!admin){
-        return errorResponse(res,'Admin not found !',401)  
+      const instructor = await this.instructorService.findByEmail(req.body.email)
+      if(!instructor){
+        return errorResponse(res,'instructor not found !',401)  
       }
-      const verify = await this.authenticationService.comparePasswords(req.body.password,admin.password)
+      const verify = await this.authenticationService.comparePasswords(req.body.password,instructor.password)
      if(!verify){
       return errorResponse(res,'Senha Incorrecta !',401)  
      }
-      const token = await this.authenticationService.generateToken(admin)
+     const instructorWithRole = {
+      ...instructor,
+      role: 'INSTRUCTOR'
+    };
+      const token = await this.authenticationService.generateToken(instructorWithRole)
       return successResponse(res,token,'Seu token !',200);
     } catch (error) {
       console.log(error);

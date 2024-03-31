@@ -3,6 +3,7 @@ import { AuthenticationService } from "../../utils/authentication/authentication
 import { StudentRepository } from "./repository/students.repository";
 import { StudentService } from "./service/student.service";
 import { StudentController } from "./controller/students.controller";
+import { signStudentValidationRules, validate } from "./validation/student.validation";
 
 const studentRepository = new StudentRepository()
 const studentService = new StudentService(studentRepository); 
@@ -89,88 +90,88 @@ const studentRouter = Router()
  *           description: Date of birth of the student (YYYY-MM-DD)
  */
 
-studentRouter.post('/create', studentController.createAdmin.bind(studentController))
-// /**
-//  * @swagger
-//  * /admin/findAlladmin:
-//  *   get:
-//  *     summary: listar todos os administradores
-//  *     tags: [Admin]
-//  *     security:
-//  *       - BearerAuth: []  # Esquema de autenticação JWT
-//  *     responses:
-//  *       201:
-//  *         description: Admin criado com sucesso
-//  *       400:
-//  *         description: Requisição inválida
-//  */
-// studentRouter.get('/findAlladmin', studentController.findAlladmin.bind(studentController))
-// /**
-//  * @swagger
-//  * /admin/findOneadmin/{id}:
-//  *   get:
-//  *     summary: Get a single admin by ID
-//  *     tags: [Admin]
-//  *     parameters:
-//  *       - in: path
-//  *         name: id
-//  *         required: true
-//  *         schema:
-//  *           type: integer
-//  *         description: ID of the admin to retrieve
-//  *     responses:
-//  *       200:
-//  *         description: Admin retrieved successfully
-//  *       404:
-//  *         description: Admin not found
-//  */
-// studentRouter.get('/findOneadmin/:Id', studentController.findOneadmin.bind(studentController))
-// /**
-//  * @swagger
-//  * /admin/sign:
-//  *   post:
-//  *     summary: Realizar login de administrador
-//  *     tags: [Admin]
-//  *     requestBody:
-//  *       required: true
-//  *       content:
-//  *         application/json:
-//  *           schema:
-//  *             type: object
-//  *             properties:
-//  *               email:
-//  *                 type: string
-//  *                 format: email
-//  *               password:
-//  *                 type: string
-//  *     responses:
-//  *       200:
-//  *         description: Login bem-sucedido
-//  *       401:
-//  *         description: Credenciais inválidas
-//  */
-// studentRouter.post('/sign', studentController.sign.bind(studentController))
-// /**
-//  * @swagger
-//  * /admin/delete/{id}:
-//  *   delete:
-//  *     summary: Delete an Admin
-//  *     tags: [Admin]
-//  *     parameters:
-//  *       - in: path
-//  *         name: id
-//  *         required: true
-//  *         schema:
-//  *           type: integer
-//  *         description: ID of the Admin to delete
-//  *     responses:
-//  *       200:
-//  *         description: Admin deleted successfully
-//  *       404:
-//  *         description: Admin not found
-//  *       500:
-//  *         description: Internal server error
-//  */
+studentRouter.post('/create', studentController.createStudent.bind(studentController))
+/**
+ * @swagger
+ * /student/findAllStudent:
+ *   get:
+ *     summary: listar todos os Estudantes
+ *     tags: [Student]
+ *     security:
+ *       - BearerAuth: []  # Esquema de autenticação JWT
+ *     responses:
+ *       201:
+ *         description: student encontrados
+ *       400:
+ *         description: Requisição inválida
+ */
+ studentRouter.get('/findAllStudent', studentController.findAllStudent.bind(studentController))
+/**
+ * @swagger
+ * /student/findOneStudent/{id}:
+ *   get:
+ *     summary: Get a single admin by ID
+ *     tags: [Student]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the admin to retrieve
+ *     responses:
+ *       200:
+ *         description: Student retrieved successfully
+ *       404:
+ *         description: Student not found
+ */
+studentRouter.get('/findOneStudent/:Id', studentController.findOneStudent.bind(studentController))
+/**
+ * @swagger
+ * /student/sign:
+ *   post:
+ *     summary: Realizar login de estudante
+ *     tags: [Student]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               email:
+ *                 type: string
+ *                 format: email
+ *               password:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: Login bem-sucedido
+ *       401:
+ *         description: Credenciais inválidas
+ */
+studentRouter.post('/sign',signStudentValidationRules(),validate, studentController.sign.bind(studentController))
+/**
+ * @swagger
+ * /student/delete/{id}:
+ *   delete:
+ *     summary: Delete an Admin
+ *     tags: [Student]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Admin to delete
+ *     responses:
+ *       200:
+ *         description: Admin deleted successfully
+ *       404:
+ *         description: Admin not found
+ *       500:
+ *         description: Internal server error
+ */
 
-// studentRouter.delete('/delete/:id' ,studentController.deleteAdmin.bind(studentController))
+studentRouter.delete('/delete/:id' ,studentController.deleteStudent.bind(studentController))
 export default studentRouter;
