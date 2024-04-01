@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import { errorResponse } from '../../handler/responseHandler';
 
 
-export const createAdminValidationRules = () => {
+export const createStudentValidationRules = () => {
   return [
     body('name')
       .optional(), 
@@ -49,7 +49,7 @@ export const createAdminValidationRules = () => {
 
   ];
 };
-export const updateAdminValidationRules = () => {
+export const updateCreateValidationRules = () => {
   return [
     body('name')
       .optional(), 

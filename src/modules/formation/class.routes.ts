@@ -3,10 +3,18 @@ import { ClassRepository } from "./repository/class.repository";
 import { ClassService } from "./service/class.service";
 import { ClassController } from "./controller/class.controller";
 import { createClassRules ,validate} from "./validation/class.validation copy";
+import { FormationRepository } from "./repository/formation.repository";
+import { FormationService } from "./service/formation.service";
+import { InstructorRepository } from "../instructor/repository/instructor.repository";
+import { InstructorService } from "../instructor/service/instructor.service";
 
 const classRepository = new ClassRepository()
 const classService = new ClassService(classRepository); 
-const classController = new ClassController(classService); 
+const formationRepository = new FormationRepository()
+const formationService = new FormationService(formationRepository); 
+const instructorRepository = new InstructorRepository()
+const instructorService = new InstructorService(instructorRepository); 
+const classController = new ClassController(classService,formationService,instructorService); 
 
 
 const classRouter = Router()
@@ -85,7 +93,7 @@ classRouter.post('/create',createClassRules(),validate, classController.create.b
 classRouter.get('/findAll-class', classController.findAllClass.bind(classController))
 /**
  * @swagger
- * /class/findOneClass/{id}:
+ * /class/findOne-class/{id}:
  *   get:
  *     summary: Get a single class by ID
  *     tags: [Class]
@@ -102,7 +110,7 @@ classRouter.get('/findAll-class', classController.findAllClass.bind(classControl
  *       404:
  *         description: class not found
  */
-classRouter.get('/findOne-formation/:Id', classController.findOneClass.bind(classController))
+classRouter.get('/findOne-class/:Id', classController.findOneClass.bind(classController))
 /**
  * @swagger
  * /class/delete/{id}:

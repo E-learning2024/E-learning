@@ -1,18 +1,32 @@
 import { Request, Response } from 'express';
 import { errorResponse, successResponse } from '../../handler/responseHandler';
 import { ClassService } from '../service/class.service';
+import { FormationService } from '../service/formation.service';
+import { InstructorService } from '../../instructor/service/instructor.service';
 
 export class ClassController { 
   constructor(
-    private readonly classService: ClassService
+    private readonly classService: ClassService,
+    private readonly formationService: FormationService,
+    private readonly instructorService: InstructorService,
   ) {
     console.log('ClassService constructor - classService:', this.classService);
+    console.log('FormationService constructor - classService:', this.formationService);
  }
 
 
    async create(req: Request, res: Response, ): Promise<unknown> {
     try { 
-    
+    const {instructorId,formationId}= req.body
+    const formation =await this.formationService.findByid(parseInt(formationId))
+    if(!formation) {
+      return errorResponse(res,`Formação não encontrado`,401)  
+    }
+
+    const Instructor = await this.instructorService.findById(parseInt(instructorId))
+      if(!Instructor){
+        return errorResponse(res,'Instructor not found !',401)  
+      }
        const create = await this.classService.create(req.body);
       return successResponse(res,create,'Formação cadastrado com sucesso',201);
     } catch (error) {
