@@ -14,7 +14,7 @@ model Administrator {
   nif                  String                 @unique
   phone                String                 @unique
   password             String
-  accessLevel          AccessLevel?           @relation(fields: [accessLevelId], references: [id])
+  accessLevel          AccessLevel?           @relation(fields: [accessLevelId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   accessLevelId        Int?
   isActive             Boolean                @default(true)
   avatarUrl            String?
@@ -31,7 +31,7 @@ model TeamAdmin {
   id          Int             @id @default(autoincrement())
   name        String
   description String?
-  leader      Administrator?  @relation("teamLeader", fields: [leaderId], references: [id])
+  leader      Administrator?  @relation("teamLeader", fields: [leaderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   leaderId    Int?
   members     Administrator[] @relation("teamMembers")
   createdAt   DateTime        @default(now())
@@ -142,14 +142,13 @@ model Formations {
 
 model Class {
   id               Int          @id @default(autoincrement())
-  instructor       Instructor   @relation(fields: [instructorId], references: [id])
+  instructor       Instructor   @relation(fields: [instructorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   instructorId     Int
-  formation        Formations   @relation(fields: [formationId], references: [id])
+  formation        Formations   @relation(fields: [formationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   formationId      Int
   name             String?
   description      String?
   time             String?
-  class_detail     String?
   student_quantity Int?
   material         Material[]
   enrollment       Enrollment[]
@@ -162,7 +161,7 @@ model Material {
   title       String
   description String?
   fileUrl     String?
-  class       Class   @relation(fields: [classId], references: [id])
+  class       Class   @relation(fields: [classId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   classId     Int
 }
 

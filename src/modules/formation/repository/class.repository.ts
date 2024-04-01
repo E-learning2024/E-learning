@@ -5,10 +5,36 @@ export class ClassRepository {
         return await prisma.class.create({ data: createClassDTO });
     }
     async findAll() {
-        return await prisma.class.findMany({})
+        return await prisma.class.findMany({select: {
+            id: true,
+            instructorId: true,
+            formationId: true,
+            name: true,
+            description: true,
+            time: true,
+            student_quantity: true,
+            instructor: true,
+            formation: true,
+            material: true,
+            enrollment: true,
+            _count: true
+            } })
     }
     async findById(Id: number) {
-        return await prisma.class.findFirst({ where: { id: Id } })
+        return await prisma.class.findFirst({ where: { id: Id }, select: {
+              id: true,
+              instructorId: true,
+              formationId: true,
+              name: true,
+              description: true,
+              time: true,
+              student_quantity: true,
+              instructor: true,
+              formation: true,
+              material: true,
+              enrollment: true,
+              _count: true
+              } })
     }
   
     async update(Id: number, data: any) {

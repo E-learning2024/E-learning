@@ -74,17 +74,17 @@ export class StudentController {
       return errorResponse(res,MessagesResponse.SERVER_ERROR,500)  
     }
   }
-  // async updateAdmin (req: Request, res: Response, ): Promise<unknown> {
-  //   try {
-  //     const { id } = req.params;
-   
-  //     const updateAdmin = await this.studentService.update(parseInt(id, 10),req.body);
-  //     return successResponse(res,updateAdmin,'Admin Atualizado com sucesso',200);
-  //   } catch (error) {
-  //     console.log(error);
-  //     return errorResponse(res,MessagesResponse.SERVER_ERROR,500)   
-  //   }
-  // }
+  async updatestudent (req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const { Id } = req.params;
+      const newRequest ={ ...req.body,password:await this.authenticationService.encryptPassword(req.body.password)}
+      const updateAdmin = await this.studentService.update(parseInt(Id, 10),newRequest);
+      return successResponse(res,updateAdmin,'student Atualizado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,MessagesResponse.SERVER_ERROR,500)   
+    }
+  }
   async deleteStudent (req: Request, res: Response, ): Promise<unknown> {
     try {
       const { id } = req.params;
