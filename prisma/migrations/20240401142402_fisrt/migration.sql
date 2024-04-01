@@ -4,9 +4,9 @@ CREATE TABLE "administrator" (
     "name" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "nif" TEXT NOT NULL,
-    "phone" TEXT,
+    "phone" TEXT NOT NULL,
     "password" TEXT NOT NULL,
-    "accessLevelId" INTEGER NOT NULL,
+    "accessLevelId" INTEGER,
     "isActive" BOOLEAN NOT NULL DEFAULT true,
     "avatarUrl" TEXT,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -55,7 +55,8 @@ CREATE TABLE "Student" (
     "password" TEXT NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
-    "dateOfBirth" TIMESTAMP(3),
+    "dateOfBirth" TEXT,
+    "avatarUrl" TEXT,
     "isActive" BOOLEAN NOT NULL DEFAULT true,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
@@ -81,6 +82,7 @@ CREATE TABLE "Instructor" (
     "nif" TEXT NOT NULL,
     "phone" TEXT,
     "bio" TEXT,
+    "password" TEXT NOT NULL,
     "isActive" BOOLEAN NOT NULL DEFAULT true,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
@@ -102,7 +104,7 @@ CREATE TABLE "Specialty" (
 CREATE TABLE "presence" (
     "id" SERIAL NOT NULL,
     "instructorId" INTEGER NOT NULL,
-    "date" TIMESTAMP(3) NOT NULL,
+    "date" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "present" BOOLEAN NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
@@ -111,17 +113,19 @@ CREATE TABLE "presence" (
 );
 
 -- CreateTable
-CREATE TABLE "Formation" (
+CREATE TABLE "formations" (
     "id" SERIAL NOT NULL,
     "title" TEXT NOT NULL,
     "description" TEXT,
-    "startDate" TIMESTAMP(3) NOT NULL,
-    "endDate" TIMESTAMP(3) NOT NULL,
+    "startDate" TEXT NOT NULL,
+    "endDate" TEXT NOT NULL,
+    "cover" TEXT,
+    "duration" TEXT,
     "isActive" BOOLEAN NOT NULL DEFAULT true,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
-    CONSTRAINT "Formation_pkey" PRIMARY KEY ("id")
+    CONSTRAINT "formations_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
@@ -132,7 +136,8 @@ CREATE TABLE "class" (
     "name" TEXT,
     "description" TEXT,
     "time" TEXT,
-    "duration" TEXT,
+    "class_detail" TEXT,
+    "student_quantity" INTEGER,
 
     CONSTRAINT "class_pkey" PRIMARY KEY ("id")
 );
@@ -200,37 +205,37 @@ CREATE UNIQUE INDEX "_teamMembers_AB_unique" ON "_teamMembers"("A", "B");
 CREATE INDEX "_teamMembers_B_index" ON "_teamMembers"("B");
 
 -- AddForeignKey
-ALTER TABLE "administrator" ADD CONSTRAINT "administrator_accessLevelId_fkey" FOREIGN KEY ("accessLevelId") REFERENCES "accessLevel"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "administrator" ADD CONSTRAINT "administrator_accessLevelId_fkey" FOREIGN KEY ("accessLevelId") REFERENCES "accessLevel"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "teamAdmin" ADD CONSTRAINT "teamAdmin_leaderId_fkey" FOREIGN KEY ("leaderId") REFERENCES "administrator"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "activityHistoryAdmin" ADD CONSTRAINT "activityHistoryAdmin_administratorId_fkey" FOREIGN KEY ("administratorId") REFERENCES "administrator"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "activityHistoryAdmin" ADD CONSTRAINT "activityHistoryAdmin_administratorId_fkey" FOREIGN KEY ("administratorId") REFERENCES "administrator"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "activityHistoryStudent" ADD CONSTRAINT "activityHistoryStudent_StudentId_fkey" FOREIGN KEY ("StudentId") REFERENCES "Student"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "activityHistoryStudent" ADD CONSTRAINT "activityHistoryStudent_StudentId_fkey" FOREIGN KEY ("StudentId") REFERENCES "Student"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Specialty" ADD CONSTRAINT "Specialty_instructorId_fkey" FOREIGN KEY ("instructorId") REFERENCES "Instructor"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Specialty" ADD CONSTRAINT "Specialty_instructorId_fkey" FOREIGN KEY ("instructorId") REFERENCES "Instructor"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "presence" ADD CONSTRAINT "presence_instructorId_fkey" FOREIGN KEY ("instructorId") REFERENCES "Instructor"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "presence" ADD CONSTRAINT "presence_instructorId_fkey" FOREIGN KEY ("instructorId") REFERENCES "Instructor"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "class" ADD CONSTRAINT "class_instructorId_fkey" FOREIGN KEY ("instructorId") REFERENCES "Instructor"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "class" ADD CONSTRAINT "class_formationId_fkey" FOREIGN KEY ("formationId") REFERENCES "Formation"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "class" ADD CONSTRAINT "class_formationId_fkey" FOREIGN KEY ("formationId") REFERENCES "formations"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Material" ADD CONSTRAINT "Material_classId_fkey" FOREIGN KEY ("classId") REFERENCES "class"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Enrollment" ADD CONSTRAINT "Enrollment_studentId_fkey" FOREIGN KEY ("studentId") REFERENCES "Student"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Enrollment" ADD CONSTRAINT "Enrollment_studentId_fkey" FOREIGN KEY ("studentId") REFERENCES "Student"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE "Enrollment" ADD CONSTRAINT "Enrollment_classId_fkey" FOREIGN KEY ("classId") REFERENCES "class"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Enrollment" ADD CONSTRAINT "Enrollment_classId_fkey" FOREIGN KEY ("classId") REFERENCES "class"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "_teamMembers" ADD CONSTRAINT "_teamMembers_A_fkey" FOREIGN KEY ("A") REFERENCES "administrator"("id") ON DELETE CASCADE ON UPDATE CASCADE;

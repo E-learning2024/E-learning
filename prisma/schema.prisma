@@ -50,7 +50,7 @@ model AccessLevel {
 
 model ActivityHistoryAdmin {
   id              Int           @id @default(autoincrement())
-  administrator   Administrator @relation(fields: [administratorId], references: [id])
+  administrator   Administrator @relation(fields: [administratorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   administratorId Int
   title           String?
   description     String?
@@ -80,7 +80,7 @@ model Student {
 
 model ActivityHistoryStudent {
   id          Int     @id @default(autoincrement())
-  Student     Student @relation(fields: [StudentId], references: [id])
+  Student     Student @relation(fields: [StudentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   StudentId   Int
   title       String?
   description String?
@@ -108,13 +108,13 @@ model Specialty {
   id           Int        @id @default(autoincrement())
   name         String
   description  String?
-  instructor   Instructor @relation(fields: [instructorId], references: [id])
+  instructor   Instructor @relation(fields: [instructorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   instructorId Int
 }
 
 model Presence {
   id           Int        @id @default(autoincrement())
-  instructor   Instructor @relation(fields: [instructorId], references: [id])
+  instructor   Instructor @relation(fields: [instructorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   instructorId Int
   date         DateTime   @default(now())
   present      Boolean
@@ -168,8 +168,8 @@ model Material {
 
 model Enrollment {
   id        Int     @id @default(autoincrement())
-  student   Student @relation(fields: [studentId], references: [id])
+  student   Student @relation(fields: [studentId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   studentId Int
-  class     Class   @relation(fields: [classId], references: [id])
+  class     Class   @relation(fields: [classId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   classId   Int
 }
