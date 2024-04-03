@@ -1,4 +1,5 @@
 import { CreateClassDTO } from "../dto/create-class.dto";
+import { UpdateClassDTO } from "../dto/update-class.dto";
 import { ClassRepository } from "../repository/class.repository";
 
  export class ClassService {
@@ -17,10 +18,10 @@ import { ClassRepository } from "../repository/class.repository";
     return await this.classRepository.findById(id);
   }
 
-  // async update(id: number, updateAdministratorDTO: UpdateAdministratorDTO) {
+  async update(id: number, data: UpdateClassDTO) {
 
-  //   return await this.classRepository.update(id, updateAdministratorDTO);
-  // }
+    return await this.classRepository.update(id, data);
+  }
 
   async delete(id: number) {
     return await this.classRepository.delete(id);

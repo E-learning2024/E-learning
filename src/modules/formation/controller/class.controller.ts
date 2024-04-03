@@ -34,6 +34,17 @@ export class ClassController {
       return errorResponse(res,'Server Error',500)  
     }
   }
+  async update(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {Id}= req.params
+  
+       const create = await this.classService.update(parseInt(Id),req.body);
+      return successResponse(res,create,'Atualizado  com sucesso',201);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
   async findAllClass(req: Request, res: Response, ): Promise<unknown> {
     try { 
       return successResponse(res,await this.classService.findAll(),'',200);
