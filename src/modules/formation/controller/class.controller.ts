@@ -53,12 +53,12 @@ export class ClassController {
   }
   async deleteClass(req: Request, res: Response, ): Promise<unknown> {
     try {
-      const { id } = req.params;
-      const cla = await this.classService.findByid(parseInt(id, 10));
+      const { Id } = req.params;
+      const cla = await this.classService.findByid(parseInt(Id, 10));
       if(!cla){
         return errorResponse(res,'class not found !',401)  
       }
-      return successResponse(res,await this.classService.delete(parseInt(id, 10)),'Class Deletado com sucesso',200);
+      return successResponse(res,await this.classService.delete(parseInt(Id, 10)),'Class Deletado com sucesso',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   
