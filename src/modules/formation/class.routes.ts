@@ -133,4 +133,71 @@ classRouter.get('/findOne-class/:Id', classController.findOneClass.bind(classCon
  *         description: Internal server error
  */
 classRouter.delete('/delete/:Id', classController.deleteClass.bind(classController))
+/**
+ * @swagger
+ * /class/edit/{id}:
+ *   put:
+ *     summary: Edit an existing class
+ *     tags: [Class]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the class to edit
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/EditClassDTO'
+ *     responses:
+ *       200:
+ *         description: Class edited successfully
+ *       400:
+ *         description: Bad request
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     EditClassDTO:
+ *       type: object
+ *       required:
+ *         - instructorId
+ *         - formationId
+ *         - name
+ *         - description
+ *         - time
+ *         - student_quantity
+ *       properties:
+ *         instructorId:
+ *           type: number
+ *           example: 1
+ *           description: ID of the instructor for the class
+ *         formationId:
+ *           type: number
+ *           example: 1
+ *           description: ID of the formation the class belongs to
+ *         name:
+ *           type: string
+ *           example: "Introduction to Web Development"
+ *           description: Name of the class
+ *         description:
+ *           type: string
+ *           example: "This class covers the basics of web development."
+ *           description: Description of the class
+ *         time:
+ *           type: string
+ *           example: "12:30:00"
+ *           description: Time of the class (ISO 8601 format)
+ *         student_quantity:
+ *           type: number
+ *           example: 0
+ *           description: Number of students in the class
+ */
+
+classRouter.put('/edit/:Id', classController.update.bind(classController))
 export default classRouter;
