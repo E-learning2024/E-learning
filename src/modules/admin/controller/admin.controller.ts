@@ -81,7 +81,14 @@ export class AdminController {
   async updateAdmin(req: Request, res: Response, ): Promise<unknown> {
     try {
       const { Id } = req.params;
-      const newRequest ={ ...req.body,password:await this.authenticationService.encryptPassword(req.body.password)}
+      const admin = await this.adminService.findByEmail(req.body.email)
+      if(!admin){
+        return errorResponse(res,'Admin not found !',401)  
+      }
+      const newRequest = {
+        ...req.body,
+        password: req.body.password != null ? await this.authenticationService.encryptPassword(req.body.password) : admin.password
+      };
       const updateAdmin = await this.adminService.update(parseInt(Id, 10),newRequest);
       return successResponse(res,updateAdmin,'Admin Atualizado com sucesso',200);
     } catch (error) {

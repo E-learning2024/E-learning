@@ -2,7 +2,7 @@ import { Router } from "express";
 import { ClassRepository } from "./repository/class.repository";
 import { ClassService } from "./service/class.service";
 import { ClassController } from "./controller/class.controller";
-import { createClassRules ,validate} from "./validation/class.validation copy";
+import { createClassRules ,updateClassRules,validate} from "./validation/class.validation";
 import { FormationRepository } from "./repository/formation.repository";
 import { FormationService } from "./service/formation.service";
 import { InstructorRepository } from "../instructor/repository/instructor.repository";
@@ -135,8 +135,8 @@ classRouter.get('/findOne-class/:Id', classController.findOneClass.bind(classCon
 classRouter.delete('/delete/:Id', classController.deleteClass.bind(classController))
 /**
  * @swagger
- * /class/edit/{id}:
- *   put:
+ * /class/editClass/{id}:
+ *   patch:
  *     summary: Edit an existing class
  *     tags: [Class]
  *     parameters:
@@ -168,10 +168,6 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
  *       required:
  *         - instructorId
  *         - formationId
- *         - name
- *         - description
- *         - time
- *         - student_quantity
  *       properties:
  *         instructorId:
  *           type: number
@@ -199,5 +195,5 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
  *           description: Number of students in the class
  */
 
-classRouter.put('/edit/:Id', classController.update.bind(classController))
+classRouter.patch('/editClass/:Id', updateClassRules(),validate,classController.update.bind(classController))
 export default classRouter;

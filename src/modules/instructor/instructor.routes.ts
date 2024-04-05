@@ -3,7 +3,7 @@ import  {InstructorController}  from './controller/instructor.controller';
 import { AuthenticationService } from "../../utils/authentication/authentication";
 import { InstructorRepository } from "./repository/instructor.repository";
 import { InstructorService } from "./service/instructor.service";
-import { createAttendanceRecordValidationRules, createInstructorValidationRules, signInstructorValidationRules, validate } from "./validation/instructor.validation";
+import { createAttendanceRecordValidationRules, createInstructorValidationRules, signInstructorValidationRules, updateInstructorValidationRules, validate } from "./validation/instructor.validation";
 import { AttendanceInstructorService } from "./service/instructor.attendance.record.service";
 import { AttendanceInstructorRepository } from "./repository/instructor.attendance.record.repository";
 import { SpecialtyInstructorRepository } from "./repository/instructor.speciality.repository";
@@ -167,7 +167,7 @@ instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind
 /**
 * @swagger
 * /instructor/updateInstr/{id}:
-*   put:
+*   patch:
 *     summary: Update an instructor
 *     tags: [Instructor]
 *     parameters:
@@ -226,7 +226,7 @@ instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind
  *           description: Whether the instructor is active
  *           example: true
  */
-instructorRouter.put('/updateInstr/:Id' ,instructorController.updateInstr.bind(instructorController))
+instructorRouter.patch('/updateInstr/:Id' ,updateInstructorValidationRules(), validate,instructorController.updateInstr.bind(instructorController))
 /**
  * @swagger
  * /instructor/createAttendanceRecord:
@@ -269,4 +269,106 @@ instructorRouter.put('/updateInstr/:Id' ,instructorController.updateInstr.bind(i
  */
 
 instructorRouter.post('/createAttendanceRecord',createAttendanceRecordValidationRules(),validate ,instructorController.createAttendanceRecord.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/findAllAttendance:
+ *   get:
+ *     summary: listar todas as listas de presença
+ *     tags: [Attendance]
+ *     security:
+ *       - BearerAuth: []  # Esquema de autenticação JWT
+ *     responses:
+ *       200:
+ *         description: Lista localizadas
+ *       400:
+ *         description: Requisição inválida
+ */
+instructorRouter.get('/findAllAttendance' ,instructorController.findAllAttendance.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/findByIdInstructorAttendance/{id}:
+ *   get:
+ *     summary: Get a single InstructorAttendance by ID
+ *     tags: [Attendance]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Instructor to retrieve
+ *     responses:
+ *       200:
+ *         description: InstructorAttendance retrieved successfully
+ *       404:
+ *         description: InstructorAttendance not found
+ */
+instructorRouter.get('/findByIdInstructorAttendance/:Id' ,instructorController.findByIdInstructorAttendance.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/deleteAttendance/{id}:
+ *   delete:
+ *     summary: Delete an Attendance
+ *     tags: [Attendance]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Attendance to delete
+ *     responses:
+ *       200:
+ *         description: Attendance deleted successfully
+ *       404:
+ *         description: Attendance not found
+ *       500:
+ *         description: Internal server error
+ */
+
+instructorRouter.delete('/deleteAttendance/:Id' ,instructorController.deleteAttendance.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/editAttendanceRecord/{id}:
+ *   patch:
+ *     summary: Edit an instructor attendance record
+ *     tags: [Attendance]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID of the attendance record to edit
+ *         schema:
+ *           type: number
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/EditAttendanceInstructorDTO'
+ *     responses:
+ *       200:
+ *         description: Instructor attendance record edited successfully
+ *       400:
+ *         description: Bad request
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     EditAttendanceInstructorDTO:
+ *       type: object
+ *       properties:
+ *         present:
+ *           type: boolean
+ *           description: Whether the instructor is present
+ *           example: true
+ *       required:
+ *      
+ *         - present
+ */
+
+
+instructorRouter.put('/editAttendanceRecord/:Id' ,instructorController.updateAttendanceRecord.bind(instructorController))
 export default instructorRouter;

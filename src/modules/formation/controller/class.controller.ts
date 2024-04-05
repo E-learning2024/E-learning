@@ -28,7 +28,7 @@ export class ClassController {
         return errorResponse(res,'Instructor not found !',401)  
       }
        const create = await this.classService.create(req.body);
-      return successResponse(res,create,'Formação cadastrado com sucesso',201);
+      return successResponse(res,create,'Turma cadastrado com sucesso',201);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)  
@@ -37,7 +37,21 @@ export class ClassController {
   async update(req: Request, res: Response, ): Promise<unknown> {
     try { 
       const {Id}= req.params
-  
+      const { instructorId, formationId } = req.body;
+ 
+      if (formationId) {
+        const  formation = await this.formationService.findByid(parseInt(formationId));
+        if (!formation) {
+          return errorResponse(res, `Formação não encontrada`, 404);
+        }
+      }
+      
+      if (instructorId) {
+      const   instructor = await this.instructorService.findById(parseInt(instructorId));
+        if (!instructor) {
+          return errorResponse(res, 'Instrutor não encontrado', 404);
+        }
+      }
        const create = await this.classService.update(parseInt(Id),req.body);
       return successResponse(res,create,'Atualizado  com sucesso',201);
     } catch (error) {

@@ -60,6 +60,7 @@ export const updateAdminValidationRules = () => {
       .isEmail()
       .withMessage('O email deve ser válido'),
     body('password')
+    .optional()
      .isLength({ min: 6 })
       .isString()
       .withMessage('Adicione um senha valido e Forte'),
@@ -73,8 +74,8 @@ export const updateAdminValidationRules = () => {
       .optional()
       .isBoolean()
       .withMessage('isActive deve ser um valor booleano'),
-
       body('phone')
+      .optional()
       .notEmpty()
       .withMessage('O contacto não pode estar vazio')
       .custom((value) => {
