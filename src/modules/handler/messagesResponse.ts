@@ -7,5 +7,7 @@ export enum MessagesResponse {
     DATA_ENTERED='Exito na inserção dos dados !',
     DATA_FOUND_SUCESS='Dado encontrado!',
     DATA_NOT_FOUND_SUCESS='Dados Não encontrado!',
+    STUDENT_EARLY_ENROLLMENT='Estudante ja se encontra incrito neste curso',
+    FULL_CLASS='Esta turma ja esta cheia !',
   }
   

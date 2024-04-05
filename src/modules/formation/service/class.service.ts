@@ -22,6 +22,11 @@ import { ClassRepository } from "../repository/class.repository";
 
     return await this.classRepository.update(id, data);
   }
+  async updateQuantity(Id: number, student_quantity: number) {
+
+    return await this.classRepository.updateQuantity(Id, student_quantity);
+  }
+
 
   async delete(id: number) {
     return await this.classRepository.delete(id);

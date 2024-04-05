@@ -171,4 +171,10 @@ model Enrollment {
   studentId Int
   class     Class   @relation(fields: [classId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   classId   Int
+  status    Status @default(PENDENTE)
+}
+
+enum Status {
+  PENDENTE
+  CONFIRMADO
 }

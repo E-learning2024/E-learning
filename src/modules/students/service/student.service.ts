@@ -1,10 +1,16 @@
+import { CreateEnrollmentDTO } from "../dto/create-enrollment.dto";
 import { CreateStudentDTO } from "../dto/create-students.dto";
+import { EnrollmentRepository } from "../repository/enrollment.repository";
 import { StudentRepository } from "../repository/students.repository";
 
 
 export class StudentService {
-  constructor(private readonly studentRepository: StudentRepository) {
+  constructor(private readonly studentRepository: StudentRepository,
+    private readonly enrollmentRepository:EnrollmentRepository
+  ) 
+  {
     console.log('StudentRepository constructor - studentRepository:', this.studentRepository);
+    console.log('EnrollmentRepository constructor - enrollmentRepository:', this.enrollmentRepository);
   }
   async create(createStudentDTO: CreateStudentDTO) {
     return await this.studentRepository.create(createStudentDTO)
@@ -28,8 +34,15 @@ export class StudentService {
 
     return await this.studentRepository.update(id, updateAdministratorDTO);
   }
-
   async delete(id: number) {
     return await this.studentRepository.delete(id);
   }
+  async createnrollment(createEnrollmentDTO: CreateEnrollmentDTO) {
+    return await this.enrollmentRepository.create(createEnrollmentDTO)
+  }
+  async findStudentByIdandClass(studentId:number,classId:number) {
+    return await this.enrollmentRepository.findStudentByIdandClass(studentId,classId);
+  }
+
+
 }
