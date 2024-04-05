@@ -257,11 +257,15 @@ instructorRouter.patch('/updateInstr/:Id' ,updateInstructorValidationRules(), va
  *           type: number
  *           description: ID of the instructor
  *           example: 1
- *   
  *         present:
  *           type: boolean
  *           description: Whether the instructor is present
  *           example: true
+ *         date:
+ *           type: string
+ *           format: date
+ *           description: Date of the attendance
+ *           example: "2024-04-05"
  *       required:
  *         - instructorId
  *         - date
@@ -288,7 +292,7 @@ instructorRouter.get('/findAllAttendance' ,instructorController.findAllAttendanc
  * @swagger
  * /instructor/findByIdInstructorAttendance/{id}:
  *   get:
- *     summary: Get a single InstructorAttendance by ID
+ *     summary: Listar a presença de um unico instructor
  *     tags: [Attendance]
  *     parameters:
  *       - in: path
