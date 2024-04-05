@@ -6,7 +6,7 @@ import { errorResponse } from '../../handler/responseHandler';
 export const createClassRules = () => {
   return [
     body('instructorId')
-      .optional(), 
+    .notEmpty(),
        body('formationId')
       .notEmpty()
       .withMessage('A description não pode estar vazio'),
@@ -18,6 +18,31 @@ export const createClassRules = () => {
     .notEmpty()
       .withMessage('A endDate não pode estar vazio'),
     body('time')
+      .notEmpty()
+      .withMessage('informe a Hora !'),
+
+
+  ];
+};
+export const updateClassRules = () => {
+  return [
+    body('instructorId')
+      .optional(), 
+       body('formationId')
+       .optional()
+      .notEmpty()
+      .withMessage(' formador não pode estar vazio'),
+    body('name')
+    .optional()
+      .isString()
+      .withMessage('A startDate não pode estar vazio'),
+    body('description')
+    .optional()
+    .isString()
+    .notEmpty()
+      .withMessage('A endDate não pode estar vazio'),
+    body('time')
+    .optional()
       .notEmpty()
       .withMessage('informe a Hora !'),
 

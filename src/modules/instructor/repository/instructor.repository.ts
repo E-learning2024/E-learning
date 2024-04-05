@@ -32,7 +32,7 @@ export class InstructorRepository {
               nif: true,
               phone: true,
               bio: true,
-              password: false,
+              password: true,
               isActive: true,
               createdAt: true,
               updatedAt: true,
@@ -49,7 +49,22 @@ export class InstructorRepository {
         return await prisma.instructor.findFirst({ where: { phone: phone } })
     }
     async update(Id: number, data: UpdateInstructorDTO) {
-        return await prisma.instructor.update({ where: { id: Id }, data })
+        return await prisma.instructor.update({ where: { id: Id }, data ,select: {
+            id: true,
+            name: true,
+            email: true,
+            nif: true,
+            phone: true,
+            bio: true,
+            password: false,
+            isActive: true,
+            createdAt: true,
+            updatedAt: true,
+            specialty: true,
+            class: true,
+            presence: true,
+            _count: true
+            }})
     }
     async delete(Id: number) {
         return await prisma.instructor.delete({ where: { id: Id } })

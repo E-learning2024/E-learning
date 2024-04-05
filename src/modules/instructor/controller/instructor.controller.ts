@@ -82,7 +82,15 @@ export class InstructorController {
   async updateInstr (req: Request, res: Response, ): Promise<unknown> {
     try {
       const { Id } = req.params;
-      const newRequest ={ ...req.body,password:await this.authenticationService.encryptPassword(req.body.password)}
+      const instructor = await this.instructorService.findById(parseInt(Id, 10));
+      if(!instructor){
+        return errorResponse(res,'instructor not found !',401)  
+      }
+      const newRequest = {
+        ...req.body,
+        password: req.body.password != null ? await this.authenticationService.encryptPassword(req.body.password) : instructor.password
+      };
+      
       const updateInstr = await this.instructorService.update(parseInt(Id, 10),newRequest);
       return successResponse(res,updateInstr,'Instruct Atualizado com sucesso',200);
     } catch (error) {
@@ -92,12 +100,12 @@ export class InstructorController {
   }
   async deleteInstructor(req: Request, res: Response, ): Promise<unknown> {
     try {
-      const { id } = req.params;
-      const instructor = await this.instructorService.findById(parseInt(id, 10));
+      const { Id } = req.params;
+      const instructor = await this.instructorService.findById(parseInt(Id, 10));
       if(!instructor){
         return errorResponse(res,'instructor not found !',401)  
       }
-      return successResponse(res,await this.instructorService.delete(parseInt(id, 10)),'Instructor Deletado com sucesso',200);
+      return successResponse(res,await this.instructorService.delete(parseInt(Id, 10)),'Instructor Deletado com sucesso',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   
@@ -111,5 +119,50 @@ export class InstructorController {
       return errorResponse(res,'Server Error',500)   
     }
   }
+  async updateAttendanceRecord(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const {Id}= req.params
+      
+      return successResponse(res,await this.attendanceInstructorService.updateAttendance(req.body,parseInt(Id)),'Presença Marcado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async findAllAttendance(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      return successResponse(res,await this.attendanceInstructorService.findAllAttendance(),'Listas de Marcação de presença',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async findByIdInstructorAttendance(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const {Id}= req.params
+      const attendance= await this.attendanceInstructorService.findByIdInstructor(parseInt(Id))
+      if(!attendance){
+        return errorResponse(res,'Attendance Instructor not found !',401)  
+      }
+      return successResponse(res,attendance,'Lista de Marcação de presença',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async deleteAttendance(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const {Id}= req.params
+      const attendance= await this.attendanceInstructorService.findByIdInstructor(parseInt(Id))
+      if(!attendance){
+        return errorResponse(res,'Attendance Instructor not found !',401)  
+      }
+      return successResponse(res,await this.attendanceInstructorService.deleteAttendance(parseInt(Id)),'Presença Deletada !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+
   
 }
