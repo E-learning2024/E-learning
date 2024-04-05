@@ -10,7 +10,17 @@ export class EnrollmentRepository {
         return await prisma.enrollment.findMany({ })
     }
     async findStudentByIdandClass(studentId:number,classId:number) {
-        return await prisma.enrollment.findFirst({where: {studentId: studentId, classId: classId}})
+        return await prisma.enrollment.findFirst({where: {studentId: studentId, classId: classId},select:{}})
+    }
+    async findStudentByIdForEnrollma(studentId:number) {
+        return await prisma.enrollment.findFirst({where: {studentId: studentId},  select: {
+               id: true,
+               studentId: true,
+               classId: true,
+               status: true,
+               student: true,
+               class: true
+              }})
     }
     async findById(studentId: number) {
         return await prisma.enrollment.findMany({ where:{studentId:studentId}})

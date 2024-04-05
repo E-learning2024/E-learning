@@ -136,5 +136,18 @@ export class StudentController {
       return errorResponse(res,MessagesResponse.SERVER_ERROR,500)  
     }
   }
+  async findStudentByIdForEnrollma(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {Id}=req.params
+      const student = await this.studentService.findByid(parseInt(Id))
+      if(!student){
+        return errorResponse(res,MessagesResponse.DATA_NOT_FOUND_SUCESS,401)  
+      }
+      return successResponse(res,await this.studentService.findStudentByIdForEnrollma(parseInt(Id)),MessagesResponse.DATA_FOUND_SUCESS,200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,MessagesResponse.SERVER_ERROR,500)  
+    }
+  }
   
 }

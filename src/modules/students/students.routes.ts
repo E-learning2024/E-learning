@@ -317,4 +317,24 @@ studentRouter.delete('/delete/:id' ,studentController.deleteStudent.bind(student
  *           description: Status of the enrollment
  */
 studentRouter.post('/enrollment/create', studentController.createnrollment.bind(studentController))
+/**
+ * @swagger
+ * /student/enrollment/list/{studentId}:
+ *   get:
+ *     summary: List all enrollments by student ID
+ *     tags: [Student-Enrollment]
+ *     parameters:
+ *       - in: path
+ *         name: studentId
+ *         schema:
+ *           type: number
+ *         required: true
+ *         description: ID of the student
+ *     responses:
+ *       200:
+ *         description: List of enrollments by student ID
+ *       404:
+ *         description: Student not found
+ */
+studentRouter.get('/enrollment/list/:Id', studentController.findStudentByIdForEnrollma.bind(studentController))
 export default studentRouter;

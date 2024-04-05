@@ -43,6 +43,9 @@ export class StudentService {
   async findStudentByIdandClass(studentId:number,classId:number) {
     return await this.enrollmentRepository.findStudentByIdandClass(studentId,classId);
   }
+  async findStudentByIdForEnrollma(studentId:number) {
+    return await this.enrollmentRepository.findStudentByIdForEnrollma(studentId);
+  }
 
 
 }
