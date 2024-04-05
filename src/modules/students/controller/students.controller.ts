@@ -3,14 +3,17 @@ import { errorResponse, successResponse } from '../../handler/responseHandler';
 import { AuthenticationService } from '../../../utils/authentication/authentication';
 import { StudentService } from '../service/student.service';
 import { MessagesResponse } from '../../handler/messagesResponse';
+import { ClassService } from '../../formation/service/class.service';
 
 export class StudentController { 
   constructor(
     private readonly studentService: StudentService,
-    private readonly authenticationService: AuthenticationService
+    private readonly authenticationService: AuthenticationService,
+    private readonly classService: ClassService
   ) {
     console.log('StudentController constructor - studentService:', this.studentService);
     console.log('StudentController constructor - authenticationService:', this.authenticationService);
+    console.log('StudentController constructor - authenticationService:', this.classService);
   }
 
 
@@ -97,6 +100,53 @@ export class StudentController {
     } catch (error) {
       console.log(error);
       return errorResponse(res,MessagesResponse.SERVER_ERROR,500)   
+    }
+  }
+  async createnrollment(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {studentId,classId}=req.body;
+
+    const student = await this.studentService.findByid(parseInt(studentId))
+    if(!student){
+      return errorResponse(res,MessagesResponse.DATA_NOT_FOUND_SUCESS,401)  
+    }
+    const classverify = await this.classService.findByid(parseInt(classId))
+      if(!classverify){
+      return errorResponse(res,MessagesResponse.DATA_NOT_FOUND_SUCESS,401)  
+    }
+   
+  if (classverify && classverify.student_quantity && classverify.student_quantity > 45) {
+   // Pesquisar outra class para esta formação e inserir este estudante 
+   // Ou posso escoclehr outra turma , porque esta ja esta cheia
+    return errorResponse(res,MessagesResponse.FULL_CLASS,401)  
+ }
+    const verify = await this.studentService.findStudentByIdandClass(parseInt(studentId),parseInt(classId))
+    if(verify){
+      return errorResponse(res,MessagesResponse.STUDENT_EARLY_ENROLLMENT,401)  
+    }
+  
+       const enrollment = await this.studentService.createnrollment(req.body);
+       if(enrollment){
+        const student_quantity = classverify && classverify.student_quantity ? classverify.student_quantity + 1 : 1;
+        await this.classService.updateQuantity(parseInt(classId), student_quantity);
+       }
+      return successResponse(res,enrollment,MessagesResponse.DATA_ENTERED,201);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,MessagesResponse.SERVER_ERROR,500)  
+    }
+  }
+  async findStudentByIdForEnrollma(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {Id}=req.params
+      const student = await this.studentService.findByid(parseInt(Id))
+      if(!student){
+        return errorResponse(res,MessagesResponse.DATA_NOT_FOUND_SUCESS,401)  
+      }
+      return successResponse(res,await this.studentService.findStudentByIdForEnrollma(parseInt(Id)),MessagesResponse.DATA_FOUND_SUCESS,200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,MessagesResponse.SERVER_ERROR,500)  
     }
   }
   

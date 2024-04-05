@@ -41,6 +41,9 @@ export class ClassRepository {
     async update(Id: number, data: UpdateClassDTO) {
         return await prisma.class.update({ where: { id: Id }, data })
     }
+    async updateQuantity(Id: number, student_quantity: number) {
+        return await prisma.class.update({ where: { id: Id }, data: { student_quantity: student_quantity}})
+    }
     async delete(Id: number) {
         return await prisma.class.delete({ where: { id: Id } })
     }

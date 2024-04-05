@@ -4,11 +4,17 @@ import { StudentRepository } from "./repository/students.repository";
 import { StudentService } from "./service/student.service";
 import { StudentController } from "./controller/students.controller";
 import { signStudentValidationRules, validate } from "./validation/student.validation";
+import { EnrollmentRepository } from "./repository/enrollment.repository";
+import { ClassService } from "../formation/service/class.service";
+import { ClassRepository } from "../formation/repository/class.repository";
 
 const studentRepository = new StudentRepository()
-const studentService = new StudentService(studentRepository); 
+const enrollmentRepository = new EnrollmentRepository()
+const studentService = new StudentService(studentRepository,enrollmentRepository); 
 const authenticationService = new AuthenticationService(); 
-const studentController = new StudentController(studentService,authenticationService); 
+const classRepository = new ClassRepository()
+const classService = new ClassService(classRepository); 
+const studentController = new StudentController(studentService,authenticationService,classService); 
 
 
 const studentRouter = Router()
@@ -262,4 +268,73 @@ studentRouter.post('/sign',signStudentValidationRules(),validate, studentControl
  */
 
 studentRouter.delete('/delete/:id' ,studentController.deleteStudent.bind(studentController))
+
+
+/**
+ * @swagger
+ * /student/enrollment/create:
+ *   post:
+ *     summary: Create a new enrollment
+ *     tags: [Student-Enrollment]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/CreateEnrollmentDTO'
+ *     responses:
+ *       201:
+ *         description: Enrollment created successfully
+ *       400:
+ *         description: Bad request
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CreateEnrollmentDTO:
+ *       type: object
+ *       required:
+ *         - studentId
+ *         - classId
+ *         - status
+ *       properties:
+ *         studentId:
+ *           type: number
+ *           example: 1
+ *           description: ID of the student
+ *         classId:
+ *           type: number
+ *           example: 1
+ *           description: ID of the class
+ *         status:
+ *           type: string
+ *           enum:
+ *             - PENDENTE
+ *             - CONFIRMADO
+ *           example: "PENDENTE"
+ *           description: Status of the enrollment
+ */
+studentRouter.post('/enrollment/create', studentController.createnrollment.bind(studentController))
+/**
+ * @swagger
+ * /student/enrollment/list/{studentId}:
+ *   get:
+ *     summary: List all enrollments by student ID
+ *     tags: [Student-Enrollment]
+ *     parameters:
+ *       - in: path
+ *         name: studentId
+ *         schema:
+ *           type: number
+ *         required: true
+ *         description: ID of the student
+ *     responses:
+ *       200:
+ *         description: List of enrollments by student ID
+ *       404:
+ *         description: Student not found
+ */
+studentRouter.get('/enrollment/list/:Id', studentController.findStudentByIdForEnrollma.bind(studentController))
 export default studentRouter;
