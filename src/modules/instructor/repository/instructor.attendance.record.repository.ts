@@ -12,7 +12,7 @@ export class AttendanceInstructorRepository {
         return await prisma.presence.findMany({})
     }
     async findByIdInstructor(Id: number) {
-        return await prisma.presence.findFirst({ where: { instructorId: Id } })
+        return await prisma.presence.findMany({ where: { instructorId: Id } })
     }
     async deleteAttendance(Id: number) {
         return await prisma.presence.delete({ where: { id: Id } })

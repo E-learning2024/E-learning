@@ -140,11 +140,12 @@ export class InstructorController {
   async findByIdInstructorAttendance(req: Request, res: Response, ): Promise<unknown> {
     try {
       const {Id}= req.params
-      const attendance= await this.attendanceInstructorService.findByIdInstructor(parseInt(Id))
-      if(!attendance){
-        return errorResponse(res,'Attendance Instructor not found !',401)  
+      const instructor = await this.instructorService.findById(parseInt(Id, 10));
+      if(!instructor){
+        return errorResponse(res,'instructor not found !',401)  
       }
-      return successResponse(res,attendance,'Lista de Marcação de presença',200);
+     
+      return successResponse(res,await this.attendanceInstructorService.findByIdInstructor(parseInt(Id)),'Lista de Marcação de presença',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   
