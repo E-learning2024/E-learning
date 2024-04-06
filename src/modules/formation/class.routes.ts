@@ -9,6 +9,9 @@ import { InstructorRepository } from "../instructor/repository/instructor.reposi
 import { InstructorService } from "../instructor/service/instructor.service";
 import { Materialervice } from "./service/material.service";
 import { MaterialRepository } from "./repository/material.repository";
+import multer from 'multer';
+import configureMulter from "../../utils/middlewares/fileUpload";
+const upload = multer(configureMulter());
 
 const classRepository = new ClassRepository()
 const classService = new ClassService(classRepository); 
