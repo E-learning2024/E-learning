@@ -17,7 +17,7 @@ const adminRouter = Router()
  * /admin/createAdmin:
  *   post:
  *     summary: Create a new admin
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     requestBody:
  *       required: true
  *       content:
@@ -62,7 +62,7 @@ adminRouter.post('/createAdmin',createAdminValidationRules(),validate, adminCont
  * /admin/findAlladmin:
  *   get:
  *     summary: listar todos os administradores
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
@@ -77,7 +77,7 @@ adminRouter.get('/findAlladmin', adminController.findAlladmin.bind(adminControll
  * /admin/findOneadmin/{id}:
  *   get:
  *     summary: Get a single admin by ID
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     parameters:
  *       - in: path
  *         name: id
@@ -97,7 +97,7 @@ adminRouter.get('/findOneadmin/:Id', adminController.findOneadmin.bind(adminCont
  * /admin/sign:
  *   post:
  *     summary: Realizar login de administrador
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     requestBody:
  *       required: true
  *       content:
@@ -122,7 +122,7 @@ adminRouter.post('/sign', adminController.sign.bind(adminController))
  * /admin/delete/{id}:
  *   delete:
  *     summary: Delete an Admin
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     parameters:
  *       - in: path
  *         name: id
@@ -144,7 +144,7 @@ adminRouter.delete('/delete/:Id' ,adminController.deleteAdmin.bind(adminControll
  * /admin/updateAdmin/{id}:
  *   patch:
  *     summary: Update an admin
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     parameters:
  *       - in: path
  *         name: id
@@ -212,7 +212,7 @@ adminRouter.patch('/updateAdmin/:Id',updateAdminValidationRules(),validate ,admi
  * /admin/createTeam:
  *   post:
  *     summary: Create a new team
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     requestBody:
  *       required: true
  *       content:
@@ -265,7 +265,7 @@ adminRouter.post('/createTeam',createTeamAdminValidationRules(),validate ,adminC
  * /admin/findAll-team:
  *   get:
  *     summary: Get all team by ID
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     responses:
  *       200:
  *         description: team retrieved successfully
@@ -278,7 +278,7 @@ adminRouter.get('/findAll-team', adminController.findAllTeam.bind(adminControlle
  * /admin/findOneTeam/{id}:
  *   get:
  *     summary: Get a single team by ID
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     parameters:
  *       - in: path
  *         name: id
@@ -298,7 +298,7 @@ adminRouter.get('/findOneTeam/:Id', adminController.findOneTeam.bind(adminContro
  * /admin/deleteTeam/{id}:
  *   delete:
  *     summary: Delete an Team
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     parameters:
  *       - in: path
  *         name: id
@@ -320,7 +320,7 @@ adminRouter.delete('/deleteTeam/:Id' ,adminController.deleteTeam.bind(adminContr
  * /admin/editTeam/{teamId}:
  *   put:
  *     summary: Edit a team
- *     tags: [Admin]
+ *     tags: [ADMIN]
  *     parameters:
  *       - name: teamId
  *         in: path

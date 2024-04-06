@@ -7,6 +7,8 @@ import { FormationRepository } from "./repository/formation.repository";
 import { FormationService } from "./service/formation.service";
 import { InstructorRepository } from "../instructor/repository/instructor.repository";
 import { InstructorService } from "../instructor/service/instructor.service";
+import { Materialervice } from "./service/material.service";
+import { MaterialRepository } from "./repository/material.repository";
 
 const classRepository = new ClassRepository()
 const classService = new ClassService(classRepository); 
@@ -14,7 +16,9 @@ const formationRepository = new FormationRepository()
 const formationService = new FormationService(formationRepository); 
 const instructorRepository = new InstructorRepository()
 const instructorService = new InstructorService(instructorRepository); 
-const classController = new ClassController(classService,formationService,instructorService); 
+const materialRepository = new MaterialRepository()
+const materialervice = new Materialervice(materialRepository)
+const classController = new ClassController(classService,formationService,instructorService,materialervice); 
 
 
 const classRouter = Router()
@@ -23,7 +27,7 @@ const classRouter = Router()
  * /class/create:
  *   post:
  *     summary: Create a new class
- *     tags: [Class]
+ *     tags: [CLASS]
  *     requestBody:
  *       required: true
  *       content:
@@ -81,7 +85,7 @@ classRouter.post('/create',createClassRules(),validate, classController.create.b
  * /class/findAll-class:
  *   get:
  *     summary: listar todas class
- *     tags: [Class]
+ *     tags: [CLASS]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
@@ -96,7 +100,7 @@ classRouter.get('/findAll-class', classController.findAllClass.bind(classControl
  * /class/findOne-class/{id}:
  *   get:
  *     summary: Get a single class by ID
- *     tags: [Class]
+ *     tags: [CLASS]
  *     parameters:
  *       - in: path
  *         name: id
@@ -116,7 +120,7 @@ classRouter.get('/findOne-class/:Id', classController.findOneClass.bind(classCon
  * /class/delete/{id}:
  *   delete:
  *     summary: Delete an formation
- *     tags: [Class]
+ *     tags: [CLASS]
  *     parameters:
  *       - in: path
  *         name: id
@@ -138,7 +142,7 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
  * /class/editClass/{id}:
  *   patch:
  *     summary: Edit an existing class
- *     tags: [Class]
+ *     tags: [CLASS]
  *     parameters:
  *       - in: path
  *         name: id
@@ -196,4 +200,95 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
  */
 
 classRouter.patch('/editClass/:Id', updateClassRules(),validate,classController.update.bind(classController))
+/**
+ * @swagger
+ * /class/material/create:
+ *   post:
+ *     summary: Create a new material
+ *     tags: [CLASS-MATERIAL]
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/CreateMaterialDTO'
+ *     responses:
+ *       201:
+ *         description: Material created successfully
+ *       400:
+ *         description: Bad request
+ */
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     CreateMaterialDTO:
+ *       type: object
+ *       required:
+ *         - title
+ *         - description
+ *         - fileUrl
+ *         - classId
+ *       properties:
+ *         title:
+ *           type: string
+ *           example: "Material Title"
+ *           description: Title of the material
+ *         description:
+ *           type: string
+ *           example: "This material covers important concepts."
+ *           description: Description of the material
+ *         fileUrl:
+ *           type: string
+ *           example: "https://example.com/material.pdf"
+ *           description: URL of the material file
+ *         classId:
+ *           type: number
+ *           example: 1
+ *           description: ID of the class the material belongs to
+ */
+
+classRouter.post('/material/create', validate,classController.createMaterial.bind(classController))
+
+/**
+ * @swagger
+ * /class/material/findByIdClass/{classId}:
+ *   get:
+ *     summary: Get a single class by ID
+ *     tags: [CLASS-MATERIAL]
+ *     parameters:
+ *       - in: path
+ *         name: classId
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the class to retrieve
+ *     responses:
+ *       200:
+ *         description: class retrieved successfully
+ *       404:
+ *         description: class not found
+ */
+classRouter.get('/material/findByIdClass/:classId', classController.findByIdClass.bind(classController))
+
+/**
+ * @swagger
+ * /class/material/findById/{Id}:
+ *   get:
+ *     summary: Get a single class by ID
+ *     tags: [CLASS-MATERIAL]
+ *     parameters:
+ *       - in: path
+ *         name: Id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the class to retrieve
+ *     responses:
+ *       200:
+ *         description: class retrieved successfully
+ *       404:
+ *         description: class not found
+ */
+classRouter.get('/material/findById/:Id', classController.findByIdMaterial.bind(classController))
 export default classRouter;

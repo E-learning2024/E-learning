@@ -15,7 +15,7 @@ const formationRouter = Router()
  * /formation/create:
  *   post:
  *     summary: Create a new formation
- *     tags: [Formation]
+ *     tags: [FORMATION]
  *     requestBody:
  *       required: true
  *       content:
@@ -67,7 +67,7 @@ formationRouter.post('/create',createFormationRules(),validate, formationControl
  * /formation/edit/{id}:
  *   put:
  *     summary: Edit a formation
- *     tags: [Formation]
+ *     tags: [FORMATION]
  *     parameters:
  *       - name: id
  *         in: path
@@ -128,7 +128,7 @@ formationRouter.put('/edit/:Id',updateFormationRules(),validate, formationContro
  * /formation/findAll-formation:
  *   get:
  *     summary: listar todas as formação
- *     tags: [Formation]
+ *     tags: [FORMATION]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
@@ -143,7 +143,7 @@ formationRouter.get('/findAll-formation', formationController.findAllFormation.b
  * /formation/findOne-formation/{id}:
  *   get:
  *     summary: Get a single formation by ID
- *     tags: [Formation]
+ *     tags: [FORMATION]
  *     parameters:
  *       - in: path
  *         name: id
@@ -163,7 +163,7 @@ formationRouter.get('/findOne-formation/:Id', formationController.findOneFormati
  * /formation/delete/{id}:
  *   delete:
  *     summary: Delete an formation
- *     tags: [Formation]
+ *     tags: [FORMATION]
  *     parameters:
  *       - in: path
  *         name: id
