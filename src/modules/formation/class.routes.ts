@@ -11,6 +11,7 @@ import { Materialervice } from "./service/material.service";
 import { MaterialRepository } from "./repository/material.repository";
 import multer from 'multer';
 import configureMulter from "../../utils/middlewares/fileUpload";
+import { createMaterialRules } from "./validation/material.validation";
 const upload = multer(configureMulter());
 
 const classRepository = new ClassRepository()
@@ -251,7 +252,7 @@ classRouter.patch('/editClass/:Id', updateClassRules(),validate,classController.
  *           description: ID of the class the material belongs to
  */
 
-classRouter.post('/material/create', validate,classController.createMaterial.bind(classController))
+classRouter.post('/material/create',upload.single('file'),createMaterialRules(),validate,classController.createMaterial.bind(classController))
 
 /**
  * @swagger
