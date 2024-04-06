@@ -25,7 +25,7 @@ const instructorRouter = Router()
 * /instructor/createInstructor:
 *   post:
 *     summary: Create a new instructor
-*     tags: [INATRUCTOR]
+*     tags: [INSTRUCTOR]
 *     requestBody:
 *       required: true
 *       content:
@@ -86,7 +86,7 @@ instructorRouter.post('/createInstructor',createInstructorValidationRules(),vali
  * /instructor/findAllinstructor:
  *   get:
  *     summary: listar todos os Instrutores
- *     tags: [INATRUCTOR]
+ *     tags: [INSTRUCTOR]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
@@ -101,7 +101,7 @@ instructorRouter.get('/findAllinstructor' ,instructorController.findAllinstructo
  * /instructor/sign:
  *   post:
  *     summary: Realizar login de instructor
- *     tags: [INATRUCTOR]
+ *     tags: [INSTRUCTOR]
  *     requestBody:
  *       required: true
  *       content:
@@ -126,7 +126,7 @@ instructorRouter.post('/sign' ,signInstructorValidationRules(),validate,instruct
  * /instructor/delete/{id}:
  *   delete:
  *     summary: Delete an instructor
- *     tags: [INATRUCTOR]
+ *     tags: [INSTRUCTOR]
  *     parameters:
  *       - in: path
  *         name: id
@@ -149,7 +149,7 @@ instructorRouter.delete('/delete/:id' ,instructorController.deleteInstructor.bin
  * /instructor/findOneInstr/{id}:
  *   get:
  *     summary: Get a single Instructor by ID
- *     tags: [INATRUCTOR]
+ *     tags: [INSTRUCTOR]
  *     parameters:
  *       - in: path
  *         name: id
@@ -169,7 +169,7 @@ instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind
 * /instructor/updateInstr/{id}:
 *   patch:
 *     summary: Update an instructor
-*     tags: [INATRUCTOR]
+*     tags: [INSTRUCTOR]
 *     parameters:
 *       - in: path
 *         name: id
