@@ -23,7 +23,7 @@ const studentRouter = Router()
  * /student/create:
  *   post:
  *     summary: Create a new student
- *     tags: [Student]
+ *     tags: [STUDENT]
  *     requestBody:
  *       required: true
  *       content:
@@ -102,7 +102,7 @@ studentRouter.post('/create', studentController.createStudent.bind(studentContro
  * /student/edit/{studentId}:
  *   put:
  *     summary: Edit student information
- *     tags: [Student]
+ *     tags: [STUDENT]
  *     parameters:
  *       - name: studentId
  *         in: path
@@ -190,7 +190,7 @@ studentRouter.put('/edit/:Id', studentController.updatestudent.bind(studentContr
  * /student/findAllStudent:
  *   get:
  *     summary: listar todos os Estudantes
- *     tags: [Student]
+ *     tags: [STUDENT]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
@@ -205,7 +205,7 @@ studentRouter.put('/edit/:Id', studentController.updatestudent.bind(studentContr
  * /student/findOneStudent/{id}:
  *   get:
  *     summary: Get a single admin by ID
- *     tags: [Student]
+ *     tags: [STUDENT]
  *     parameters:
  *       - in: path
  *         name: id
@@ -225,7 +225,7 @@ studentRouter.get('/findOneStudent/:Id', studentController.findOneStudent.bind(s
  * /student/sign:
  *   post:
  *     summary: Realizar login de estudante
- *     tags: [Student]
+ *     tags: [STUDENT]
  *     requestBody:
  *       required: true
  *       content:
@@ -250,7 +250,7 @@ studentRouter.post('/sign',signStudentValidationRules(),validate, studentControl
  * /student/delete/{id}:
  *   delete:
  *     summary: Delete an Admin
- *     tags: [Student]
+ *     tags: [STUDENT]
  *     parameters:
  *       - in: path
  *         name: id
@@ -275,7 +275,7 @@ studentRouter.delete('/delete/:id' ,studentController.deleteStudent.bind(student
  * /student/enrollment/create:
  *   post:
  *     summary: Create a new enrollment
- *     tags: [Student-Enrollment]
+ *     tags: [STUDENT-ENROLLMENT]
  *     requestBody:
  *       required: true
  *       content:
@@ -322,7 +322,7 @@ studentRouter.post('/enrollment/create', studentController.createnrollment.bind(
  * /student/enrollment/list/{studentId}:
  *   get:
  *     summary: List all enrollments by student ID
- *     tags: [Student-Enrollment]
+ *     tags: [STUDENT-ENROLLMENT]
  *     parameters:
  *       - in: path
  *         name: studentId

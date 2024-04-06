@@ -3,15 +3,18 @@ import { errorResponse, successResponse } from '../../handler/responseHandler';
 import { ClassService } from '../service/class.service';
 import { FormationService } from '../service/formation.service';
 import { InstructorService } from '../../instructor/service/instructor.service';
+import { Materialervice } from '../service/material.service';
 
 export class ClassController { 
   constructor(
     private readonly classService: ClassService,
     private readonly formationService: FormationService,
     private readonly instructorService: InstructorService,
+    private readonly materialervice: Materialervice,
   ) {
     console.log('ClassService constructor - classService:', this.classService);
     console.log('FormationService constructor - classService:', this.formationService);
+    console.log('Materialervice constructor - classService:', this.materialervice);
  }
 
 
@@ -89,5 +92,47 @@ export class ClassController {
       return errorResponse(res,'Server Error',500)   
     }
   }
- 
+
+  //Material 
+  async createMaterial(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+    const {classId}= req.body
+    const cla = await this.classService.findByid(parseInt(classId, 10));
+    if(!cla){
+      return errorResponse(res,'class not found !',401)  
+    }
+   
+       const create = await this.materialervice.create(req.body);
+      return successResponse(res,create,'Material cadastrado com sucesso',201);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
+  async findByIdClass(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {classId} = req.params
+      const cla = await this.classService.findByid(parseInt(classId, 10));
+      if(!cla){
+        return errorResponse(res,'class not found !',401)  
+      }
+      return successResponse(res,await this.materialervice.findByIdClass(parseInt(classId)),'',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
+  async findByIdMaterial(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {Id} = req.params
+      const cla = await this.materialervice.findByid(parseInt(Id, 10));
+      if(!cla){
+        return errorResponse(res,'Material not found !',401)  
+      }
+      return successResponse(res,await this.materialervice.findByid(parseInt(Id)),'',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
 }

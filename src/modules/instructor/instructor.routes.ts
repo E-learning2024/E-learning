@@ -25,7 +25,7 @@ const instructorRouter = Router()
 * /instructor/createInstructor:
 *   post:
 *     summary: Create a new instructor
-*     tags: [Instructor]
+*     tags: [INATRUCTOR]
 *     requestBody:
 *       required: true
 *       content:
@@ -86,7 +86,7 @@ instructorRouter.post('/createInstructor',createInstructorValidationRules(),vali
  * /instructor/findAllinstructor:
  *   get:
  *     summary: listar todos os Instrutores
- *     tags: [Instructor]
+ *     tags: [INATRUCTOR]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
@@ -101,7 +101,7 @@ instructorRouter.get('/findAllinstructor' ,instructorController.findAllinstructo
  * /instructor/sign:
  *   post:
  *     summary: Realizar login de instructor
- *     tags: [Instructor]
+ *     tags: [INATRUCTOR]
  *     requestBody:
  *       required: true
  *       content:
@@ -126,7 +126,7 @@ instructorRouter.post('/sign' ,signInstructorValidationRules(),validate,instruct
  * /instructor/delete/{id}:
  *   delete:
  *     summary: Delete an instructor
- *     tags: [Instructor]
+ *     tags: [INATRUCTOR]
  *     parameters:
  *       - in: path
  *         name: id
@@ -149,7 +149,7 @@ instructorRouter.delete('/delete/:id' ,instructorController.deleteInstructor.bin
  * /instructor/findOneInstr/{id}:
  *   get:
  *     summary: Get a single Instructor by ID
- *     tags: [Instructor]
+ *     tags: [INATRUCTOR]
  *     parameters:
  *       - in: path
  *         name: id
@@ -169,7 +169,7 @@ instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind
 * /instructor/updateInstr/{id}:
 *   patch:
 *     summary: Update an instructor
-*     tags: [Instructor]
+*     tags: [INATRUCTOR]
 *     parameters:
 *       - in: path
 *         name: id
@@ -232,7 +232,7 @@ instructorRouter.patch('/updateInstr/:Id' ,updateInstructorValidationRules(), va
  * /instructor/createAttendanceRecord:
  *   post:
  *     summary: Create a new instructor attendance
- *     tags: [Attendance]
+ *     tags: [ATTENDANCE]
  *     requestBody:
  *       required: true
  *       content:
@@ -278,7 +278,7 @@ instructorRouter.post('/createAttendanceRecord',createAttendanceRecordValidation
  * /instructor/findAllAttendance:
  *   get:
  *     summary: listar todas as listas de presença
- *     tags: [Attendance]
+ *     tags: [ATTENDANCE]
  *     security:
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
@@ -293,7 +293,7 @@ instructorRouter.get('/findAllAttendance' ,instructorController.findAllAttendanc
  * /instructor/findByIdInstructorAttendance/{id}:
  *   get:
  *     summary: Listar a presença de um unico instructor
- *     tags: [Attendance]
+ *     tags: [ATTENDANCE]
  *     parameters:
  *       - in: path
  *         name: id
@@ -313,7 +313,7 @@ instructorRouter.get('/findByIdInstructorAttendance/:Id' ,instructorController.f
  * /instructor/deleteAttendance/{id}:
  *   delete:
  *     summary: Delete an Attendance
- *     tags: [Attendance]
+ *     tags: [ATTENDANCE]
  *     parameters:
  *       - in: path
  *         name: id
@@ -336,7 +336,7 @@ instructorRouter.delete('/deleteAttendance/:Id' ,instructorController.deleteAtte
  * /instructor/editAttendanceRecord/{id}:
  *   patch:
  *     summary: Edit an instructor attendance record
- *     tags: [Attendance]
+ *     tags: [ATTENDANCE]
  *     parameters:
  *       - in: path
  *         name: id
