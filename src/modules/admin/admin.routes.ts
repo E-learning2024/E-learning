@@ -142,7 +142,7 @@ adminRouter.delete('/delete/:Id' ,adminController.deleteAdmin.bind(adminControll
 /**
  * @swagger
  * /admin/updateAdmin/{id}:
- *   patch:
+ *   put:
  *     summary: Update an admin
  *     tags: [ADMIN]
  *     parameters:
@@ -206,7 +206,7 @@ adminRouter.delete('/delete/:Id' ,adminController.deleteAdmin.bind(adminControll
  *           example: "https://example.com/avatar.jpg"
  */
 
-adminRouter.patch('/updateAdmin/:Id',updateAdminValidationRules(),validate ,adminController.updateAdmin.bind(adminController))
+adminRouter.put('/updateAdmin/:Id',updateAdminValidationRules(),validate ,adminController.updateAdmin.bind(adminController))
 /**
  * @swagger
  * /admin/createTeam:
