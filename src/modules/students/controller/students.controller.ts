@@ -80,7 +80,15 @@ export class StudentController {
   async updatestudent (req: Request, res: Response, ): Promise<unknown> {
     try {
       const { Id } = req.params;
-      const newRequest ={ ...req.body,password:await this.authenticationService.encryptPassword(req.body.password)}
+      const student = await this.studentService.findByid(parseInt(Id))
+      if(!student){
+        return errorResponse(res,MessagesResponse.DATA_NOT_FOUND_SUCESS,401)  
+      }
+      const newRequest = {
+        ...req.body,
+        password: req.body.password != null ? await this.authenticationService.encryptPassword(req.body.password) : student.password
+      };
+      
       const updateAdmin = await this.studentService.update(parseInt(Id, 10),newRequest);
       return successResponse(res,updateAdmin,'student Atualizado com sucesso',200);
     } catch (error) {
@@ -90,12 +98,12 @@ export class StudentController {
   }
   async deleteStudent (req: Request, res: Response, ): Promise<unknown> {
     try {
-      const { id } = req.params;
-      const student = await this.studentService.findByid(parseInt(id, 10));
+      const { Id } = req.params;
+      const student = await this.studentService.findByid(parseInt(Id, 10));
       if(!student){
         return errorResponse(res,'student not found !',401)  
       }
-      const deletedstudent = await this.studentService.delete(parseInt(id, 10));
+      const deletedstudent = await this.studentService.delete(parseInt(Id, 10));
       return successResponse(res,deletedstudent,'student deletado com sucesso',200);
     } catch (error) {
       console.log(error);

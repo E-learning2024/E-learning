@@ -267,7 +267,7 @@ studentRouter.post('/sign',signStudentValidationRules(),validate, studentControl
  *         description: Internal server error
  */
 
-studentRouter.delete('/delete/:id' ,studentController.deleteStudent.bind(studentController))
+studentRouter.delete('/delete/:Id' ,studentController.deleteStudent.bind(studentController))
 
 
 /**
