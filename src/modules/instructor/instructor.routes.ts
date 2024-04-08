@@ -143,7 +143,7 @@ instructorRouter.post('/sign' ,signInstructorValidationRules(),validate,instruct
  *         description: Internal server error
  */
 
-instructorRouter.delete('/delete/:id' ,instructorController.deleteInstructor.bind(instructorController))
+instructorRouter.delete('/delete/:Id' ,instructorController.deleteInstructor.bind(instructorController))
 /**
  * @swagger
  * /instructor/findOneInstr/{id}:
