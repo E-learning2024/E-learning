@@ -38,7 +38,6 @@ const instructorRouter = Router()
 *       400:
 *         description: Bad request
 */
-
 /**
  * @swagger
  * components:
@@ -142,7 +141,6 @@ instructorRouter.post('/sign' ,signInstructorValidationRules(),validate,instruct
  *       500:
  *         description: Internal server error
  */
-
 instructorRouter.delete('/delete/:Id' ,instructorController.deleteInstructor.bind(instructorController))
 /**
  * @swagger
@@ -167,7 +165,7 @@ instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind
 /**
 * @swagger
 * /instructor/updateInstr/{id}:
-*   patch:
+*   put:
 *     summary: Update an instructor
 *     tags: [INSTRUCTOR]
 *     parameters:
@@ -226,7 +224,7 @@ instructorRouter.get('/findOneInstr/:Id' ,instructorController.findOneInstr.bind
  *           description: Whether the instructor is active
  *           example: true
  */
-instructorRouter.patch('/updateInstr/:Id' ,updateInstructorValidationRules(), validate,instructorController.updateInstr.bind(instructorController))
+instructorRouter.put('/updateInstr/:Id' ,updateInstructorValidationRules(), validate,instructorController.updateInstr.bind(instructorController))
 /**
  * @swagger
  * /instructor/createAttendanceRecord:
@@ -271,7 +269,6 @@ instructorRouter.patch('/updateInstr/:Id' ,updateInstructorValidationRules(), va
  *         - date
  *         - present
  */
-
 instructorRouter.post('/createAttendanceRecord',createAttendanceRecordValidationRules(),validate ,instructorController.createAttendanceRecord.bind(instructorController))
 /**
  * @swagger
