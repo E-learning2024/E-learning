@@ -331,7 +331,7 @@ instructorRouter.delete('/deleteAttendance/:Id' ,instructorController.deleteAtte
 /**
  * @swagger
  * /instructor/editAttendanceRecord/{id}:
- *   patch:
+ *   put:
  *     summary: Edit an instructor attendance record
  *     tags: [ATTENDANCE]
  *     parameters:

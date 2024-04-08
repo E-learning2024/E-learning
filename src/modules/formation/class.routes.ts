@@ -144,7 +144,7 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
 /**
  * @swagger
  * /class/editClass/{id}:
- *   patch:
+ *   put:
  *     summary: Edit an existing class
  *     tags: [CLASS]
  *     parameters:
@@ -203,7 +203,7 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
  *           description: Number of students in the class
  */
 
-classRouter.patch('/editClass/:Id', updateClassRules(),validate,classController.update.bind(classController))
+classRouter.put('/editClass/:Id', updateClassRules(),validate,classController.update.bind(classController))
 /**
  * @swagger
  * /class/material/create:
