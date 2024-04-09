@@ -20,6 +20,9 @@ export class AttendanceInstructorService {
       async findByIdInstructor(Id:number) {
         return await this.attendanceInstructorRepository.findByIdInstructor(Id);
       }
+      async findById(Id:number) {
+        return await this.attendanceInstructorRepository.findById(Id);
+      }
    
   
    

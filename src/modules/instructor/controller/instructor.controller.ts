@@ -164,6 +164,19 @@ export class InstructorController {
       return errorResponse(res,'Server Error',500)   
     }
   }
+  async findByIdAttendance(req: Request, res: Response, ): Promise<unknown> {
+    try {
+      const {Id}= req.params
+      const attendance= await this.attendanceInstructorService.findById(parseInt(Id))
+      if(!attendance){
+        return errorResponse(res,'Attendance Instructor not found !',401)  
+      }
+      return successResponse(res,attendance,'Presença  !',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
 
   
 }

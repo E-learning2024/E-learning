@@ -135,4 +135,13 @@ export class ClassController {
       return errorResponse(res,'Server Error',500)  
     }
   }
+  async findByAllMaterial(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+     
+      return successResponse(res,await this.materialervice.findAll(),'...',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
 }

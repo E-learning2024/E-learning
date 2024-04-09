@@ -295,4 +295,19 @@ classRouter.get('/material/findByIdClass/:classId', classController.findByIdClas
  *         description: class not found
  */
 classRouter.get('/material/findById/:Id', classController.findByIdMaterial.bind(classController))
+/**
+ * @swagger
+ * /class/material/findAll:
+ *   get:
+ *     summary: listar todos os Materiais
+ *     tags: [CLASS-MATERIAL]
+ *     security:
+ *       - BearerAuth: []  # Esquema de autenticação JWT
+ *     responses:
+ *       201:
+ *         description: Material localizados 
+ *       400:
+ *         description: Requisição inválida
+ */
+classRouter.get('/material/findAll', classController.findByAllMaterial.bind(classController))
 export default classRouter;
