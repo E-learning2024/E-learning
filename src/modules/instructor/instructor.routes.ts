@@ -370,6 +370,26 @@ instructorRouter.delete('/deleteAttendance/:Id' ,instructorController.deleteAtte
  *         - present
  */
 
-
 instructorRouter.put('/editAttendanceRecord/:Id' ,instructorController.updateAttendanceRecord.bind(instructorController))
+/**
+ * @swagger
+ * /instructor/findByIdAttendance/{id}:
+ *   get:
+ *     summary: Listar a presença pelo Id 
+ *     tags: [ATTENDANCE]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Instructor to retrieve
+ *     responses:
+ *       200:
+ *         description: InstructorAttendance retrieved successfully
+ *       404:
+ *         description: InstructorAttendance not found
+ */
+instructorRouter.get('/findByIdAttendance/:Id' ,instructorController.findByIdAttendance.bind(instructorController))
+
 export default instructorRouter;

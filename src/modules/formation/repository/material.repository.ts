@@ -6,7 +6,14 @@ export class MaterialRepository {
         return await prisma.material.create({ data: createMaterialDTO });
     }
     async findAll() {
-        return await prisma.material.findMany({})
+        return await prisma.material.findMany({ select: {
+            id: true,
+            title: true,
+            description: true,
+            fileUrl: true,
+            classId: true,
+            class: true
+           }})
     }
     async findById(Id: number) {
         return await prisma.material.findUnique({ where: { id: Id } , select: {
