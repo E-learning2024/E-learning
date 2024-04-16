@@ -97,12 +97,13 @@ export class ClassController {
   async createMaterial(req: Request, res: Response, ): Promise<unknown> {
     try { 
     const {classId}= req.body
+    const file = req.file ? req.file.filename : "unknown-url-file.json";
     const cla = await this.classService.findByid(parseInt(classId, 10));
     if(!cla){
       return errorResponse(res,'class not found !',401)  
     }
-   
-       const create = await this.materialervice.create(req.body);
+       const newRequeste = { ...req.body,fileUrl:file }
+       const create = await this.materialervice.create(newRequeste);
       return successResponse(res,create,'Material cadastrado com sucesso',201);
     } catch (error) {
       console.log(error);
