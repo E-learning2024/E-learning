@@ -4,6 +4,8 @@ import { AuthenticationService } from '../../../utils/authentication/authenticat
 import { StudentService } from '../service/student.service';
 import { MessagesResponse } from '../../handler/messagesResponse';
 import { ClassService } from '../../formation/service/class.service';
+import { enviarEmail } from '../../../utils/shared/sendMail';
+import { criarEmailDeConfirmacao } from '../../../utils/shared/template';
 
 export class StudentController { 
   constructor(
@@ -125,7 +127,7 @@ export class StudentController {
    
   if (classverify && classverify.student_quantity && classverify.student_quantity > 45) {
    // Pesquisar outra class para esta formação e inserir este estudante 
-   // Ou posso escoclehr outra turma , porque esta ja esta cheia
+   // Ou posso escolher outra turma , porque esta ja esta cheia
     return errorResponse(res,MessagesResponse.FULL_CLASS,401)  
  }
     const verify = await this.studentService.findStudentByIdandClass(parseInt(studentId),parseInt(classId))
@@ -138,6 +140,13 @@ export class StudentController {
         const student_quantity = classverify && classverify.student_quantity ? classverify.student_quantity + 1 : 1;
         await this.classService.updateQuantity(parseInt(classId), student_quantity);
        }
+       //send Mail Message
+       const destinatario = student.email;
+       const assunto = 'Confirmação de Inscrição e Detalhes de Pagamento ';
+       const anexo = 'src/utils/shared/fatura.pdf'; 
+       const name = `${student.firstName} ${student.firstName}`
+       const emailHtml = await criarEmailDeConfirmacao(assunto,name);
+      await enviarEmail(destinatario, assunto, emailHtml, anexo);
       return successResponse(res,enrollment,MessagesResponse.DATA_ENTERED,201);
     } catch (error) {
       console.log(error);
