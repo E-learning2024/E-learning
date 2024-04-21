@@ -143,7 +143,7 @@ export class StudentController {
        //send Mail Message
        const destinatario = student.email;
        const assunto = 'Confirmação de Inscrição e Detalhes de Pagamento ';
-       const anexo = 'src/utils/shared/fatura.pdf'; 
+       const anexo = 'upload/docs/fatura.pdf'; 
        const name = `${student.firstName} ${student.firstName}`
        const emailHtml = await criarEmailDeConfirmacao(assunto,name);
       await enviarEmail(destinatario, assunto, emailHtml, anexo);
