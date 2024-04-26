@@ -9,7 +9,11 @@ export class FormationRepository {
         return await prisma.formations.findMany({ where: { isActive: true } })
     }
     async findById(Id: number) {
-        return await prisma.formations.findFirst({ where: { id: Id ,isActive: true } })
+        return await prisma.formations.findFirst({ where: { id: Id ,isActive: true }
+        ,include:{
+            class:true
+    
+        } })
     }
   
     async update(Id: number, data: UpdateFormationDTO) {
