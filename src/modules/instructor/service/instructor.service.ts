@@ -15,6 +15,9 @@ export class InstructorService {
       async findByPhone(phone: string) {
         return await this.instructorRepository.findPhone(phone);
       }
+      async findByNif(nif: string) {
+        return await this.instructorRepository.findByNif(nif);
+      }
       async findAll() {
         return await this.instructorRepository.findAll();
       }

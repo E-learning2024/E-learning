@@ -26,6 +26,9 @@ export class AdminService {
   async findByPhone(phone: string) {
     return await this.adminRepository.findPhone(phone);
   }
+  async findByNif(nif: string) {
+    return await this.adminRepository.findByNif(nif);
+  }
 
   async update(id: number, updateAdministratorDTO: UpdateAdministratorDTO) {
 

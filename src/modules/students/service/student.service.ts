@@ -29,6 +29,10 @@ export class StudentService {
   async findByPhone(phone: string) {
     return await this.studentRepository.findPhone(phone);
   }
+  
+  async findByNif(nif: string) {
+    return await this.studentRepository.findByNif(nif);
+  }
 
   async update(id: number, updateAdministratorDTO: any) {
 
