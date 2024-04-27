@@ -221,7 +221,7 @@ export class StudentController {
       const anexo = "upload/docs/fatura.pdf";
       const name = `${student.firstName} ${student.firstName}`;
       const emailHtml = await criarEmailDeConfirmacao(assunto, name);
-      await enviarEmail(destinatario, assunto, emailHtml, anexo);
+      await enviarEmail(destinatario, assunto, emailHtml.corpoDaMensagem, anexo);
       return successResponse(
         res,
         enrollment,
@@ -290,6 +290,20 @@ export class StudentController {
       return successResponse(
         res,
         await this.studentService.updateEnrollmentByState(parseInt(enrollmentId),statusEnum),
+        MessagesResponse.DATA_FOUND_SUCESS,
+        200
+      );
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res, MessagesResponse.SERVER_ERROR, 500);
+    }
+  }
+  async findAllEnrollment(req: Request, res: Response): Promise<unknown> {
+    try {
+    
+      return successResponse(
+        res,
+        await this.studentService.findAllEnrollment(),
         MessagesResponse.DATA_FOUND_SUCESS,
         200
       );
