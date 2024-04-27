@@ -61,6 +61,9 @@ export class StudentRepository {
     async findByEmail(email: string) {
         return await prisma.student.findFirst({ where: { email: email } })
     }
+    async findByNif(nif: string) {
+        return await prisma.student.findFirst({ where: { nif: nif } })
+    }
     async findPhone(phone: string) {
         return await prisma.student.findFirst({ where: { phone: phone } })
     }

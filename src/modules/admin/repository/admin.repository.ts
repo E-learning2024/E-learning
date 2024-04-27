@@ -48,6 +48,26 @@ export class AdminRepository {
       _count: true
   }});
   }
+  async findByNif(nif: string) {
+    return await prisma.administrator.findFirst({ where: { nif: nif }, select: {
+      id: true,
+      name: true,
+      email: true,
+      nif: true,
+      phone: true,
+      password: false,
+      accessLevelId: true,
+      isActive: true,
+      avatarUrl: true,
+      createdAt: true,
+      updatedAt: true,
+      accessLevel: true,
+      activityHistoryAdmin: true,
+      teamLeader: true,
+      teamMembers: true,
+      _count: true
+  }});
+  }
   async findByEmail(email: string) {
     return await prisma.administrator.findFirst({ where: { email: email }, select: {
       id: true,

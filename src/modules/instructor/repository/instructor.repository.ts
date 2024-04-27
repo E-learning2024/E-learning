@@ -42,6 +42,24 @@ export class InstructorRepository {
               _count: true
               } })
     }
+    async findByNif(nif: string) {
+        return await prisma.instructor.findUnique({ where: { nif: nif },  select: {
+              id: true,
+              name: true,
+              email: true,
+              nif: true,
+              phone: true,
+              bio: true,
+              password: true,
+              isActive: true,
+              createdAt: true,
+              updatedAt: true,
+              specialty: true,
+              class: true,
+              presence: true,
+              _count: true
+              } })
+    }
     async findByEmail(email: string) {
         return await prisma.instructor.findFirst({ where: { email: email } })
     }

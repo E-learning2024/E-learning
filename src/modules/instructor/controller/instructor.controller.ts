@@ -30,6 +30,10 @@ export class InstructorController {
     if(verifyPhone) {
       return errorResponse(res,`Este contacto : ${req.body.phone} ja se encontra cadatrado`,400)  
     }
+    const verifyNif=  await this.instructorService.findByNif(req.body.nif)
+    if(verifyNif) {
+      return errorResponse(res,`Este nif : ${req.body.nif} ja se encontra cadatrado`,400)  
+    }
        const createdAdmin = await this.instructorService.create(newRequest);
       return successResponse(res,createdAdmin,'Instructor cadastrado com sucesso',201);
     } catch (error) {

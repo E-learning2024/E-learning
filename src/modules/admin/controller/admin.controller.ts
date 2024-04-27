@@ -25,6 +25,11 @@ export class AdminController {
     if(verifyPhone) {
       return errorResponse(res,`Este contacto : ${req.body.phone} ja se encontra cadatrado`,400)  
     }
+    const verifyNif=  await this.adminService.findByNif(req.body.nif)
+    console.log(verifyNif)
+    if(verifyNif) {
+      return errorResponse(res,`Este Nif : ${req.body.nif} ja se encontra cadatrado`,400)  
+    }
        const createdAdmin = await this.adminService.create(newRequest);
       return successResponse(res,createdAdmin,'Admin cadastrado com sucesso',201);
     } catch (error) {

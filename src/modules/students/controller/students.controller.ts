@@ -30,6 +30,10 @@ export class StudentController {
     if(verifyPhone) {
       return errorResponse(res,`Este contacto : ${req.body.phone} ja se encontra cadatrado`,400)  
     }
+    const verifyNif=  await this.studentService.findByNif(req.body.nif)
+    if(verifyNif) {
+      return errorResponse(res,`Este nif : ${req.body.nif} ja se encontra cadatrado`,400)  
+    }
        const student = await this.studentService.create(newRequest);
       return successResponse(res,student,MessagesResponse.DATA_ENTERED,201);
     } catch (error) {
@@ -126,8 +130,6 @@ export class StudentController {
     }
    
   if (classverify && classverify.student_quantity && classverify.student_quantity > 45) {
-   // Pesquisar outra class para esta formação e inserir este estudante 
-   // Ou posso escolher outra turma , porque esta ja esta cheia
     return errorResponse(res,MessagesResponse.FULL_CLASS,401)  
  }
     const verify = await this.studentService.findStudentByIdandClass(parseInt(studentId),parseInt(classId))
