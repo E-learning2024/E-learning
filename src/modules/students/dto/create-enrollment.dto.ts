@@ -1,4 +1,4 @@
-enum Status {
+export enum Status {
   PENDENTE = 'PENDENTE',
   CONFIRMADO = 'CONFIRMADO',
 }

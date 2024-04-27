@@ -1,5 +1,5 @@
 import {prisma} from "../../../config/lib/prisma";
-import { CreateEnrollmentDTO } from "../dto/create-enrollment.dto";
+import { CreateEnrollmentDTO, Status } from "../dto/create-enrollment.dto";
 import { UpdateEnrollmentDTO } from "../dto/update-enrollment.dto";
 
 export class EnrollmentRepository {
@@ -38,5 +38,27 @@ export class EnrollmentRepository {
     }
     async delete(Id: number) {
         return await prisma.enrollment.delete({ where: { id: Id } })
+    }
+    async findEnrollmentByState(status: Status) {
+        return await prisma.enrollment.findMany({ where: { status: status },include:{
+            student: true,
+            class: {
+                include: {
+                    formation: true
+                }
+            }
+        } })
+    }
+    async updateEnrollmentByState(Id: number,status: Status) {
+        return await prisma.enrollment.update({ where: { id: Id },data:{
+            status: status
+        },include:{
+            student: true,
+            class: {
+                include: {
+                    formation: true
+                }
+            }
+        } })
     }
 }
