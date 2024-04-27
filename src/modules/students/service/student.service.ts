@@ -1,4 +1,4 @@
-import { CreateEnrollmentDTO } from "../dto/create-enrollment.dto";
+import { CreateEnrollmentDTO, Status } from "../dto/create-enrollment.dto";
 import { CreateStudentDTO } from "../dto/create-students.dto";
 import { EnrollmentRepository } from "../repository/enrollment.repository";
 import { StudentRepository } from "../repository/students.repository";
@@ -49,6 +49,12 @@ export class StudentService {
   }
   async findStudentByIdForEnrollma(studentId:number) {
     return await this.enrollmentRepository.findStudentByIdForEnrollma(studentId);
+  }
+  async findEnrollmentByState(status:Status) {
+    return await this.enrollmentRepository.findEnrollmentByState(status);
+  }
+  async updateEnrollmentByState(Id:number,status:Status) {
+    return await this.enrollmentRepository.updateEnrollmentByState(Id,status);
   }
 
 

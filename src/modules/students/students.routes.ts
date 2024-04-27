@@ -337,4 +337,55 @@ studentRouter.post('/enrollment/create', studentController.createnrollment.bind(
  *         description: Student not found
  */
 studentRouter.get('/enrollment/list/:Id', studentController.findStudentByIdForEnrollma.bind(studentController))
+/**
+ * @swagger
+ * /student/enrollment/listByState/{status}:
+ *   get:
+ *     summary: List all enrollments by student ID and status
+ *     tags: [STUDENT-ENROLLMENT]
+ *     parameters:
+ *       - in: path
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [PENDENTE, CONFIRMADO]  # Defina os valores permitidos aqui
+ *         required: true
+ *         description: Status to filter enrollments
+ *     responses:
+ *       200:
+ *         description: List of enrollments by student ID and status
+ *       404:
+ *         description: Student not found
+ */
+studentRouter.get('/enrollment/listByState/:status', studentController.findEnrollmentByState.bind(studentController))
+/**
+ * @swagger
+ * /student/enrollment/editStatus/{enrollmentId}:
+ *   put:
+ *     summary: Update the status of a student enrollment
+ *     tags: [STUDENT-ENROLLMENT]
+ *     parameters:
+ *       - in: path
+ *         name: enrollmentId
+ *         schema:
+ *           type: integer
+ *         required: true
+ *         description: ID of the enrollment to be updated
+ *       - in: query
+ *         name: status
+ *         schema:
+ *           type: string
+ *           enum: [PENDENTE, CONFIRMADO]  # Defina os valores permitidos aqui
+ *         style: form
+ *         explode: true
+ *         required: true
+ *         description: New status to update the enrollment
+ *     responses:
+ *       200:
+ *         description: Enrollment status updated successfully
+ *       404:
+ *         description: Enrollment not found
+ */
+
+studentRouter.put('/enrollment/editStatus/:enrollmentId', studentController.updateEnrollmentByState.bind(studentController))
 export default studentRouter;

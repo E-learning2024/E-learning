@@ -190,7 +190,6 @@ model Enrollment {
   classId   Int
   status    Status  @default(PENDENTE)
 }
-
 enum Status {
   PENDENTE
   CONFIRMADO
