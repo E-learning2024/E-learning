@@ -20,16 +20,14 @@ export class ClassController {
 
    async create(req: Request, res: Response, ): Promise<unknown> {
     try { 
-    const {instructorId,formationId}= req.body
+    const {formationId}= req.body
     const formation =await this.formationService.findByid(parseInt(formationId))
+    console.log(req.body);
     if(!formation) {
       return errorResponse(res,`Formação não encontrado`,401)  
     }
-
-    const Instructor = await this.instructorService.findById(parseInt(instructorId))
-      if(!Instructor){
-        return errorResponse(res,'Instructor not found !',401)  
-      }
+  
+   //validar os intructores no array
        const create = await this.classService.create(req.body);
       return successResponse(res,create,'Turma cadastrado com sucesso',201);
     } catch (error) {

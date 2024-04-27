@@ -2,30 +2,38 @@ import { Router } from "express";
 import { ClassRepository } from "./repository/class.repository";
 import { ClassService } from "./service/class.service";
 import { ClassController } from "./controller/class.controller";
-import { createClassRules ,updateClassRules,validate} from "./validation/class.validation";
+import {
+  createClassRules,
+  updateClassRules,
+  validate,
+} from "./validation/class.validation";
 import { FormationRepository } from "./repository/formation.repository";
 import { FormationService } from "./service/formation.service";
 import { InstructorRepository } from "../instructor/repository/instructor.repository";
 import { InstructorService } from "../instructor/service/instructor.service";
 import { Materialervice } from "./service/material.service";
 import { MaterialRepository } from "./repository/material.repository";
-import multer from 'multer';
+import multer from "multer";
 import configureMulter from "../../utils/middlewares/fileUpload";
 import { createMaterialRules } from "./validation/material.validation";
 const upload = multer(configureMulter());
 
-const classRepository = new ClassRepository()
-const classService = new ClassService(classRepository); 
-const formationRepository = new FormationRepository()
-const formationService = new FormationService(formationRepository); 
-const instructorRepository = new InstructorRepository()
-const instructorService = new InstructorService(instructorRepository); 
-const materialRepository = new MaterialRepository()
-const materialervice = new Materialervice(materialRepository)
-const classController = new ClassController(classService,formationService,instructorService,materialervice); 
+const classRepository = new ClassRepository();
+const classService = new ClassService(classRepository);
+const formationRepository = new FormationRepository();
+const formationService = new FormationService(formationRepository);
+const instructorRepository = new InstructorRepository();
+const instructorService = new InstructorService(instructorRepository);
+const materialRepository = new MaterialRepository();
+const materialervice = new Materialervice(materialRepository);
+const classController = new ClassController(
+  classService,
+  formationService,
+  instructorService,
+  materialervice
+);
 
-
-const classRouter = Router()
+const classRouter = Router();
 /**
  * @swagger
  * /class/create:
@@ -51,17 +59,13 @@ const classRouter = Router()
  *     CreateClassDTO:
  *       type: object
  *       required:
- *         - instructorId
  *         - formationId
  *         - name
  *         - description
  *         - time
  *         - student_quantity
+ *         - instructors
  *       properties:
- *         instructorId:
- *           type: number
- *           example: 1
- *           description: ID of the instructor for the class
  *         formationId:
  *           type: number
  *           example: 1
@@ -82,8 +86,19 @@ const classRouter = Router()
  *           type: number
  *           example: 0
  *           description: Number of students in the class
+ *         instructors:
+ *           type: array
+ *           items:
+ *            type: number
+ *           example: [{ id: 1}]
+ *           description: An array of member IDs
  */
-classRouter.post('/create',createClassRules(),validate, classController.create.bind(classController))
+classRouter.post(
+  "/create",
+  createClassRules(),
+  validate,
+  classController.create.bind(classController)
+);
 /**
  * @swagger
  * /class/findAll-class:
@@ -98,7 +113,10 @@ classRouter.post('/create',createClassRules(),validate, classController.create.b
  *       400:
  *         description: Requisição inválida
  */
-classRouter.get('/findAll-class', classController.findAllClass.bind(classController))
+classRouter.get(
+  "/findAll-class",
+  classController.findAllClass.bind(classController)
+);
 /**
  * @swagger
  * /class/findOne-class/{id}:
@@ -118,7 +136,10 @@ classRouter.get('/findAll-class', classController.findAllClass.bind(classControl
  *       404:
  *         description: class not found
  */
-classRouter.get('/findOne-class/:Id', classController.findOneClass.bind(classController))
+classRouter.get(
+  "/findOne-class/:Id",
+  classController.findOneClass.bind(classController)
+);
 /**
  * @swagger
  * /class/delete/{id}:
@@ -140,7 +161,10 @@ classRouter.get('/findOne-class/:Id', classController.findOneClass.bind(classCon
  *       500:
  *         description: Internal server error
  */
-classRouter.delete('/delete/:Id', classController.deleteClass.bind(classController))
+classRouter.delete(
+  "/delete/:Id",
+  classController.deleteClass.bind(classController)
+);
 /**
  * @swagger
  * /class/editClass/{id}:
@@ -174,13 +198,8 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
  *     EditClassDTO:
  *       type: object
  *       required:
- *         - instructorId
  *         - formationId
  *       properties:
- *         instructorId:
- *           type: number
- *           example: 1
- *           description: ID of the instructor for the class
  *         formationId:
  *           type: number
  *           example: 1
@@ -201,9 +220,20 @@ classRouter.delete('/delete/:Id', classController.deleteClass.bind(classControll
  *           type: number
  *           example: 0
  *           description: Number of students in the class
+ *         instructors:
+ *           type: array
+ *           items:
+ *            type: number
+ *           example: [{ id: 1}]
+ *           description: Se sertifica em adicionar id do estructor valido no array para n dar pau
  */
 
-classRouter.put('/editClass/:Id', updateClassRules(),validate,classController.update.bind(classController))
+classRouter.put(
+  "/editClass/:Id",
+  updateClassRules(),
+  validate,
+  classController.update.bind(classController)
+);
 /**
  * @swagger
  * /class/material/create:
@@ -252,7 +282,13 @@ classRouter.put('/editClass/:Id', updateClassRules(),validate,classController.up
  *           description: ID of the class the material belongs to
  */
 
-classRouter.post('/material/create',upload.single('file'),createMaterialRules(),validate,classController.createMaterial.bind(classController))
+classRouter.post(
+  "/material/create",
+  upload.single("file"),
+  createMaterialRules(),
+  validate,
+  classController.createMaterial.bind(classController)
+);
 
 /**
  * @swagger
@@ -273,7 +309,10 @@ classRouter.post('/material/create',upload.single('file'),createMaterialRules(),
  *       404:
  *         description: class not found
  */
-classRouter.get('/material/findByIdClass/:classId', classController.findByIdClass.bind(classController))
+classRouter.get(
+  "/material/findByIdClass/:classId",
+  classController.findByIdClass.bind(classController)
+);
 
 /**
  * @swagger
@@ -294,7 +333,10 @@ classRouter.get('/material/findByIdClass/:classId', classController.findByIdClas
  *       404:
  *         description: class not found
  */
-classRouter.get('/material/findById/:Id', classController.findByIdMaterial.bind(classController))
+classRouter.get(
+  "/material/findById/:Id",
+  classController.findByIdMaterial.bind(classController)
+);
 /**
  * @swagger
  * /class/material/findAll:
@@ -305,9 +347,12 @@ classRouter.get('/material/findById/:Id', classController.findByIdMaterial.bind(
  *       - BearerAuth: []  # Esquema de autenticação JWT
  *     responses:
  *       201:
- *         description: Material localizados 
+ *         description: Material localizados
  *       400:
  *         description: Requisição inválida
  */
-classRouter.get('/material/findAll', classController.findByAllMaterial.bind(classController))
+classRouter.get(
+  "/material/findAll",
+  classController.findByAllMaterial.bind(classController)
+);
 export default classRouter;

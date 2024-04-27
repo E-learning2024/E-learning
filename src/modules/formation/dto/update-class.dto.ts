@@ -5,6 +5,7 @@
     name!: string;
     description!: string;
     time!: string;
+    instructors?: { id: number }[];
     student_quantity!: number;
   }
 

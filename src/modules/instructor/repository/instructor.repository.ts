@@ -19,7 +19,7 @@ export class InstructorRepository {
             createdAt: true,
             updatedAt: true,
             specialty: true,
-            class: true,
+    
             presence: true,
             _count: true
             }})
@@ -37,7 +37,7 @@ export class InstructorRepository {
               createdAt: true,
               updatedAt: true,
               specialty: true,
-              class: true,
+           
               presence: true,
               _count: true
               } })
@@ -55,7 +55,6 @@ export class InstructorRepository {
               createdAt: true,
               updatedAt: true,
               specialty: true,
-              class: true,
               presence: true,
               _count: true
               } })
@@ -79,7 +78,6 @@ export class InstructorRepository {
             createdAt: true,
             updatedAt: true,
             specialty: true,
-            class: true,
             presence: true,
             _count: true
             }})

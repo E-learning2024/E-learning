@@ -4,6 +4,7 @@
     description!: string;
     startDate!: string;
     endDate!: string;
+    price!:string;
     isActive!: boolean;
 
   }
