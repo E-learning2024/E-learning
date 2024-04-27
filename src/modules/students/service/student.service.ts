@@ -56,6 +56,9 @@ export class StudentService {
   async updateEnrollmentByState(Id:number,status:Status) {
     return await this.enrollmentRepository.updateEnrollmentByState(Id,status);
   }
+  async findAllEnrollment() {
+    return await this.enrollmentRepository.findAllEnrollment();
+  }
 
 
 }

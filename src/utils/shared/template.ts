@@ -56,8 +56,25 @@ export async function criarEmailDeConfirmacao(assunto:string,nome:string) {
   </body>
   </html>
   `;
-  
-  return corpoDaMensagem;
+  const corpoBroadCasting =
+  `  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+  </head>
+  <body>
+    <div style="font-family: Arial, sans-serif; padding: 20px;">
+      <h1 style="color: #333;">Olá, {nome}!</h1>
+      <p style="color: #666;">Este é um email de exemplo com um template HTML.</p>
+      <p style="color: #666;">Você pode personalizar este template com as informações desejadas.</p>
+      <p style="color: #666;">Atenciosamente, Equipe de E-learning</p>
+    </div>
+  </body>
+  </html>`
+  return  {corpoBroadCasting,corpoDaMensagem};
 }
 
 // const nomeDoDestinatario = "João";

@@ -388,4 +388,20 @@ studentRouter.get('/enrollment/listByState/:status', studentController.findEnrol
  */
 
 studentRouter.put('/enrollment/editStatus/:enrollmentId', studentController.updateEnrollmentByState.bind(studentController))
+
+/**
+ * @swagger
+ * /student/enrollment/findAll:
+ *   get:
+ *     summary: listar todos os enrollment
+ *     tags: [STUDENT-ENROLLMENT]
+ *     security:
+ *       - BearerAuth: []  # Esquema de autenticação JWT
+ *     responses:
+ *       201:
+ *         description: student encontrados
+ *       400:
+ *         description: Requisição inválida
+ */
+studentRouter.get('/enrollment/findAll', studentController.findAllEnrollment.bind(studentController))
 export default studentRouter;
