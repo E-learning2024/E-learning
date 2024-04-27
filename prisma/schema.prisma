@@ -89,19 +89,20 @@ model ActivityHistoryStudent {
 }
 
 model Instructor {
-  id        Int         @id @default(autoincrement())
-  name      String
-  email     String      @unique
-  nif       String      @unique
-  phone     String?     @unique
-  bio       String?
-  password  String
-  isActive  Boolean     @default(true)
-  createdAt DateTime    @default(now())
-  updatedAt DateTime    @updatedAt
-  specialty Specialty[]
-  class     Class[]
-  presence  Presence[]
+  id              Int               @id @default(autoincrement())
+  name            String
+  email           String            @unique
+  nif             String            @unique
+  phone           String?           @unique
+  bio             String?
+  password        String
+  isActive        Boolean           @default(true)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  specialty       Specialty[]
+  members         Class[]           @relation("instructors")
+  presence        Presence[]
+  Program_Content Program_Content[]
 }
 
 model Specialty {
@@ -125,26 +126,40 @@ model Presence {
 }
 
 model Formations {
-  id          Int      @id @default(autoincrement())
-  title       String
-  description String?
-  startDate   String
-  endDate     String
-  cover       String?
-  duration    String?
-  price       String?
-  isActive    Boolean  @default(true)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  class       Class[]
+  id              Int               @id @default(autoincrement())
+  title           String
+  description     String?
+  startDate       String
+  endDate         String
+  cover           String?
+  duration        String?
+  price           String?
+  isActive        Boolean           @default(true)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+  class           Class[]
+  Program_Content Program_Content[]
 
   @@map("formations")
 }
 
+model Program_Content {
+  id           Int        @id @default(autoincrement())
+  formation    Formations @relation(fields: [formationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  formationId  Int
+  name         String?
+  description  String?
+  week       String?
+  duration      String?
+  data         String?
+  time         String?
+  instructor   Instructor @relation(fields: [instructorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  instructorId Int
+  @@map("program_content")
+}
+
 model Class {
   id               Int          @id @default(autoincrement())
-  instructor       Instructor   @relation(fields: [instructorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  instructorId     Int
   formation        Formations   @relation(fields: [formationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   formationId      Int
   name             String?
@@ -153,6 +168,7 @@ model Class {
   student_quantity Int?
   material         Material[]
   enrollment       Enrollment[]
+  instructors      Instructor[] @relation("instructors")
 
   @@map("class")
 }

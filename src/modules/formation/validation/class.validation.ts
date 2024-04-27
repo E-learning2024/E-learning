@@ -5,8 +5,6 @@ import { errorResponse } from '../../handler/responseHandler';
 
 export const createClassRules = () => {
   return [
-    body('instructorId')
-    .notEmpty(),
        body('formationId')
       .notEmpty()
       .withMessage('A description não pode estar vazio'),
