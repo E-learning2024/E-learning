@@ -13,7 +13,7 @@ const enrollmentRepository = new EnrollmentRepository()
 const studentService = new StudentService(studentRepository,enrollmentRepository); 
 const authenticationService = new AuthenticationService(); 
 const classRepository = new ClassRepository()
-const classService = new ClassService(classRepository); 
+const classService = new ClassService(classRepository,enrollmentRepository); 
 const studentController = new StudentController(studentService,authenticationService,classService); 
 
 
@@ -337,6 +337,26 @@ studentRouter.post('/enrollment/create', studentController.createnrollment.bind(
  *         description: Student not found
  */
 studentRouter.get('/enrollment/list/:Id', studentController.findStudentByIdForEnrollma.bind(studentController))
+/**
+ * @swagger
+ * /student/findStudentByClassId/{classId}:
+ *   get:
+ *     summary: List all enrollments by student ID
+ *     tags: [STUDENT]
+ *     parameters:
+ *       - in: path
+ *         name: classId
+ *         schema:
+ *           type: number
+ *         required: true
+ *         description: ID of the student
+ *     responses:
+ *       200:
+ *         description: List of enrollments by student ID
+ *       404:
+ *         description: Student not found
+ */
+studentRouter.get('/findStudentByClassId/:classId', studentController.findStudentByClassId.bind(studentController))
 /**
  * @swagger
  * /student/enrollment/listByState/{status}:

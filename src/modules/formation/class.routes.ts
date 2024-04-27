@@ -16,16 +16,21 @@ import { MaterialRepository } from "./repository/material.repository";
 import multer from "multer";
 import configureMulter from "../../utils/middlewares/fileUpload";
 import { createMaterialRules } from "./validation/material.validation";
+import { EnrollmentRepository } from "../students/repository/enrollment.repository";
+import { StudentService } from "../students/service/student.service";
 const upload = multer(configureMulter());
 
 const classRepository = new ClassRepository();
-const classService = new ClassService(classRepository);
+const enrollmentRepository = new EnrollmentRepository()
+const classService = new ClassService(classRepository,enrollmentRepository);
 const formationRepository = new FormationRepository();
 const formationService = new FormationService(formationRepository);
 const instructorRepository = new InstructorRepository();
 const instructorService = new InstructorService(instructorRepository);
 const materialRepository = new MaterialRepository();
 const materialervice = new Materialervice(materialRepository);
+
+
 const classController = new ClassController(
   classService,
   formationService,
@@ -354,5 +359,39 @@ classRouter.get(
 classRouter.get(
   "/material/findAll",
   classController.findByAllMaterial.bind(classController)
+);
+/**
+ * @swagger
+ * /class/sendAnyBroadCasting/{Id}:
+ *   post:
+ *     summary: id da turma que vai receber o email
+ *     tags: [CLASS]
+ *     parameters:
+ *       - in: path
+ *         name: Id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID da turma para a qual enviar o email
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             properties:
+ *               subject:
+ *                 type: string
+ *               message:
+ *                 type: string
+ *     responses:
+ *       200:
+ *         description: class retrieved successfully
+ *       404:
+ *         description: class not found
+ */
+classRouter.post(
+  "/sendAnyBroadCasting/:Id",
+  classController.sendAnyBroadCasting.bind(classController)
 );
 export default classRouter;

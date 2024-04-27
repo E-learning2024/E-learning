@@ -254,6 +254,24 @@ export class StudentController {
       return errorResponse(res, MessagesResponse.SERVER_ERROR, 500);
     }
   }
+  async findStudentByClassId(
+    req: Request,
+    res: Response
+  ): Promise<unknown> {
+    try {
+      const { classId } = req.params;
+
+      return successResponse(
+        res,
+        await this.studentService.findStudentByClassId(parseInt(classId)),
+        MessagesResponse.DATA_FOUND_SUCESS,
+        200
+      );
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res, MessagesResponse.SERVER_ERROR, 500);
+    }
+  }
 
   async findEnrollmentByState(req: Request, res: Response): Promise<unknown> {
     try {

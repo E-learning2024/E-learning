@@ -34,7 +34,7 @@ export async function enviarEmail(destinatario: string, assunto: string, corpo: 
   });
 }
 
-export async function sendBroadcastingEmail(destinatarios: string[], assunto: string, corpo: string, anexo: string) {
+export async function sendBroadcastingEmail(destinatarios: string[], assunto: string, corpo: string,description: string) {
   const transporter = nodemailer.createTransport({
     host: 'mail.achei.ao',
     port: 465,

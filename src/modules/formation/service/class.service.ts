@@ -1,9 +1,14 @@
+import { EnrollmentRepository } from "../../students/repository/enrollment.repository";
 import { CreateClassDTO } from "../dto/create-class.dto";
 import { UpdateClassDTO } from "../dto/update-class.dto";
 import { ClassRepository } from "../repository/class.repository";
 
  export class ClassService {
-  constructor(private readonly classRepository: ClassRepository) {
+  constructor(private readonly classRepository: ClassRepository,
+    private readonly enrollmentRepository:EnrollmentRepository,
+  )
+  
+   {
     console.log('ClassRepository constructor - classRepository:', this.classRepository);
   }
   async create(createClassDTO: CreateClassDTO) {
@@ -21,6 +26,10 @@ import { ClassRepository } from "../repository/class.repository";
   async update(id: number, data: UpdateClassDTO) {
 
     return await this.classRepository.update(id, data);
+  }
+  async findStudentByClassId(id: number) {
+
+    return await this.enrollmentRepository.findStudentByClassId(id);
   }
   async updateQuantity(Id: number, student_quantity: number) {
 
