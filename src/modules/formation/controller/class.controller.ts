@@ -4,6 +4,9 @@ import { ClassService } from '../service/class.service';
 import { FormationService } from '../service/formation.service';
 import { InstructorService } from '../../instructor/service/instructor.service';
 import { Materialervice } from '../service/material.service';
+import { MessagesResponse } from '../../handler/messagesResponse';
+import { sendBroadcastingEmail } from '../../../utils/shared/sendMail';
+import { criarEmailDeConfirmacao } from '../../../utils/shared/template';
 
 export class ClassController { 
   constructor(
@@ -11,6 +14,7 @@ export class ClassController {
     private readonly formationService: FormationService,
     private readonly instructorService: InstructorService,
     private readonly materialervice: Materialervice,
+    
   ) {
     console.log('ClassService constructor - classService:', this.classService);
     console.log('FormationService constructor - classService:', this.formationService);
@@ -26,7 +30,7 @@ export class ClassController {
     if(!formation) {
       return errorResponse(res,`Formação não encontrado`,401)  
     }
-  
+
    //validar os intructores no array
        const create = await this.classService.create(req.body);
       return successResponse(res,create,'Turma cadastrado com sucesso',201);
@@ -85,6 +89,38 @@ export class ClassController {
         return errorResponse(res,'class not found !',401)  
       }
       return successResponse(res,await this.classService.delete(parseInt(Id, 10)),'Class Deletado com sucesso',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)   
+    }
+  }
+  async sendAnyBroadCasting(req: Request, res: Response, ): Promise<unknown> {
+    try {
+
+      const {Id}= req.params
+      const {subject,message}  = req.body
+      const cla = await this.classService.findByid(parseInt(Id, 10));
+      if(!cla){
+        return errorResponse(res,'class not found !',401)  
+      }
+      const users = await this.classService.findStudentByClassId(parseInt(Id, 10));
+      
+    //send any broadcast
+    const emails = users.map(user => user.student.email);
+    console.log(emails);
+    const formattedEmails = emails.filter(email => email !== null && email !== undefined);
+    console.log(formattedEmails);
+    const formattedArray = [formattedEmails.join(',')];
+    console.log(formattedArray);
+    const assunto = "Confirmação de Inscrição e Detalhes de Pagamento ";
+   const emailHtml = await criarEmailDeConfirmacao(assunto, "");
+    sendBroadcastingEmail(formattedArray, assunto, emailHtml.corpoBroadCasting,"")
+    return successResponse(
+      res,
+      "",
+      MessagesResponse.DATA_ENTERED,
+      200
+    );
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   
