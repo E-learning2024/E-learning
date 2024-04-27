@@ -41,6 +41,7 @@ const formationRouter = Router()
  *         - startDate
  *         - endDate
  *         - isActive
+ *         - price
  *       properties:
  *         title:
  *           type: string
@@ -59,6 +60,9 @@ const formationRouter = Router()
  *         isActive:
  *           type: boolean
  *           example: true
+ *         price:
+ *           type: string
+ *           example: 35000
  */
 
 formationRouter.post('/create',createFormationRules(),validate, formationController.create.bind(formationController))
