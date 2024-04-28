@@ -8,6 +8,9 @@ import { AttendanceInstructorService } from "./service/instructor.attendance.rec
 import { AttendanceInstructorRepository } from "./repository/instructor.attendance.record.repository";
 import { SpecialtyInstructorRepository } from "./repository/instructor.speciality.repository";
 import { SpecialityInstructorService } from "./service/instructor.speciality.service";
+import { ClassService } from "../formation/service/class.service";
+import { ClassRepository } from "../formation/repository/class.repository";
+import { EnrollmentRepository } from "../students/repository/enrollment.repository";
 
 const instructorRepository = new InstructorRepository()
 const instructorService = new InstructorService(instructorRepository); 
@@ -16,7 +19,10 @@ const attendanceInstructorRepository = new AttendanceInstructorRepository()
 const specialtyInstructorRepository = new SpecialtyInstructorRepository()
 const attendanceInstructorService = new AttendanceInstructorService(attendanceInstructorRepository)
 const specialityInstructorService = new SpecialityInstructorService(specialtyInstructorRepository)
-const instructorController = new InstructorController(instructorService,authenticationService,attendanceInstructorService,specialityInstructorService); 
+const classRepository = new ClassRepository()
+const enrollmentRepository = new EnrollmentRepository()
+const classService = new ClassService(classRepository,enrollmentRepository); 
+const instructorController = new InstructorController(instructorService,authenticationService,attendanceInstructorService,specialityInstructorService,classService); 
 
 
 const instructorRouter = Router()
@@ -391,5 +397,24 @@ instructorRouter.put('/editAttendanceRecord/:Id' ,instructorController.updateAtt
  *         description: InstructorAttendance not found
  */
 instructorRouter.get('/findByIdAttendance/:Id' ,instructorController.findByIdAttendance.bind(instructorController))
-
+/**
+ * @swagger
+ * /instructor/findClassByIdInstructor/{id}:
+ *   get:
+ *     summary: Get a single Instructor by ID
+ *     tags: [INSTRUCTOR]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the Instructor to retrieve
+ *     responses:
+ *       200:
+ *         description: Instructor retrieved successfully
+ *       404:
+ *         description: Instructor not found
+ */
+instructorRouter.get('/findClassByIdInstructor/:Id' ,instructorController.findClassByIdInstructor.bind(instructorController))
 export default instructorRouter;

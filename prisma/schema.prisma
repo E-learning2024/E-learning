@@ -166,6 +166,7 @@ model Class {
   description      String?
   time             String?
   student_quantity Int?
+  current_student_number Int? @default(0)
   material         Material[]
   enrollment       Enrollment[]
   instructors      Instructor[] @relation("instructors")

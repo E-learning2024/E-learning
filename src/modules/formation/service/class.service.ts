@@ -22,6 +22,9 @@ import { ClassRepository } from "../repository/class.repository";
   async findByid(id: number) {
     return await this.classRepository.findById(id);
   }
+  async findAllClassByIdInstructor(id: number) {
+    return await this.classRepository.findAllClassByIdInstructor(id);
+  }
 
   async update(id: number, data: UpdateClassDTO) {
 
@@ -31,9 +34,9 @@ import { ClassRepository } from "../repository/class.repository";
 
     return await this.enrollmentRepository.findStudentByClassId(id);
   }
-  async updateQuantity(Id: number, student_quantity: number) {
+  async updateQuantity(Id: number, current_student_number: number) {
 
-    return await this.classRepository.updateQuantity(Id, student_quantity);
+    return await this.classRepository.updateQuantity(Id, current_student_number);
   }
 
 

@@ -424,4 +424,26 @@ studentRouter.put('/enrollment/editStatus/:enrollmentId', studentController.upda
  *         description: Requisição inválida
  */
 studentRouter.get('/enrollment/findAll', studentController.findAllEnrollment.bind(studentController))
+/**
+ * @swagger
+ * /student/enrollment/delete/{id}:
+ *   delete:
+ *     summary: Delete an enrollment by ID
+ *     tags: [STUDENT-ENROLLMENT]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         schema:
+ *           type: integer
+ *           format: int64
+ *         required: true
+ *         description: ID of the enrollment to delete
+ *     responses:
+ *       204:
+ *         description: Enrollment deleted successfully
+ *       404:
+ *         description: Enrollment not found
+ */
+
+studentRouter.delete('/enrollment/delete/:Id', studentController.deleteEnrollment.bind(studentController))
 export default studentRouter;

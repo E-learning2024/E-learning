@@ -172,6 +172,26 @@ export class StudentController {
       return errorResponse(res, MessagesResponse.SERVER_ERROR, 500);
     }
   }
+  async deleteEnrollment(req: Request, res: Response): Promise<unknown> {
+    try {
+      const { Id } = req.params;
+      console.log(Id)
+      const student = await this.studentService.findByIdEnrollment(parseInt(Id, 10));
+      if (!student) {
+        return errorResponse(res, "Enrollment not found !", 401);
+      }
+      const deletedstudent = await this.studentService.deleteEnrollment(parseInt(Id, 10));
+      return successResponse(
+        res,
+        deletedstudent,
+        "Enrollment deletado com sucesso",
+        200
+      );
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res, MessagesResponse.SERVER_ERROR, 500);
+    }
+  }
   async createnrollment(req: Request, res: Response): Promise<unknown> {
     try {
       const { studentId, classId } = req.body;
@@ -184,14 +204,9 @@ export class StudentController {
       if (!classverify) {
         return errorResponse(res, MessagesResponse.DATA_NOT_FOUND_SUCESS, 401);
       }
-
-      if (
-        classverify &&
-        classverify.student_quantity &&
-        classverify.student_quantity > 45
-      ) {
+      if (classverify && classverify.student_quantity !== null && classverify.current_student_number !== null && classverify.current_student_number >= classverify.student_quantity) {
         return errorResponse(res, MessagesResponse.FULL_CLASS, 401);
-      }
+    }
       const verify = await this.studentService.findStudentByIdandClass(
         parseInt(studentId),
         parseInt(classId)
@@ -206,13 +221,14 @@ export class StudentController {
 
       const enrollment = await this.studentService.createnrollment(req.body);
       if (enrollment) {
-        const student_quantity =
-          classverify && classverify.student_quantity
-            ? classverify.student_quantity + 1
+        const current_student_number =
+          classverify && classverify.current_student_number
+            ? classverify.current_student_number + 1
             : 1;
+            console.log(current_student_number)
         await this.classService.updateQuantity(
           parseInt(classId),
-          student_quantity
+          current_student_number
         );
       }
       //send Mail Message
@@ -330,4 +346,5 @@ export class StudentController {
       return errorResponse(res, MessagesResponse.SERVER_ERROR, 500);
     }
   }
+
 }

@@ -61,6 +61,11 @@ export class EnrollmentRepository {
       where: { studentId: studentId },
     });
   }
+  async findByIdEnrollment(Id: number) {
+    return await prisma.enrollment.findUnique({
+      where: { id: Id },
+    });
+  }
 
   async update(Id: number, data: UpdateEnrollmentDTO) {
     return await prisma.enrollment.update({ where: { id: Id }, data });
