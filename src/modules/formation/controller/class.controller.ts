@@ -126,7 +126,6 @@ export class ClassController {
       return errorResponse(res,'Server Error',500)   
     }
   }
-
   //Material 
   async createMaterial(req: Request, res: Response, ): Promise<unknown> {
     try { 
