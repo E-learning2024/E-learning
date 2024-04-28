@@ -41,13 +41,29 @@ export class EnrollmentRepository {
         classId: true,
         status: true,
         student: true,
-        class: true,
-      },
+        class: {
+            select: {
+              id: true,
+              name: true,
+              description: true,
+              student_quantity: true,
+              instructors: true,
+              formation: true,
+              _count: true,
+            },
+        },
+        
+      }
     });
   }
   async findById(studentId: number) {
     return await prisma.enrollment.findMany({
       where: { studentId: studentId },
+    });
+  }
+  async findByIdEnrollment(Id: number) {
+    return await prisma.enrollment.findUnique({
+      where: { id: Id },
     });
   }
 

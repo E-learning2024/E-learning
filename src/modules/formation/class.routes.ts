@@ -89,7 +89,7 @@ const classRouter = Router();
  *           description:  time of the class (ISO 8601 format)
  *         student_quantity:
  *           type: number
- *           example: 0
+ *           example: 50
  *           description: Number of students in the class
  *         instructors:
  *           type: array

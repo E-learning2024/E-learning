@@ -4,13 +4,16 @@ import { AuthenticationService } from '../../../utils/authentication/authenticat
 import { InstructorService } from '../service/instructor.service';
 import { AttendanceInstructorService } from '../service/instructor.attendance.record.service';
 import { SpecialityInstructorService } from '../service/instructor.speciality.service';
+import { MessagesResponse } from '../../handler/messagesResponse';
+import { ClassService } from '../../formation/service/class.service';
 
 export class InstructorController { 
   constructor(
     private readonly instructorService: InstructorService,
     private readonly authenticationService: AuthenticationService,
     private readonly attendanceInstructorService:AttendanceInstructorService,
-    private readonly specialityInstructorService:SpecialityInstructorService
+    private readonly specialityInstructorService:SpecialityInstructorService,
+    private readonly classService: ClassService
   ) {
     console.log('InstructorController constructor - instructorService:', this.instructorService);
     console.log('InstructorController constructor - authenticationService:', this.authenticationService);
@@ -179,6 +182,23 @@ export class InstructorController {
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)   
+    }
+  }
+
+  async findClassByIdInstructor(req: Request, res: Response): Promise<unknown> {
+    try {
+      const { Id } = req.params;
+      
+      return successResponse(
+        res,
+        await this.classService.findAllClassByIdInstructor(parseInt(Id))
+        ,
+        MessagesResponse.DATA_FOUND_SUCESS,
+        200
+      );
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res, MessagesResponse.SERVER_ERROR, 500);
     }
   }
 

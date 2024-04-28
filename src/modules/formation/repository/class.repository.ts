@@ -27,11 +27,27 @@ export class ClassRepository {
             time: true,
             student_quantity: true,
             instructors: true,
+            current_student_number:true,
             formation: true,
             material: true,
             enrollment: true,
             _count: true
             } })
+    }
+    async findAllClassByIdInstructor(id:number) {
+        return await prisma.class.findMany({
+            where: {
+                instructors: {
+                  some: {
+                    id:id
+                  }
+                }
+              },
+              include: {
+                formation: true,
+                _count: true
+              }
+        } )
     }
     async findById(Id: number) {
         return await prisma.class.findFirst({ where: { id: Id }, select: {
@@ -42,6 +58,7 @@ export class ClassRepository {
               description: true,
               time: true,
               student_quantity: true,
+              current_student_number:true,
               formation: true,
               material: true,
               enrollment: true,
@@ -64,8 +81,8 @@ export class ClassRepository {
             include: { instructors: true },
           })
     }
-    async updateQuantity(Id: number, student_quantity: number) {
-        return await prisma.class.update({ where: { id: Id }, data: { student_quantity: student_quantity}})
+    async updateQuantity(Id: number, current_student_number: number) {
+        return await prisma.class.update({ where: { id: Id }, data: { current_student_number: current_student_number}})
     }
     async delete(Id: number) {
         return await prisma.class.delete({ where: { id: Id } })

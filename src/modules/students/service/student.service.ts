@@ -33,6 +33,9 @@ export class StudentService {
   async findByNif(nif: string) {
     return await this.studentRepository.findByNif(nif);
   }
+  async findByIdEnrollment(id: number) {
+    return await this.enrollmentRepository.findByIdEnrollment(id);
+  }
 
   async update(id: number, updateAdministratorDTO: any) {
 
@@ -40,6 +43,9 @@ export class StudentService {
   }
   async delete(id: number) {
     return await this.studentRepository.delete(id);
+  }
+  async deleteEnrollment(id: number) {
+    return await this.enrollmentRepository.delete(id);
   }
   async createnrollment(createEnrollmentDTO: CreateEnrollmentDTO) {
     return await this.enrollmentRepository.create(createEnrollmentDTO)
