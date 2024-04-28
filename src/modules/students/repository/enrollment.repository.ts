@@ -33,7 +33,7 @@ export class EnrollmentRepository {
     });
   }
   async findStudentByIdForEnrollma(studentId: number) {
-    return await prisma.enrollment.findFirst({
+    return await prisma.enrollment.findMany({
       where: { studentId: studentId },
       select: {
         id: true,
