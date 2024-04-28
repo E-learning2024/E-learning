@@ -41,8 +41,19 @@ export class EnrollmentRepository {
         classId: true,
         status: true,
         student: true,
-        class: true,
-      },
+        class: {
+            select: {
+              id: true,
+              name: true,
+              description: true,
+              student_quantity: true,
+              instructors: true,
+              formation: true,
+              _count: true,
+            },
+        },
+        
+      }
     });
   }
   async findById(studentId: number) {
