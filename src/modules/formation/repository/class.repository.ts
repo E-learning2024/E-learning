@@ -20,7 +20,6 @@ export class ClassRepository {
     async findAll() {
         return await prisma.class.findMany({select: {
             id: true,
-         
             formationId: true,
             name: true,
             description: true,
@@ -45,7 +44,8 @@ export class ClassRepository {
               },
               include: {
                 formation: true,
-                _count: true
+                _count: true,
+                instructors:true
               }
         } )
     }
