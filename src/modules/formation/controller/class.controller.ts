@@ -7,6 +7,7 @@ import { Materialervice } from '../service/material.service';
 import { MessagesResponse } from '../../handler/messagesResponse';
 import { sendBroadcastingEmail } from '../../../utils/shared/sendMail';
 import { criarEmailDeConfirmacao } from '../../../utils/shared/template';
+import { statusReboot } from '../../students/controller/students.controller';
 
 export class ClassController { 
   constructor(
@@ -99,11 +100,26 @@ export class ClassController {
 
       const {Id}= req.params
       const {subject,message}  = req.body
+      const status="CONFIRMADO"
+      const statusEnum = statusReboot(status);
+      if (!statusEnum) {
+        return errorResponse(res, "Invalid status value", 400);
+      }
       const cla = await this.classService.findByid(parseInt(Id, 10));
       if(!cla){
         return errorResponse(res,'class not found !',401)  
       }
-      const users = await this.classService.findStudentByClassId(parseInt(Id, 10));
+      const users = await this.classService.findStudentByClassId(parseInt(Id, 10),statusEnum);
+      if(users.length==0){
+        return errorResponse(res,'Não temos Alunos nesta Turma !',401)   
+      }
+      if(subject==""){
+        return errorResponse(res,'Adicione um Assunto  !',401)   
+      }
+      if(message==""){
+        return errorResponse(res,'Adicione o corpo da mensagem  !',401)   
+      }
+      
       
     //send any broadcast
     const emails = users.map(user => user.student.email);
@@ -112,8 +128,9 @@ export class ClassController {
     console.log(formattedEmails);
     const formattedArray = [formattedEmails.join(',')];
     console.log(formattedArray);
-    const assunto = "Confirmação de Inscrição e Detalhes de Pagamento ";
-   const emailHtml = await criarEmailDeConfirmacao(assunto, "");
+   
+    const assunto: string = subject.trim() ? subject : "Recording subject";
+   const emailHtml = await criarEmailDeConfirmacao(assunto, message);
     sendBroadcastingEmail(formattedArray, assunto, emailHtml.corpoBroadCasting,"")
     return successResponse(
       res,
@@ -151,6 +168,34 @@ export class ClassController {
         return errorResponse(res,'class not found !',401)  
       }
       return successResponse(res,await this.materialervice.findByIdClass(parseInt(classId)),'',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
+  async deleteMaterial(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {material_Id} = req.params
+      const cla = await this.materialervice.findByid(parseInt(material_Id, 10));
+      if(!cla){
+        return errorResponse(res,'Material not found !',401)  
+      }
+      return successResponse(res,await this.materialervice.delete(parseInt(material_Id)),'',200);
+    } catch (error) {
+      console.log(error);
+      return errorResponse(res,'Server Error',500)  
+    }
+  }
+  async findAllMaterialByIdInstructor(req: Request, res: Response, ): Promise<unknown> {
+    try { 
+      const {instructorId} = req.params
+      if (instructorId) {
+        const   instructor = await this.instructorService.findById(parseInt(instructorId));
+          if (!instructor) {
+            return errorResponse(res, 'Instrutor não encontrado', 404);
+          }
+        }
+      return successResponse(res,await this.classService.findAllMaterialByIdInstructor(parseInt(instructorId)),'',200);
     } catch (error) {
       console.log(error);
       return errorResponse(res,'Server Error',500)  

@@ -1,3 +1,4 @@
+import { Status } from "../../students/dto/create-enrollment.dto";
 import { EnrollmentRepository } from "../../students/repository/enrollment.repository";
 import { CreateClassDTO } from "../dto/create-class.dto";
 import { UpdateClassDTO } from "../dto/update-class.dto";
@@ -30,9 +31,9 @@ import { ClassRepository } from "../repository/class.repository";
 
     return await this.classRepository.update(id, data);
   }
-  async findStudentByClassId(id: number) {
+  async findStudentByClassId(id: number,status:Status) {
 
-    return await this.enrollmentRepository.findStudentByClassId(id);
+    return await this.enrollmentRepository.findStudentByClassId(id,status);
   }
   async updateQuantity(Id: number, current_student_number: number) {
 
@@ -42,5 +43,8 @@ import { ClassRepository } from "../repository/class.repository";
 
   async delete(id: number) {
     return await this.classRepository.delete(id);
+  }
+  async findAllMaterialByIdInstructor(Id: number) {
+    return await this.classRepository.findAllMaterialByIdInstructor(Id);
   }
 }

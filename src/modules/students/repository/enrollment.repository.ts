@@ -21,9 +21,9 @@ export class EnrollmentRepository {
         class: true,
       },
     });
-  }  async findStudentByClassId( classId: number) {
+  }  async findStudentByClassId( classId: number,status:Status) {
     return await prisma.enrollment.findMany({
-      where: {  classId: classId },
+      where: {  classId: classId,status:status },
       select: {
         id: true,
         status: true,

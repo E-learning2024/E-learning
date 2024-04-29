@@ -67,10 +67,10 @@ export async function criarEmailDeConfirmacao(assunto:string,nome:string) {
   </head>
   <body>
     <div style="font-family: Arial, sans-serif; padding: 20px;">
-      <h1 style="color: #333;">Olá, {nome}!</h1>
-      <p style="color: #666;">Este é um email de exemplo com um template HTML.</p>
-      <p style="color: #666;">Você pode personalizar este template com as informações desejadas.</p>
-      <p style="color: #666;">Atenciosamente, Equipe de E-learning</p>
+      <h1 style="color: #333;">Assunto: ${assunto}</h1>
+      <h1 style="color: #333;">Olá, Turma!</h1>
+      <p style="color: #666;">${nome}.</p>
+
     </div>
   </body>
   </html>`

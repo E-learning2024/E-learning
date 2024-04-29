@@ -16,7 +16,9 @@ export class AdminController {
 
   async createAdmin(req: Request, res: Response, ): Promise<unknown> {
     try { 
+      console.log(req.body)
       const newRequest ={ ...req.body,password:await this.authenticationService.encryptPassword(req.body.password)}
+
     const verifyEmail=  await this.adminService.findByEmail(req.body.email)
     if(verifyEmail) {
       return errorResponse(res,`Este email:  ${req.body.email}  ja se encontra cadatrado`,400)  
