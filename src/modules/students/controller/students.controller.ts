@@ -7,7 +7,7 @@ import { ClassService } from "../../formation/service/class.service";
 import { enviarEmail } from "../../../utils/shared/sendMail";
 import { criarEmailDeConfirmacao } from "../../../utils/shared/template";
 import { Status } from "../dto/create-enrollment.dto";
-function statusReboot(value: string): Status | undefined {
+export function statusReboot(value: string): Status | undefined {
   return Object.values(Status).find((status) => status === value);
 }
 export class StudentController {
@@ -276,10 +276,14 @@ export class StudentController {
   ): Promise<unknown> {
     try {
       const { classId } = req.params;
-
+      const status="CONFIRMADO"
+      const statusEnum = statusReboot(status);
+      if (!statusEnum) {
+        return errorResponse(res, "Invalid status value", 400);
+      }
       return successResponse(
         res,
-        await this.studentService.findStudentByClassId(parseInt(classId)),
+        await this.studentService.findStudentByClassId(parseInt(classId),statusEnum),
         MessagesResponse.DATA_FOUND_SUCESS,
         200
       );

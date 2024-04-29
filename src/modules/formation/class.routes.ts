@@ -172,6 +172,31 @@ classRouter.delete(
 );
 /**
  * @swagger
+ * /class/deleteMaterial/{material_Id}:
+ *   delete:
+ *     summary: Delete an formation
+ *     tags: [CLASS-MATERIAL]
+ *     parameters:
+ *       - in: path
+ *         name: material_Id
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: ID of the formation to delete
+ *     responses:
+ *       200:
+ *         description: formation deleted successfully
+ *       404:
+ *         description: formation not found
+ *       500:
+ *         description: Internal server error
+ */
+classRouter.delete(
+  "/deleteMaterial/:material_Id",
+  classController.deleteMaterial.bind(classController)
+);
+/**
+ * @swagger
  * /class/editClass/{id}:
  *   put:
  *     summary: Edit an existing class
@@ -393,5 +418,28 @@ classRouter.get(
 classRouter.post(
   "/sendAnyBroadCasting/:Id",
   classController.sendAnyBroadCasting.bind(classController)
+);
+/**
+ * @swagger
+ * /class/findAllMaterialByIdInstructor/{instructorId}:
+ *   get:
+ *     summary: Get a single class by ID
+ *     tags: [CLASS]
+ *     parameters:
+ *       - in: path
+ *         name: instructorId
+ *         required: true
+ *         schema:
+ *           type: integer
+ *         description: instructorId of the class to retrieve
+ *     responses:
+ *       200:
+ *         description: class retrieved successfully
+ *       404:
+ *         description: class not found
+ */
+classRouter.get(
+  "/findAllMaterialByIdInstructor/:instructorId",
+  classController.findAllMaterialByIdInstructor.bind(classController)
 );
 export default classRouter;

@@ -87,5 +87,20 @@ export class ClassRepository {
     async delete(Id: number) {
         return await prisma.class.delete({ where: { id: Id } })
     }
+    async findAllMaterialByIdInstructor(Id:number) {
+        return await prisma.class.findMany({
+            where:{
+                instructors:{
+                    some:{
+                        id: Id,
+                    }
+                }
+            },
+            include:{
+                material:true
+            }
+
+         })
+    }
 
 }
