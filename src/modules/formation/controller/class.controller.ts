@@ -152,7 +152,7 @@ export class ClassController {
     if(!cla){
       return errorResponse(res,'class not found !',401)  
     }
-       const newRequeste = { ...req.body,fileUrl:file }
+       const newRequeste = { ...req.body,fileUrl:file,classId:parseInt(classId, 10) }
        const create = await this.materialervice.create(newRequeste);
       return successResponse(res,create,'Material cadastrado com sucesso',201);
     } catch (error) {

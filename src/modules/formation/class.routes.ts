@@ -18,7 +18,7 @@ import configureMulter from "../../utils/middlewares/fileUpload";
 import { createMaterialRules } from "./validation/material.validation";
 import { EnrollmentRepository } from "../students/repository/enrollment.repository";
 import { StudentService } from "../students/service/student.service";
-const upload = multer(configureMulter());
+const upload = multer(configureMulter("material"));
 
 const classRepository = new ClassRepository();
 const enrollmentRepository = new EnrollmentRepository()
@@ -314,7 +314,7 @@ classRouter.put(
 
 classRouter.post(
   "/material/create",
-  upload.single("file"),
+  upload.single("fileUrl"),
   createMaterialRules(),
   validate,
   classController.createMaterial.bind(classController)
