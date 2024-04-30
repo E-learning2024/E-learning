@@ -77,6 +77,3 @@ export async function criarEmailDeConfirmacao(assunto:string,nome:string) {
   return  {corpoBroadCasting,corpoDaMensagem};
 }
 
-// const nomeDoDestinatario = "João";
-// const assunto =""
-// const emailHtml = criarEmailDeConfirmacao(assunto,nomeDoDestinatario);

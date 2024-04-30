@@ -1,0 +1,4951 @@
+{
+	"items": [
+		{
+			"name": "UserActions",
+			"data": [
+				{
+					"InsightHash": "UPLOADPHOTONUDGE*LBPZ4+M4ZHXMXUHS5VHUOLS5YTR17OQB91TWEWENWOY=*UF0MZS/WLUUY+VAUZ514K4WZ5VMGL6KNWWKKBLNN3UG=",
+					"FeedItemId": null,
+					"InsightType": "UploadPhotoNudge",
+					"InsightScenario": "User",
+					"UserActions": {
+						"userActions": {
+							"VIEW": [
+								{
+									"Count": 1,
+									"MostRecentActionTimestamp": "2024-04-15T20:15:27.5831521+00:00",
+									"UserActionType": "View",
+									"CallToActionType": null
+								},
+								{
+									"Count": 1,
+									"MostRecentActionTimestamp": "2024-04-16T09:17:06.1198536+00:00",
+									"UserActionType": "View",
+									"CallToActionType": null
+								}
+							]
+						}
+					},
+					"Version": "V1",
+					"ItemClass": "InsightInstanceActions",
+					"SecondaryKey": "VVBMT0FEUEhPVE9OVURHRSpMQlBaNCtNNFpIWE1YVUhTNVZIVU9MUzVZVFIxN09RQjkxVFdFV0VOV09ZPSpVRjBNWlMvV0xVVVkrVkFVWjUxNEs0V1o1Vk1HTDZLTldXS0tCTE5OM1VHPQ",
+					"Id": "RgAAAAA0uTpfBz5qRag4vE7HFAneBwAL4wWFsGjPT6xHLX6F3l1sAAAGEpE-AAAL4wWFsGjPT6xHLX6F3l1sAAAGFQrbAAAA0",
+					"CreatedDateTime": "2024-04-15T20:15:27.6008172+00:00",
+					"LastModifiedDateTime": "2024-04-16T09:17:06.1592361+00:00",
+					"SystemExpirationDateTime": null
+				},
+				{
+					"InsightHash": "LINKEDINPROFILESUGGESTION*LBPZ4+M4ZHXMXUHS5VHUOLS5YTR17OQB91TWEWENWOY=*CUFFHXZ205KN8PCQ0GY1BMRBN1CLYXGY5GR/C62AOEA=",
+					"FeedItemId": null,
+					"InsightType": "LinkedInProfileSuggestion",
+					"InsightScenario": "User",
+					"UserActions": {
+						"userActions": {
+							"VIEW": [
+								{
+									"Count": 1,
+									"MostRecentActionTimestamp": "2024-04-16T11:52:43.1348694+00:00",
+									"UserActionType": "View",
+									"CallToActionType": null
+								},
+								{
+									"Count": 1,
+									"MostRecentActionTimestamp": "2024-04-16T11:52:59.0072089+00:00",
+									"UserActionType": "View",
+									"CallToActionType": null
+								}
+							]
+						}
+					},
+					"Version": "V1",
+					"ItemClass": "InsightInstanceActions",
+					"SecondaryKey": "TElOS0VESU5QUk9GSUxFU1VHR0VTVElPTipMQlBaNCtNNFpIWE1YVUhTNVZIVU9MUzVZVFIxN09RQjkxVFdFV0VOV09ZPSpDVUZGSFhaMjA1S044UENRMEdZMUJNUkJOMUNMWVhHWTVHUi9DNjJBT0VBPQ",
+					"Id": "RgAAAAA0uTpfBz5qRag4vE7HFAneBwAL4wWFsGjPT6xHLX6F3l1sAAAGEpE-AAAL4wWFsGjPT6xHLX6F3l1sAAAGFQraAAAA0",
+					"CreatedDateTime": "2024-04-15T14:30:11.8554521+00:00",
+					"LastModifiedDateTime": "2024-04-16T11:52:59.0507629+00:00",
+					"SystemExpirationDateTime": null
+				},
+				{
+					"InsightHash": "UPLOADPHOTONUDGE*VWJ7N5FOWGCFDAZK/VZ6QSG+KLZHUJIC9NXEP4ZLARM=*UF0MZS/WLUUY+VAUZ514K4WZ5VMGL6KNWWKKBLNN3UG=",
+					"FeedItemId": null,
+					"InsightType": "UploadPhotoNudge",
+					"InsightScenario": "User",
+					"UserActions": {
+						"userActions": {
+							"VIEW": [
+								{
+									"Count": 1,
+									"MostRecentActionTimestamp": "2024-04-15T13:58:48.4406582+00:00",
+									"UserActionType": "View",
+									"CallToActionType": null
+								}
+							]
+						}
+					},
+					"Version": "V1",
+					"ItemClass": "InsightInstanceActions",
+					"SecondaryKey": "VVBMT0FEUEhPVE9OVURHRSpWV0o3TjVGT1dHQ0ZEQVpLL1ZaNlFTRytLTFpIVUpJQzlOWEVQNFpMQVJNPSpVRjBNWlMvV0xVVVkrVkFVWjUxNEs0V1o1Vk1HTDZLTldXS0tCTE5OM1VHPQ",
+					"Id": "RgAAAAA0uTpfBz5qRag4vE7HFAneBwAL4wWFsGjPT6xHLX6F3l1sAAAGEpE-AAAL4wWFsGjPT6xHLX6F3l1sAAAGFQrZAAAA0",
+					"CreatedDateTime": "2024-04-15T13:58:48.484455+00:00",
+					"LastModifiedDateTime": "2024-04-15T13:58:48.512946+00:00",
+					"SystemExpirationDateTime": null
+				}
+			]
+		},
+		{
+			"name": "UserAssociations",
+			"data": [
+				{
+					"EmailId": "isaac.bunga@ideiasdinamicas.com",
+					"LinkedInMemberId": "urn:li:person:DgGgzgP4QAGiKXE-ReTA_BpK9ZpESc2odJvDMEAztVs",
+					"VoteTier": 0,
+					"ItemClass": "LinkedInProfileAssociationItem",
+					"SecondaryKey": "aXNhYWMuYnVuZ2FAaWRlaWFzZGluYW1pY2FzLmNvbQ==",
+					"Id": "RgAAAAA0uTpfBz5qRag4vE7HFAneBwAL4wWFsGjPT6xHLX6F3l1sAAAGEpFTAAAL4wWFsGjPT6xHLX6F3l1sAAAGFW-9AAAA0",
+					"CreatedDateTime": "2024-04-15T14:34:37.2210149+00:00",
+					"LastModifiedDateTime": "2024-04-15T14:37:51.758362+00:00",
+					"SystemExpirationDateTime": null
+				}
+			]
+		},
+		{
+			"name": "ChatsWith",
+			"data": [
+				{
+					"Id": "OID:6C2F67D4-DEB3-49D2-8963-F1FACAEC2656@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-18T04:19:53.462+00:00",
+						"LastDateTime": "2024-04-26T08:58:57.74+00:00",
+						"FrequencyList": "2,4,2,,,,,,2",
+						"FrequencyTotalCount": 10
+					}
+				},
+				{
+					"Id": "OID:02345C6E-0A86-4D4A-8780-620B3C0E4B39@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:11:07.342+00:00",
+						"LastDateTime": "2024-04-24T15:05:50.223+00:00",
+						"FrequencyList": "5,,1,,,5,,,,2",
+						"FrequencyTotalCount": 13
+					}
+				},
+				{
+					"Id": "OID:944BC8E7-82B2-4DC0-9194-C9A38CD52FA9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T15:16:18.432+00:00",
+						"LastDateTime": "2024-04-19T10:28:53.384+00:00",
+						"FrequencyList": "1,,,4,2",
+						"FrequencyTotalCount": 7
+					}
+				},
+				{
+					"Id": "OID:E29F4268-5D6B-4BEB-8C29-ABE4DD593E4A@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T14:29:16.489+00:00",
+						"LastDateTime": "2024-04-23T12:43:28.589+00:00",
+						"FrequencyList": "1,5,,,,,3,3,4",
+						"FrequencyTotalCount": 16
+					}
+				},
+				{
+					"Id": "OID:6666DAB7-EADB-46D5-BF38-6126E5C33F01@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-25T10:51:09.857+00:00",
+						"LastDateTime": "2024-04-26T09:01:23.149+00:00",
+						"FrequencyList": "3,11",
+						"FrequencyTotalCount": 14
+					}
+				},
+				{
+					"Id": "OID:869417F6-E8C1-41F5-BC58-231E12222A22@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-26T10:11:52.316+00:00",
+						"LastDateTime": "2024-04-26T10:13:43.605+00:00",
+						"FrequencyList": "2",
+						"FrequencyTotalCount": 2
+					}
+				},
+				{
+					"Id": "OID:ECBF325B-0BEB-4F07-BE78-ECEB69EB8DEC@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-26T10:31:02.995+00:00",
+						"LastDateTime": "2024-04-26T19:17:42.635+00:00",
+						"FrequencyList": "5",
+						"FrequencyTotalCount": 5
+					}
+				},
+				{
+					"Id": "OID:BB8E4377-3FDE-4A40-85FD-AD8F9D94570F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T15:01:29.95+00:00",
+						"LastDateTime": "2024-04-15T15:05:03.178+00:00",
+						"FrequencyList": "2",
+						"FrequencyTotalCount": 2
+					}
+				},
+				{
+					"Id": "OID:9AB3DDF8-096C-4E02-A02E-5F1A3B21D209@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T15:37:49.032+00:00",
+						"LastDateTime": "2024-04-15T15:39:34.592+00:00",
+						"FrequencyList": "3",
+						"FrequencyTotalCount": 3
+					}
+				},
+				{
+					"Id": "OID:2BD41C45-86C6-4147-851B-973514CFFD3F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-23T09:00:41.818+00:00",
+						"LastDateTime": "2024-04-23T09:00:41.818+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				}
+			]
+		},
+		{
+			"name": "GetsChatsFrom",
+			"data": [
+				{
+					"Id": "OID:425E0770-61D9-46AF-BB46-7CEEA8434AF4@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-13T11:41:46.839+00:00",
+						"LastDateTime": "2024-04-15T11:40:17.482+00:00",
+						"FrequencyList": "3,,,,,,,,,,,,2,,,,,,,1",
+						"FrequencyTotalCount": 260
+					}
+				},
+				{
+					"Id": "OID:041A2FB7-282D-4C56-A5B6-5344267CAF2F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-08T14:16:10.712+00:00",
+						"LastDateTime": "2024-04-03T16:53:47.286+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,1,,,,,,,,,,,,,1,,,1",
+						"FrequencyTotalCount": 1232
+					}
+				},
+				{
+					"Id": "OID:11270F3C-3F10-4ECF-AE58-86197D0BA14E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-12T08:49:13.462+00:00",
+						"LastDateTime": "2024-04-03T16:49:55.584+00:00",
+						"FrequencyList": "1,1,,,,,1,,1,2,,,,,,1,,,,,,,,1,1,,,1,1",
+						"FrequencyTotalCount": 441
+					}
+				},
+				{
+					"Id": "OID:6C2F67D4-DEB3-49D2-8963-F1FACAEC2656@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-12-05T08:51:19.208+00:00",
+						"LastDateTime": "2024-04-25T14:56:47.509+00:00",
+						"FrequencyList": "7,1,,,,,,,,,2,,,2,,11,15,1,,,,,,,3,,,,,1",
+						"FrequencyTotalCount": 467
+					}
+				},
+				{
+					"Id": "OID:49B2E1BE-C697-4F36-A6A7-0EB0700B5286@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-20T09:53:04.668+00:00",
+						"LastDateTime": "2024-04-12T14:38:09.604+00:00",
+						"FrequencyList": "2,2,,,,,,,,,,2,3,,,1,3,1,,,,,,2",
+						"FrequencyTotalCount": 239
+					}
+				},
+				{
+					"Id": "OID:129891C6-ACAB-4F8D-BACB-8FA598384BFA@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-05T14:33:51.93+00:00",
+						"LastDateTime": "2024-04-02T12:07:25.677+00:00",
+						"FrequencyList": "1,1",
+						"FrequencyTotalCount": 96
+					}
+				},
+				{
+					"Id": "OID:49482C26-FF3C-4735-A322-0DA5C8D0BCC8@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-13T10:08:41.072+00:00",
+						"LastDateTime": "2024-03-28T19:16:11.138+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,1,,,,,1",
+						"FrequencyTotalCount": 196
+					}
+				},
+				{
+					"Id": "OID:9B6371CD-DF06-4EE9-A8DB-EC615D2CDA00@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-07-17T13:17:27.61+00:00",
+						"LastDateTime": "2024-04-01T15:31:06.551+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 40
+					}
+				},
+				{
+					"Id": "OID:5F96E26A-0C9B-44F7-A55E-913D866E302B@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-07T16:30:42.971+00:00",
+						"LastDateTime": "2024-04-12T08:18:12.85+00:00",
+						"FrequencyList": "1,2,,,,,,,,,,,,,,,4,,,,,,,,2,4",
+						"FrequencyTotalCount": 771
+					}
+				},
+				{
+					"Id": "OID:02345C6E-0A86-4D4A-8780-620B3C0E4B39@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-08T11:54:56.311+00:00",
+						"LastDateTime": "2024-04-24T15:05:22.12+00:00",
+						"FrequencyList": "7,9,2,,,2,,,,5,,,11,5,17,12,2,,,,,1,1,14,,,,8,5,2",
+						"FrequencyTotalCount": 2036
+					}
+				},
+				{
+					"Id": "OID:E33038E3-E37E-4AF6-88F0-82FEACC2CBF1@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-07T16:37:01.905+00:00",
+						"LastDateTime": "2024-03-28T23:04:05.845+00:00",
+						"FrequencyList": "1,1,,1,,,,,,,,,,,,,,,,,,,,1",
+						"FrequencyTotalCount": 164
+					}
+				},
+				{
+					"Id": "OID:EE1CBB7C-0ABD-46CE-8322-8A66845377C2@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-09-14T09:37:15.497+00:00",
+						"LastDateTime": "2024-03-31T21:19:00.67+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 63
+					}
+				},
+				{
+					"Id": "OID:944BC8E7-82B2-4DC0-9194-C9A38CD52FA9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T15:15:34.268+00:00",
+						"LastDateTime": "2024-04-19T11:15:43.396+00:00",
+						"FrequencyList": "6,,,8,4",
+						"FrequencyTotalCount": 18
+					}
+				},
+				{
+					"Id": "OID:A06EB6EE-93C8-4344-8853-DFA54E19B02F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-21T14:29:06.24+00:00",
+						"LastDateTime": "2024-04-12T10:35:15.977+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 64
+					}
+				},
+				{
+					"Id": "OID:13ACF779-A528-4F28-A92D-03D0DE04290E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-04T08:07:57.386+00:00",
+						"LastDateTime": "2024-03-31T21:20:28.084+00:00",
+						"FrequencyList": "1,,,1,1,,,,,,,,,4,,,,,1",
+						"FrequencyTotalCount": 164
+					}
+				},
+				{
+					"Id": "OID:8CB581DA-267C-4E7F-A4AA-C577D6CC0DF6@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-12T09:16:27.716+00:00",
+						"LastDateTime": "2024-04-12T08:33:04.476+00:00",
+						"FrequencyList": "1,1,,,,,,,,,,,,,,1,,,,,,6,1,,,11,,,,1",
+						"FrequencyTotalCount": 447
+					}
+				},
+				{
+					"Id": "OID:72932DC6-BC0F-4A46-B76F-580D64E2340D@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-19T13:22:38.686+00:00",
+						"LastDateTime": "2024-04-09T15:02:50.811+00:00",
+						"FrequencyList": "25,,,,,,,3,4,,,,3,,,,,,1,,,,,,,,,,4",
+						"FrequencyTotalCount": 405
+					}
+				},
+				{
+					"Id": "OID:E29F4268-5D6B-4BEB-8C29-ABE4DD593E4A@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T14:24:47.698+00:00",
+						"LastDateTime": "2024-04-23T12:43:35.762+00:00",
+						"FrequencyList": "6,13,,,,,4,10,11",
+						"FrequencyTotalCount": 44
+					}
+				},
+				{
+					"Id": "OID:6666DAB7-EADB-46D5-BF38-6126E5C33F01@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-12-05T11:25:50.985+00:00",
+						"LastDateTime": "2024-04-25T15:11:28.821+00:00",
+						"FrequencyList": "8,1,,,,,,,,,,,,,1,2,8,1,,,,,1,2,2,,,,6,2",
+						"FrequencyTotalCount": 220
+					}
+				},
+				{
+					"Id": "OID:869417F6-E8C1-41F5-BC58-231E12222A22@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-26T10:10:24.589+00:00",
+						"LastDateTime": "2024-04-26T10:15:16.977+00:00",
+						"FrequencyList": "5",
+						"FrequencyTotalCount": 5
+					}
+				},
+				{
+					"Id": "OID:ECBF325B-0BEB-4F07-BE78-ECEB69EB8DEC@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-09-23T10:00:46.85+00:00",
+						"LastDateTime": "2024-04-26T16:38:08.928+00:00",
+						"FrequencyList": "10,,1,2,,,,,,,,,,,7,1,,1,1,,,,,1,3,2",
+						"FrequencyTotalCount": 1167
+					}
+				},
+				{
+					"Id": "OID:F39B94A0-A5CC-40DB-B2D7-E220D5C7075F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-09-04T12:38:10.4+00:00",
+						"LastDateTime": "2024-04-03T20:37:42.207+00:00",
+						"FrequencyList": "1,,,,,,,2,,2,,,,,,,,,,,,,,,,,,1",
+						"FrequencyTotalCount": 86
+					}
+				},
+				{
+					"Id": "OID:AC736620-46BF-454F-8E93-534AE018696C@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-14T09:16:10.308+00:00",
+						"LastDateTime": "2024-04-10T10:04:19.212+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 27
+					}
+				},
+				{
+					"Id": "OID:AB5951BE-6E0D-4D34-A0B7-8D6BADDF90D2@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-11-03T09:48:42.195+00:00",
+						"LastDateTime": "2024-04-15T11:40:38.684+00:00",
+						"FrequencyList": "4,,,,,,,,,,,,1,1,2,,,,1,,2,2",
+						"FrequencyTotalCount": 389
+					}
+				},
+				{
+					"Id": "OID:F50913C2-BE75-4BF5-8870-F3F8F52DC594@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-02-16T12:47:55.922+00:00",
+						"LastDateTime": "2024-04-02T12:07:04.633+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,,,,,,,,,2,,1",
+						"FrequencyTotalCount": 188
+					}
+				},
+				{
+					"Id": "OID:E618A230-0EF1-49E5-8D3B-9BF311CB8702@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-12T09:07:36.242+00:00",
+						"LastDateTime": "2024-04-12T14:40:43.308+00:00",
+						"FrequencyList": "4,,1,,,,,,,,5,,,,,,3,,,,,,1",
+						"FrequencyTotalCount": 363
+					}
+				},
+				{
+					"Id": "OID:B62F5749-9D91-4C8B-9D64-20B753A30E26@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-03-17T10:19:36.464+00:00",
+						"LastDateTime": "2024-04-10T14:50:40.709+00:00",
+						"FrequencyList": "3,,1,,,,,1,1,1,,,,1,2",
+						"FrequencyTotalCount": 153
+					}
+				},
+				{
+					"Id": "OID:8E79AECA-F489-4B93-8566-D0B0B41D0352@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-08-16T09:33:07.782+00:00",
+						"LastDateTime": "2024-04-14T07:35:39.114+00:00",
+						"FrequencyList": "1,,1,2,,,,,,,,,,2,,,,1,,,1,,,,,,1",
+						"FrequencyTotalCount": 50
+					}
+				},
+				{
+					"Id": "OID:F4EBBAE7-9FFD-443C-9355-39C21E958E9F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-08T14:39:22.537+00:00",
+						"LastDateTime": "2024-04-15T11:40:48.049+00:00",
+						"FrequencyList": "2,,,1,,,,,,,,,1,,,,,,1,3,,1,,,1",
+						"FrequencyTotalCount": 330
+					}
+				},
+				{
+					"Id": "OID:297B5CBD-57C4-465D-8A14-C44B1DE4C99E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-09-23T08:59:41.992+00:00",
+						"LastDateTime": "2024-04-15T07:57:42.436+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 12
+					}
+				},
+				{
+					"Id": "OID:78545345-DEC2-441B-BBEC-C824679AEB54@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-06-14T09:52:38.778+00:00",
+						"LastDateTime": "2024-04-19T10:09:21.863+00:00",
+						"FrequencyList": "2",
+						"FrequencyTotalCount": 50
+					}
+				},
+				{
+					"Id": "OID:BB8E4377-3FDE-4A40-85FD-AD8F9D94570F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-13T09:19:55.591+00:00",
+						"LastDateTime": "2024-04-15T15:03:57.428+00:00",
+						"FrequencyList": "7,,,,,4,,,,,,,1,8,,,,,11,,,2,,,,2",
+						"FrequencyTotalCount": 1691
+					}
+				},
+				{
+					"Id": "OID:09CA6B55-97BB-47F2-A4A4-D1055FFFA367@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-29T13:08:15.816+00:00",
+						"LastDateTime": "2024-02-27T08:37:51.441+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,,3,,1,,,,,,,2",
+						"FrequencyTotalCount": 96
+					}
+				},
+				{
+					"Id": "OID:9AB3DDF8-096C-4E02-A02E-5F1A3B21D209@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T15:36:37.302+00:00",
+						"LastDateTime": "2024-04-15T15:39:13.106+00:00",
+						"FrequencyList": "3",
+						"FrequencyTotalCount": 3
+					}
+				},
+				{
+					"Id": "OID:ACC375DE-0417-402F-9D78-4385C91A04C6@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-09-26T07:48:40.648+00:00",
+						"LastDateTime": "2024-04-12T08:21:24.569+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 19
+					}
+				},
+				{
+					"Id": "OID:2BD41C45-86C6-4147-851B-973514CFFD3F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-12-21T12:22:08.162+00:00",
+						"LastDateTime": "2024-04-23T09:01:51.405+00:00",
+						"FrequencyList": "3",
+						"FrequencyTotalCount": 15
+					}
+				},
+				{
+					"Id": "OID:ABE10A51-FE48-4EE4-8EB6-44462525416C@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-02-16T13:05:14.853+00:00",
+						"LastDateTime": "2024-04-18T18:56:00.63+00:00",
+						"FrequencyList": "9",
+						"FrequencyTotalCount": 20
+					}
+				},
+				{
+					"Id": "OID:D09CEC20-8015-45F3-8F2E-8833B9C3420B@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-08T14:11:48.144+00:00",
+						"LastDateTime": "2024-02-19T13:59:42.022+00:00",
+						"FrequencyList": "2,,,,,,,,,,,,,,,,,,,,,3,,,2,,13,2",
+						"FrequencyTotalCount": 760
+					}
+				},
+				{
+					"Id": "OID:FE1BC02C-9055-4ADE-9162-93F3A899FAC4@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-15T13:10:29.611+00:00",
+						"LastDateTime": "2024-03-22T11:25:01.253+00:00",
+						"FrequencyList": "1,,,,1,,,,,,,,,,,,,,,,,,,,,,,,4,3",
+						"FrequencyTotalCount": 96
+					}
+				},
+				{
+					"Id": "OID:E9F46F7B-C963-4134-8FA4-D59EDFFC1CC5@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-07T16:30:42.941+00:00",
+						"LastDateTime": "2024-04-12T10:33:18.957+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,2,4,2",
+						"FrequencyTotalCount": 369
+					}
+				},
+				{
+					"Id": "OID:B239924D-ED1C-44C8-9A8F-033B7B2963BF@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-10T22:11:34.011+00:00",
+						"LastDateTime": "2024-03-07T12:43:02.613+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 103
+					}
+				},
+				{
+					"Id": "OID:04B65591-1DC0-4984-9053-E7313D32E989@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-12-09T14:00:41.241+00:00",
+						"LastDateTime": "2024-04-11T11:25:33.208+00:00",
+						"FrequencyList": "1,,,2,,,,,,,,1,,,,1",
+						"FrequencyTotalCount": 32
+					}
+				},
+				{
+					"Id": "OID:41837C01-B111-4810-8AB9-5434A6A1F6C4@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-25T06:41:03.567+00:00",
+						"LastDateTime": "2024-04-15T08:00:19.503+00:00",
+						"FrequencyList": "5",
+						"FrequencyTotalCount": 68
+					}
+				},
+				{
+					"Id": "OID:08EA43F4-ED5C-46D4-B8FC-907B28990F0D@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-07T16:30:19.794+00:00",
+						"LastDateTime": "2024-04-12T13:06:30.987+00:00",
+						"FrequencyList": "2,,2,,,,,,,2,,2,,,,1,1,,,,,3,,1,,3",
+						"FrequencyTotalCount": 291
+					}
+				},
+				{
+					"Id": "OID:0A91095F-3575-46C4-BFE9-C38B75AB490A@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-08T14:27:10.66+00:00",
+						"LastDateTime": "2024-03-27T20:03:22.05+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 388
+					}
+				},
+				{
+					"Id": "OID:CAD2DF3B-8A34-4A51-84B4-F1D9912CFD99@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-12T12:12:15.626+00:00",
+						"LastDateTime": "2023-11-09T15:10:39.187+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,1,,,,,,1,,,,,,1",
+						"FrequencyTotalCount": 246
+					}
+				},
+				{
+					"Id": "OID:C59CFC7B-DED8-4C7B-A21A-6BCC0DFE374E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-13T08:17:27.873+00:00",
+						"LastDateTime": "2024-03-01T10:36:33.649+00:00",
+						"FrequencyList": "4,,1,,,,,,,,,,,,,,,,,,,,2,,,,,,,1",
+						"FrequencyTotalCount": 94
+					}
+				},
+				{
+					"Id": "OID:D582B905-B18A-4519-80C6-D7C4CB85CCF9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-13T09:51:56.243+00:00",
+						"LastDateTime": "2024-03-05T09:38:20.606+00:00",
+						"FrequencyList": "2",
+						"FrequencyTotalCount": 114
+					}
+				},
+				{
+					"Id": "OID:77C156AB-95FA-4135-A535-BDFDEB929F00@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-22T14:06:20.258+00:00",
+						"LastDateTime": "2024-03-14T11:02:45.664+00:00",
+						"FrequencyList": "2",
+						"FrequencyTotalCount": 40
+					}
+				},
+				{
+					"Id": "OID:EC30E412-27D0-456E-AFD7-EA9B581C07FC@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-26T08:44:41.191+00:00",
+						"LastDateTime": "2024-03-07T13:15:00.982+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 47
+					}
+				},
+				{
+					"Id": "OID:385A85B4-D521-4489-A116-7223D1C1F71B@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-07-29T15:25:49.536+00:00",
+						"LastDateTime": "2024-03-21T09:47:34.816+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 32
+					}
+				},
+				{
+					"Id": "OID:3F170ECB-44CA-428F-B463-AAA7BA5F4C29@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-09T14:07:18.565+00:00",
+						"LastDateTime": "2024-01-08T09:43:20.423+00:00",
+						"FrequencyList": "1,,,,,1,,,,,,,,,,,,,,,,,,,,2",
+						"FrequencyTotalCount": 20
+					}
+				},
+				{
+					"Id": "OID:FE660028-87CE-4394-A7F7-1E4C7769744E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-17T08:03:09.623+00:00",
+						"LastDateTime": "2024-03-01T10:27:57.012+00:00",
+						"FrequencyList": "2,,,,,,,,,,,1,,,,,,,,,,2",
+						"FrequencyTotalCount": 66
+					}
+				},
+				{
+					"Id": "OID:488FDDC5-7B93-470A-9A6D-7759272D904F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-17T08:38:19.744+00:00",
+						"LastDateTime": "2024-03-19T10:11:36.615+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1",
+						"FrequencyTotalCount": 72
+					}
+				},
+				{
+					"Id": "OID:3A329E98-0FC6-49AE-B5E2-5A5F5B752DFD@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-18T09:22:21.263+00:00",
+						"LastDateTime": "2024-03-23T11:22:38.085+00:00",
+						"FrequencyList": "1,1",
+						"FrequencyTotalCount": 79
+					}
+				},
+				{
+					"Id": "OID:B319C4DC-A7E5-4C5A-AEFF-9C65AA8A70AB@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-23T17:30:33.112+00:00",
+						"LastDateTime": "2024-03-07T08:39:29.249+00:00",
+						"FrequencyList": "1,,1,,,,,,,,,,,2",
+						"FrequencyTotalCount": 75
+					}
+				},
+				{
+					"Id": "OID:076B109A-B08D-44A7-92F5-AC87A76960D3@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-25T06:32:13.487+00:00",
+						"LastDateTime": "2024-03-21T05:42:52.183+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,4,,,,,,,,,1",
+						"FrequencyTotalCount": 107
+					}
+				},
+				{
+					"Id": "OID:6305E2FB-C139-49A6-B921-5A88BD55EFCF@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-08-29T07:57:26.721+00:00",
+						"LastDateTime": "2024-03-21T14:52:30.499+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,,,,,,1",
+						"FrequencyTotalCount": 86
+					}
+				},
+				{
+					"Id": "OID:6FD7DC8E-2B6B-437E-A3E5-48AE8AE6856E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-09-14T11:41:37.326+00:00",
+						"LastDateTime": "2024-01-24T09:08:12.857+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,2",
+						"FrequencyTotalCount": 35
+					}
+				},
+				{
+					"Id": "OID:6B1C1E38-10EC-424C-8F93-A275DE9C209B@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-09-23T08:01:49.405+00:00",
+						"LastDateTime": "2024-03-19T08:39:07.223+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 17
+					}
+				},
+				{
+					"Id": "OID:F0A2773F-85EA-4260-B398-30F3550109A9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-11-15T09:55:00.877+00:00",
+						"LastDateTime": "2024-03-27T21:45:38.278+00:00",
+						"FrequencyList": "5",
+						"FrequencyTotalCount": 68
+					}
+				},
+				{
+					"Id": "OID:5CF91B17-E9A9-4F66-85A9-660DE0E480E4@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-12-12T10:34:32.413+00:00",
+						"LastDateTime": "2024-03-11T07:10:46.563+00:00",
+						"FrequencyList": "1,,,,,1",
+						"FrequencyTotalCount": 37
+					}
+				},
+				{
+					"Id": "OID:3A6FF519-F736-465F-83E3-67112620F28A@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-03-10T10:38:06.731+00:00",
+						"LastDateTime": "2024-03-26T18:53:22.164+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,,,,,,,,,,2",
+						"FrequencyTotalCount": 45
+					}
+				},
+				{
+					"Id": "OID:2EC281D9-8C92-40CF-913C-ACA42E3DF732@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-04-21T11:43:21.224+00:00",
+						"LastDateTime": "2024-02-23T10:21:40.38+00:00",
+						"FrequencyList": "1,,,,,,,1",
+						"FrequencyTotalCount": 6
+					}
+				},
+				{
+					"Id": "OID:4D9A72E6-F001-434B-9E6C-5A453FA49CAD@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2022-09-27T10:45:18.459+00:00",
+						"LastDateTime": "2024-03-22T19:56:22.02+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,,,,,,2",
+						"FrequencyTotalCount": 58
+					}
+				},
+				{
+					"Id": "OID:4C1A23F2-FB03-452C-BB03-41A8AFCE2FC2@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-06-22T14:15:45.994+00:00",
+						"LastDateTime": "2024-03-25T11:10:19.856+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,,,1,,,,,,,,3",
+						"FrequencyTotalCount": 127
+					}
+				},
+				{
+					"Id": "OID:47D32E09-A9D9-4D92-A556-322448A8D958@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-08-01T13:43:02.624+00:00",
+						"LastDateTime": "2024-03-10T14:15:46.109+00:00",
+						"FrequencyList": "1,,,,,,,,,,2,,,,,,1",
+						"FrequencyTotalCount": 41
+					}
+				},
+				{
+					"Id": "OID:5217E2BC-7ECD-426E-8BDD-8BD66113240C@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-09-04T12:40:25.653+00:00",
+						"LastDateTime": "2024-03-21T09:50:43.526+00:00",
+						"FrequencyList": "1,1,,,,,,,,,,,,,,,,,,,,,5",
+						"FrequencyTotalCount": 40
+					}
+				},
+				{
+					"Id": "OID:E71B19C5-B1C8-4222-B7C2-B92923E310B9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-11-06T15:12:29.921+00:00",
+						"LastDateTime": "2024-03-05T10:59:03.576+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,1",
+						"FrequencyTotalCount": 20
+					}
+				},
+				{
+					"Id": "OID:59F5BAF4-5C10-43BC-BF4F-853910077F85@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-11-15T16:26:50.095+00:00",
+						"LastDateTime": "2023-11-15T16:38:53.155+00:00",
+						"FrequencyList": "4",
+						"FrequencyTotalCount": 4
+					}
+				},
+				{
+					"Id": "OID:E6817B22-FE8B-4587-8AF4-BEDD9AC66C9C@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-12-05T09:07:23.241+00:00",
+						"LastDateTime": "2023-12-20T13:00:54.791+00:00",
+						"FrequencyList": "1,,,,,,2,,,,,,,,,1",
+						"FrequencyTotalCount": 4
+					}
+				},
+				{
+					"Id": "OID:E7B85F57-B2F4-460E-B801-232364C40503@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-12-21T12:21:21.265+00:00",
+						"LastDateTime": "2023-12-21T12:23:57.973+00:00",
+						"FrequencyList": "3",
+						"FrequencyTotalCount": 3
+					}
+				},
+				{
+					"Id": "OID:B00C2FCE-8796-4F1C-B740-3FCF19D39FC6@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2023-12-13T08:34:47.253+00:00",
+						"LastDateTime": "2024-03-28T14:09:40.746+00:00",
+						"FrequencyList": "1,,,,,,,,,,,,,,,,1,1,,,,,,,,,,,,1",
+						"FrequencyTotalCount": 23
+					}
+				}
+			]
+		},
+		{
+			"name": "MeetsWith",
+			"data": [
+				{
+					"Id": "OID:6C2F67D4-DEB3-49D2-8963-F1FACAEC2656@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"LastDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:601463D8-B0C4-490D-81B2-0F1C9C377ECB@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T13:05:39.0308163+00:00",
+						"LastDateTime": "2024-04-16T13:05:39.0308163+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:E5E02FAF-AF27-4CD8-A72C-EC4087812C88@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T09:16:55.53+00:00",
+						"LastDateTime": "2024-04-16T09:16:55.53+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:02345C6E-0A86-4D4A-8780-620B3C0E4B39@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"LastDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:72932DC6-BC0F-4A46-B76F-580D64E2340D@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"LastDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:AA1EEFAD-3898-478F-BCB3-CA18CD0D5002@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T09:16:55.53+00:00",
+						"LastDateTime": "2024-04-16T09:16:55.53+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:66505FFB-38EE-4C3E-9D02-BA39D40641E9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T09:16:55.53+00:00",
+						"LastDateTime": "2024-04-16T09:16:55.53+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:51A9A65A-4555-4CA0-9B6B-75B7EA2168F0@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T13:05:39.0308163+00:00",
+						"LastDateTime": "2024-04-16T13:05:39.0308163+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:8828F899-14FB-4E71-B8DF-D5FE98E40833@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T13:05:39.0308163+00:00",
+						"LastDateTime": "2024-04-16T13:05:39.0308163+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:B65F1D6C-B33E-4277-96B9-5EC7AADF5867@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T09:16:55.53+00:00",
+						"LastDateTime": "2024-04-26T10:15:33.853+00:00",
+						"FrequencyList": "1,,,,,,,,,,1",
+						"FrequencyTotalCount": 2
+					}
+				},
+				{
+					"Id": "OID:869417F6-E8C1-41F5-BC58-231E12222A22@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T09:16:55.53+00:00",
+						"LastDateTime": "2024-04-26T10:15:33.853+00:00",
+						"FrequencyList": "1,,,,,,,,,,2",
+						"FrequencyTotalCount": 3
+					}
+				},
+				{
+					"Id": "OID:ECBF325B-0BEB-4F07-BE78-ECEB69EB8DEC@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"LastDateTime": "2024-04-19T12:59:31.5799515+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				}
+			]
+		},
+		{
+			"name": "Mentions",
+			"data": [
+				{
+					"Id": "OID:6C2F67D4-DEB3-49D2-8963-F1FACAEC2656@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-19T09:03:27.2429133+00:00",
+						"LastDateTime": "2024-04-24T10:03:32.0715827+00:00",
+						"FrequencyList": "1,,,,,1",
+						"FrequencyTotalCount": 2
+					}
+				},
+				{
+					"Id": "OID:6666DAB7-EADB-46D5-BF38-6126E5C33F01@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-19T08:56:57.7031068+00:00",
+						"LastDateTime": "2024-04-19T09:03:27.2429133+00:00",
+						"FrequencyList": "2",
+						"FrequencyTotalCount": 2
+					}
+				},
+				{
+					"Id": "OID:BB8E4377-3FDE-4A40-85FD-AD8F9D94570F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-23T08:48:16.2493347+00:00",
+						"LastDateTime": "2024-04-23T08:48:16.2493347+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "V2ID:AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AC_MFhbBoz0_sRy1_hd5dbAAABhV4HwAA",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T12:56:49.3787268+00:00",
+						"LastDateTime": "2024-04-24T13:27:40.4354568+00:00",
+						"FrequencyList": "2,2,1,,,4,,1,,8",
+						"FrequencyTotalCount": 18
+					}
+				}
+			]
+		},
+		{
+			"name": "ReactsTo",
+			"data": [
+				{
+					"Id": "OID:9B6371CD-DF06-4EE9-A8DB-EC615D2CDA00@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T14:18:52.5118025+00:00",
+						"LastDateTime": "2024-04-15T14:18:52.5118025+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:5F96E26A-0C9B-44F7-A55E-913D866E302B@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-23T08:50:38.1392104+00:00",
+						"LastDateTime": "2024-04-23T08:50:38.1392104+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:02345C6E-0A86-4D4A-8780-620B3C0E4B39@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T15:18:07.3864576+00:00",
+						"LastDateTime": "2024-04-27T06:26:50.2974939+00:00",
+						"FrequencyList": "1,2,,,,,,,2,,2,,1",
+						"FrequencyTotalCount": 8
+					}
+				},
+				{
+					"Id": "OID:13ACF779-A528-4F28-A92D-03D0DE04290E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-25T15:59:49.9038335+00:00",
+						"LastDateTime": "2024-04-25T15:59:49.9038335+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:E29F4268-5D6B-4BEB-8C29-ABE4DD593E4A@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-22T14:12:48.3950011+00:00",
+						"LastDateTime": "2024-04-22T14:12:48.3950011+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:8828F899-14FB-4E71-B8DF-D5FE98E40833@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T19:59:23.3935774+00:00",
+						"LastDateTime": "2024-04-16T19:59:23.3935774+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:6666DAB7-EADB-46D5-BF38-6126E5C33F01@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-25T15:11:46.1442677+00:00",
+						"LastDateTime": "2024-04-25T15:11:46.1442677+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:869417F6-E8C1-41F5-BC58-231E12222A22@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-26T10:16:03.5444982+00:00",
+						"LastDateTime": "2024-04-26T10:16:03.5444982+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:ECBF325B-0BEB-4F07-BE78-ECEB69EB8DEC@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-26T10:54:48.401136+00:00",
+						"LastDateTime": "2024-04-26T10:54:48.401136+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:AB5951BE-6E0D-4D34-A0B7-8D6BADDF90D2@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-22T15:36:46.4591577+00:00",
+						"LastDateTime": "2024-04-22T15:36:46.4591577+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:F50913C2-BE75-4BF5-8870-F3F8F52DC594@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-25T16:00:42.4824599+00:00",
+						"LastDateTime": "2024-04-25T16:00:42.4824599+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:78545345-DEC2-441B-BBEC-C824679AEB54@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:32:59.3473161+00:00",
+						"LastDateTime": "2024-04-15T13:32:59.3473161+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:BB8E4377-3FDE-4A40-85FD-AD8F9D94570F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:17:25.9859668+00:00",
+						"LastDateTime": "2024-04-22T08:23:57.8963636+00:00",
+						"FrequencyList": "1,,,,,,2,1",
+						"FrequencyTotalCount": 4
+					}
+				},
+				{
+					"Id": "OID:09CA6B55-97BB-47F2-A4A4-D1055FFFA367@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-24T14:32:02.4046027+00:00",
+						"LastDateTime": "2024-04-24T14:32:02.4046027+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:E9F46F7B-C963-4134-8FA4-D59EDFFC1CC5@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-17T15:41:57.5356662+00:00",
+						"LastDateTime": "2024-04-17T15:41:57.5356662+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:B239924D-ED1C-44C8-9A8F-033B7B2963BF@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T15:54:32.8491537+00:00",
+						"LastDateTime": "2024-04-16T15:54:32.8491537+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:04B65591-1DC0-4984-9053-E7313D32E989@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:31:32.2698031+00:00",
+						"LastDateTime": "2024-04-15T13:31:32.2698031+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				}
+			]
+		},
+		{
+			"name": "SendsEmailTo",
+			"data": [
+				{
+					"Id": "OID:94D72E4A-3C6F-4860-9890-19C7F2AA1332@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:47:04.7580051+00:00",
+						"LastDateTime": "2024-04-15T13:47:04.7580051+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:751F4801-CBB9-4F93-A946-4F272D669ADD@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:42:26.1582554+00:00",
+						"LastDateTime": "2024-04-15T13:47:04.7580051+00:00",
+						"FrequencyList": "2",
+						"FrequencyTotalCount": 2
+					}
+				},
+				{
+					"Id": "OID:E29F4268-5D6B-4BEB-8C29-ABE4DD593E4A@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T14:17:06.7225909+00:00",
+						"LastDateTime": "2024-04-15T14:17:06.7225909+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:8828F899-14FB-4E71-B8DF-D5FE98E40833@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:41:20.7027096+00:00",
+						"LastDateTime": "2024-04-15T13:41:20.7027096+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:F50913C2-BE75-4BF5-8870-F3F8F52DC594@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T15:39:56.4515452+00:00",
+						"LastDateTime": "2024-04-15T15:39:56.4515452+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:BB8E4377-3FDE-4A40-85FD-AD8F9D94570F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T13:47:04.7580051+00:00",
+						"LastDateTime": "2024-04-15T13:47:04.7580051+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				}
+			]
+		},
+		{
+			"name": "AuthorFavorability",
+			"data": [
+				{
+					"Id": "OID:02345C6E-0A86-4D4A-8780-620B3C0E4B39@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"AuthorScore": 0.2828,
+						"CoAuthorScore": 0
+					}
+				}
+			]
+		},
+		{
+			"name": "CollaborationIntensity",
+			"data": [
+				{
+					"Id": "OID:425E0770-61D9-46AF-BB46-7CEEA8434AF4@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 24,
+						"CollaborationIntensityScore": 0.421,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.421,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.659,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 2.35,
+						"AggregatedTotalTimeLast12Weeks": 3.85,
+						"AggregatedTotalTime": 3.843,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 3.843,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 2.343,
+						"MaxAggregatedTotalTimeLast2Weeks": 2.35,
+						"MaxAggregatedTotalTimeLast4Weeks": 3.85,
+						"MaxAggregatedTotalTimeLast12Weeks": 3.85,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-18T20:21:10.696+00:00",
+						"FirstWeekWithCollaboration": "2024-04-03T18:56:23.918+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-18T20:21:10.696+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-29T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							141,
+							0,
+							90,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:041A2FB7-282D-4C56-A5B6-5344267CAF2F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 24,
+						"CollaborationIntensityScore": 0.06,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.06,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.096,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-03T16:53:47.286+00:00",
+						"FirstWeekWithCollaboration": "2024-04-03T16:53:47.286+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-03T16:53:47.286+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-29T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:11270F3C-3F10-4ECF-AE58-86197D0BA14E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 24,
+						"CollaborationIntensityScore": 0.122,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.122,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.192,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0,
+						"AggregatedTotalTimeLast12Weeks": 1.5,
+						"AggregatedTotalTime": 1.5,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 1.5,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 1.5,
+						"MaxAggregatedTotalTimeLast12Weeks": 1.5,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-03T16:49:55.584+00:00",
+						"FirstWeekWithCollaboration": "2024-04-02T12:07:05.394+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-03T16:49:55.584+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-29T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							0,
+							90,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:6C2F67D4-DEB3-49D2-8963-F1FACAEC2656@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 24,
+						"CollaborationIntensityScore": 6.131,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 1.956,
+						"ChatReceivedIntensity": 3.975,
+						"CallIntensity": 0.196,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 7.664,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 17.5,
+						"AggregatedTotalTimeLast4Weeks": 46.45,
+						"AggregatedTotalTimeLast12Weeks": 48.7,
+						"AggregatedTotalTime": 48.691,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 12.799,
+						"AggregatedTotalTimeChatReceived": 34.345,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 1.543,
+						"MaxAggregatedTotalTimeLast1Week": 17.499,
+						"MaxAggregatedTotalTimeLast2Weeks": 28.943,
+						"MaxAggregatedTotalTimeLast4Weeks": 48.699,
+						"MaxAggregatedTotalTimeLast12Weeks": 48.7,
+						"TotalWeeksWithCollaboration": 4,
+						"RecentWeekWithCollaboration": "2024-04-26T16:44:23.73+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T08:30:18.136+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-26T16:44:23.73+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-22T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-29T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							1050,
+							432,
+							1305,
+							135,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:601463D8-B0C4-490D-81B2-0F1C9C377ECB@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 24,
+						"CollaborationIntensityScore": 3.088,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0.349,
+						"MeetingIntensity": 2.737,
+						"CollaborationIntensityMaxLifetime": 3.861,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 24.233,
+						"AggregatedTotalTimeLast12Weeks": 24.233,
+						"AggregatedTotalTime": 24.16,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 21.42,
+						"AggregatedTotalTimeCall": 2.74,
+						"MaxAggregatedTotalTimeLast1Week": 13.476,
+						"MaxAggregatedTotalTimeLast2Weeks": 24.226,
+						"MaxAggregatedTotalTimeLast4Weeks": 24.233,
+						"MaxAggregatedTotalTimeLast12Weeks": 24.233,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-16T13:05:39.0308163+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T13:00:00+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-16T13:05:39.0308163+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-29T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							0,
+							1454,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:E5E02FAF-AF27-4CD8-A72C-EC4087812C88@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 24,
+						"CollaborationIntensityScore": 2.475,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0.42,
+						"MeetingIntensity": 2.055,
+						"CollaborationIntensityMaxLifetime": 3.094,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 19.3,
+						"AggregatedTotalTimeLast12Weeks": 19.3,
+						"AggregatedTotalTime": 19.357,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 16.07,
+						"AggregatedTotalTimeCall": 3.287,
+						"MaxAggregatedTotalTimeLast1Week": 11.307,
+						"MaxAggregatedTotalTimeLast2Weeks": 19.307,
+						"MaxAggregatedTotalTimeLast4Weeks": 19.307,
+						"MaxAggregatedTotalTimeLast12Weeks": 19.307,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-16T09:30:00+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T09:16:55.53+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-16T09:30:00+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-29T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							0,
+							1158,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:49B2E1BE-C697-4F36-A6A7-0EB0700B5286@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 23,
+						"CollaborationIntensityScore": 0.721,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.721,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.902,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 4.5,
+						"AggregatedTotalTimeLast12Weeks": 6.75,
+						"AggregatedTotalTime": 6.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 6.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 3,
+						"MaxAggregatedTotalTimeLast4Weeks": 6.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 6.75,
+						"TotalWeeksWithCollaboration": 3,
+						"RecentWeekWithCollaboration": "2024-04-12T14:38:09.604+00:00",
+						"FirstWeekWithCollaboration": "2024-03-31T21:17:46.938+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-12T14:38:09.604+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							180,
+							90,
+							135,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:129891C6-ACAB-4F8D-BACB-8FA598384BFA@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 23,
+						"CollaborationIntensityScore": 0.153,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.153,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.192,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 1.5,
+						"AggregatedTotalTimeLast12Weeks": 1.5,
+						"AggregatedTotalTime": 1.5,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 1.5,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 1.5,
+						"MaxAggregatedTotalTimeLast12Weeks": 1.5,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-02T12:07:25.677+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T07:24:31.769+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-02T12:07:25.677+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							90,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:49482C26-FF3C-4735-A322-0DA5C8D0BCC8@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 23,
+						"CollaborationIntensityScore": 0.06,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.06,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.076,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-03-28T19:16:11.138+00:00",
+						"FirstWeekWithCollaboration": "2024-03-28T19:16:11.138+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-03-28T19:16:11.138+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:9B6371CD-DF06-4EE9-A8DB-EC615D2CDA00@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 23,
+						"CollaborationIntensityScore": 0.076,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.076,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.096,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0.75,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-01T15:31:06.551+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T15:31:06.551+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-01T15:31:06.551+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:94D72E4A-3C6F-4860-9890-19C7F2AA1332@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 23,
+						"CollaborationIntensityScore": 0.024,
+						"EmailSentIntensity": 0.024,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.03,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0.15,
+						"AggregatedTotalTimeLast4Weeks": 0.15,
+						"AggregatedTotalTimeLast12Weeks": 0.15,
+						"AggregatedTotalTime": 0.153,
+						"AggregatedTotalTimeEmailSent": 0.153,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0.153,
+						"MaxAggregatedTotalTimeLast2Weeks": 0.153,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.153,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.153,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-15T13:47:04.7580051+00:00",
+						"FirstWeekWithCollaboration": "2024-04-15T13:47:04.7580051+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T13:47:04.7580051+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							9,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:5F96E26A-0C9B-44F7-A55E-913D866E302B@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 23,
+						"CollaborationIntensityScore": 0.287,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.287,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.359,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 2.25,
+						"AggregatedTotalTimeLast12Weeks": 2.25,
+						"AggregatedTotalTime": 2.25,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 2.25,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 2.25,
+						"MaxAggregatedTotalTimeLast4Weeks": 2.25,
+						"MaxAggregatedTotalTimeLast12Weeks": 2.25,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-12T08:18:12.85+00:00",
+						"FirstWeekWithCollaboration": "2024-04-11T11:22:42.118+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-12T08:18:12.85+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							135,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:02345C6E-0A86-4D4A-8780-620B3C0E4B39@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 15.471,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 2.846,
+						"ChatReceivedIntensity": 12.376,
+						"CallIntensity": 0.246,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 15.471,
+						"AggregatedTotalTimeCurrentWeek": 30.049,
+						"AggregatedTotalTimeLast2Weeks": 53.349,
+						"AggregatedTotalTimeLast4Weeks": 100.599,
+						"AggregatedTotalTimeLast12Weeks": 100.599,
+						"AggregatedTotalTime": 100.59,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 15.798,
+						"AggregatedTotalTimeChatReceived": 83.244,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 1.543,
+						"MaxAggregatedTotalTimeLast1Week": 30.049,
+						"MaxAggregatedTotalTimeLast2Weeks": 58.543,
+						"MaxAggregatedTotalTimeLast4Weeks": 100.599,
+						"MaxAggregatedTotalTimeLast12Weeks": 100.599,
+						"TotalWeeksWithCollaboration": 4,
+						"RecentWeekWithCollaboration": "2024-04-26T16:44:45.245+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T08:34:35.664+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-26T16:44:45.245+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-22T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							1803,
+							1398,
+							2115,
+							720,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:E33038E3-E37E-4AF6-88F0-82FEACC2CBF1@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 0.06,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.06,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.076,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-03-28T23:04:05.845+00:00",
+						"FirstWeekWithCollaboration": "2024-03-28T23:04:05.845+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-03-28T23:04:05.845+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:EE1CBB7C-0ABD-46CE-8322-8A66845377C2@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 0.06,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.06,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.076,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-03-31T21:19:00.67+00:00",
+						"FirstWeekWithCollaboration": "2024-03-31T21:19:00.67+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-03-31T21:19:00.67+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:A2D9359A-6BD8-46EC-AB2D-30B0BA71A966@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 0.399,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0.399,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.499,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 2.5,
+						"AggregatedTotalTimeLast4Weeks": 2.5,
+						"AggregatedTotalTimeLast12Weeks": 2.5,
+						"AggregatedTotalTime": 2.5,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 2.5,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 2.5,
+						"MaxAggregatedTotalTimeLast2Weeks": 2.5,
+						"MaxAggregatedTotalTimeLast4Weeks": 2.5,
+						"MaxAggregatedTotalTimeLast12Weeks": 2.5,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-17T08:07:40.031+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T11:43:10.02+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-17T08:07:40.031+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							150,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:944BC8E7-82B2-4DC0-9194-C9A38CD52FA9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 3.278,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 1.118,
+						"ChatReceivedIntensity": 2.157,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 4.098,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 20.5,
+						"AggregatedTotalTimeLast4Weeks": 20.5,
+						"AggregatedTotalTimeLast12Weeks": 20.5,
+						"AggregatedTotalTime": 20.5,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 7,
+						"AggregatedTotalTimeChatReceived": 13.5,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 20.5,
+						"MaxAggregatedTotalTimeLast2Weeks": 20.5,
+						"MaxAggregatedTotalTimeLast4Weeks": 20.5,
+						"MaxAggregatedTotalTimeLast12Weeks": 20.5,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-19T11:15:43.396+00:00",
+						"FirstWeekWithCollaboration": "2024-04-15T15:15:34.268+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-19T11:15:43.396+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							1230,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:A06EB6EE-93C8-4344-8853-DFA54E19B02F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 0.095,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.095,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.119,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0.75,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-12T10:35:15.977+00:00",
+						"FirstWeekWithCollaboration": "2024-04-12T10:35:15.977+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-12T10:35:15.977+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:13ACF779-A528-4F28-A92D-03D0DE04290E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 0.06,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.06,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.076,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-03-31T21:20:28.084+00:00",
+						"FirstWeekWithCollaboration": "2024-03-31T21:20:28.084+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-03-31T21:20:28.084+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:8CB581DA-267C-4E7F-A4AA-C577D6CC0DF6@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 0.227,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.227,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.239,
+						"AggregatedTotalTimeCurrentWeek": 0.193,
+						"AggregatedTotalTimeLast2Weeks": 0.193,
+						"AggregatedTotalTimeLast4Weeks": 1.693,
+						"AggregatedTotalTimeLast12Weeks": 1.693,
+						"AggregatedTotalTime": 1.686,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 1.686,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0.193,
+						"MaxAggregatedTotalTimeLast2Weeks": 1.5,
+						"MaxAggregatedTotalTimeLast4Weeks": 1.693,
+						"MaxAggregatedTotalTimeLast12Weeks": 1.693,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-26T09:19:14.093+00:00",
+						"FirstWeekWithCollaboration": "2024-04-11T13:19:58.351+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-12T08:33:04.476+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-22T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							12,
+							0,
+							90,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:72932DC6-BC0F-4A46-B76F-580D64E2340D@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 3.712,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0.524,
+						"ChatReceivedIntensity": 2.937,
+						"CallIntensity": 0.246,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 4.14,
+						"AggregatedTotalTimeCurrentWeek": 1.999,
+						"AggregatedTotalTimeLast2Weeks": 4.35,
+						"AggregatedTotalTimeLast4Weeks": 28.35,
+						"AggregatedTotalTimeLast12Weeks": 28.35,
+						"AggregatedTotalTime": 28.341,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 2.799,
+						"AggregatedTotalTimeChatReceived": 24,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 1.543,
+						"MaxAggregatedTotalTimeLast1Week": 2.343,
+						"MaxAggregatedTotalTimeLast2Weeks": 21.093,
+						"MaxAggregatedTotalTimeLast4Weeks": 28.35,
+						"MaxAggregatedTotalTimeLast12Weeks": 28.35,
+						"TotalWeeksWithCollaboration": 4,
+						"RecentWeekWithCollaboration": "2024-04-26T16:44:23.73+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T08:31:22.051+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-19T13:20:05.17+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							120,
+							141,
+							1125,
+							315,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:AA1EEFAD-3898-478F-BCB3-CA18CD0D5002@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 3.214,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0.119,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0.525,
+						"MeetingIntensity": 2.569,
+						"CollaborationIntensityMaxLifetime": 3.214,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 20.057,
+						"AggregatedTotalTimeLast4Weeks": 20.057,
+						"AggregatedTotalTimeLast12Weeks": 20.057,
+						"AggregatedTotalTime": 20.107,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0.75,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 16.07,
+						"AggregatedTotalTimeCall": 3.287,
+						"MaxAggregatedTotalTimeLast1Week": 12.057,
+						"MaxAggregatedTotalTimeLast2Weeks": 20.057,
+						"MaxAggregatedTotalTimeLast4Weeks": 20.057,
+						"MaxAggregatedTotalTimeLast12Weeks": 20.057,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-17T08:09:28.733+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T09:16:55.53+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-17T08:09:28.733+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							1203,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:66505FFB-38EE-4C3E-9D02-BA39D40641E9@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 3.094,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0.525,
+						"MeetingIntensity": 2.569,
+						"CollaborationIntensityMaxLifetime": 3.094,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 19.307,
+						"AggregatedTotalTimeLast4Weeks": 19.307,
+						"AggregatedTotalTimeLast12Weeks": 19.307,
+						"AggregatedTotalTime": 19.357,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 16.07,
+						"AggregatedTotalTimeCall": 3.287,
+						"MaxAggregatedTotalTimeLast1Week": 11.307,
+						"MaxAggregatedTotalTimeLast2Weeks": 19.307,
+						"MaxAggregatedTotalTimeLast4Weeks": 19.307,
+						"MaxAggregatedTotalTimeLast12Weeks": 19.307,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-16T09:30:00+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T09:16:55.53+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-16T09:30:00+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							1158,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:751F4801-CBB9-4F93-A946-4F272D669ADD@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 5.889,
+						"EmailSentIntensity": 0.319,
+						"EmailViewedIntensity": 2.999,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0,
+						"MeetingIntensity": 2.569,
+						"CollaborationIntensityMaxLifetime": 5.889,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 36.757,
+						"AggregatedTotalTimeLast4Weeks": 36.757,
+						"AggregatedTotalTimeLast12Weeks": 36.757,
+						"AggregatedTotalTime": 36.82,
+						"AggregatedTotalTimeEmailSent": 2,
+						"AggregatedTotalTimeEmailViewed": 18.75,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 16.07,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 28.757,
+						"MaxAggregatedTotalTimeLast2Weeks": 36.757,
+						"MaxAggregatedTotalTimeLast4Weeks": 36.757,
+						"MaxAggregatedTotalTimeLast12Weeks": 36.757,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-17T08:10:06.095+00:00",
+						"FirstWeekWithCollaboration": "2024-04-15T13:46:57.697+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-17T08:10:06.095+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							2205,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:51A9A65A-4555-4CA0-9B6B-75B7EA2168F0@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 3.861,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0.437,
+						"MeetingIntensity": 3.422,
+						"CollaborationIntensityMaxLifetime": 3.861,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 24.226,
+						"AggregatedTotalTimeLast4Weeks": 24.226,
+						"AggregatedTotalTimeLast12Weeks": 24.226,
+						"AggregatedTotalTime": 24.16,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 21.42,
+						"AggregatedTotalTimeCall": 2.74,
+						"MaxAggregatedTotalTimeLast1Week": 13.476,
+						"MaxAggregatedTotalTimeLast2Weeks": 24.226,
+						"MaxAggregatedTotalTimeLast4Weeks": 24.226,
+						"MaxAggregatedTotalTimeLast12Weeks": 24.226,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-16T13:05:39.0308163+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T13:00:00+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-16T13:05:39.0308163+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							1454,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:E29F4268-5D6B-4BEB-8C29-ABE4DD593E4A@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 13.992,
+						"EmailSentIntensity": 0.319,
+						"EmailViewedIntensity": 1.599,
+						"ChatSentIntensity": 2.798,
+						"ChatReceivedIntensity": 5.848,
+						"CallIntensity": 0,
+						"MeetingIntensity": 3.422,
+						"CollaborationIntensityMaxLifetime": 13.992,
+						"AggregatedTotalTimeCurrentWeek": 20.25,
+						"AggregatedTotalTimeLast2Weeks": 82.492,
+						"AggregatedTotalTimeLast4Weeks": 82.492,
+						"AggregatedTotalTimeLast12Weeks": 82.492,
+						"AggregatedTotalTime": 82.42,
+						"AggregatedTotalTimeEmailSent": 2,
+						"AggregatedTotalTimeEmailViewed": 10,
+						"AggregatedTotalTimeChatSent": 16,
+						"AggregatedTotalTimeChatReceived": 33,
+						"AggregatedTotalTimeMeeting": 21.42,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 51.492,
+						"MaxAggregatedTotalTimeLast2Weeks": 82.492,
+						"MaxAggregatedTotalTimeLast4Weeks": 82.492,
+						"MaxAggregatedTotalTimeLast12Weeks": 82.492,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-23T12:43:35.762+00:00",
+						"FirstWeekWithCollaboration": "2024-04-15T14:01:11.929+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-23T12:43:35.762+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							1215,
+							3735,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:8828F899-14FB-4E71-B8DF-D5FE98E40833@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 3.909,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.047,
+						"CallIntensity": 0.437,
+						"MeetingIntensity": 3.422,
+						"CollaborationIntensityMaxLifetime": 3.909,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 24.526,
+						"AggregatedTotalTimeLast4Weeks": 24.526,
+						"AggregatedTotalTimeLast12Weeks": 24.526,
+						"AggregatedTotalTime": 24.46,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.3,
+						"AggregatedTotalTimeMeeting": 21.42,
+						"AggregatedTotalTimeCall": 2.74,
+						"MaxAggregatedTotalTimeLast1Week": 13.776,
+						"MaxAggregatedTotalTimeLast2Weeks": 24.526,
+						"MaxAggregatedTotalTimeLast4Weeks": 24.526,
+						"MaxAggregatedTotalTimeLast12Weeks": 24.526,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-16T13:13:05.776+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T13:00:00+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-16T13:13:05.776+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							1472,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:6666DAB7-EADB-46D5-BF38-6126E5C33F01@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 6.454,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 3.324,
+						"ChatReceivedIntensity": 3.125,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 6.454,
+						"AggregatedTotalTimeCurrentWeek": 23.949,
+						"AggregatedTotalTimeLast2Weeks": 24.749,
+						"AggregatedTotalTimeLast4Weeks": 37.5,
+						"AggregatedTotalTimeLast12Weeks": 37.5,
+						"AggregatedTotalTime": 37.498,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 16.798,
+						"AggregatedTotalTimeChatReceived": 20.7,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 23.949,
+						"MaxAggregatedTotalTimeLast2Weeks": 24.749,
+						"MaxAggregatedTotalTimeLast4Weeks": 37.5,
+						"MaxAggregatedTotalTimeLast12Weeks": 37.5,
+						"TotalWeeksWithCollaboration": 4,
+						"RecentWeekWithCollaboration": "2024-04-26T16:44:23.73+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T08:30:49.265+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-26T16:44:23.73+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-22T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							1437,
+							48,
+							540,
+							225,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:B65F1D6C-B33E-4277-96B9-5EC7AADF5867@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 3.646,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 1.077,
+						"MeetingIntensity": 2.569,
+						"CollaborationIntensityMaxLifetime": 3.646,
+						"AggregatedTotalTimeCurrentWeek": 2.761,
+						"AggregatedTotalTimeLast2Weeks": 22.068,
+						"AggregatedTotalTimeLast4Weeks": 22.068,
+						"AggregatedTotalTimeLast12Weeks": 22.068,
+						"AggregatedTotalTime": 22.118,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 16.07,
+						"AggregatedTotalTimeCall": 6.048,
+						"MaxAggregatedTotalTimeLast1Week": 11.307,
+						"MaxAggregatedTotalTimeLast2Weeks": 22.068,
+						"MaxAggregatedTotalTimeLast4Weeks": 22.068,
+						"MaxAggregatedTotalTimeLast12Weeks": 22.068,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-26T10:15:33.853+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T09:16:55.53+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-26T10:15:33.853+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							166,
+							1158,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:869417F6-E8C1-41F5-BC58-231E12222A22@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 8.665,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0.399,
+						"ChatReceivedIntensity": 0.749,
+						"CallIntensity": 1.516,
+						"MeetingIntensity": 5.996,
+						"CollaborationIntensityMaxLifetime": 8.665,
+						"AggregatedTotalTimeCurrentWeek": 8.511,
+						"AggregatedTotalTimeLast2Weeks": 52.044,
+						"AggregatedTotalTimeLast4Weeks": 52.044,
+						"AggregatedTotalTimeLast12Weeks": 52.044,
+						"AggregatedTotalTime": 52.036,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 2,
+						"AggregatedTotalTimeChatReceived": 3.75,
+						"AggregatedTotalTimeMeeting": 37.5,
+						"AggregatedTotalTimeCall": 8.788,
+						"MaxAggregatedTotalTimeLast1Week": 24.783,
+						"MaxAggregatedTotalTimeLast2Weeks": 52.044,
+						"MaxAggregatedTotalTimeLast4Weeks": 52.044,
+						"MaxAggregatedTotalTimeLast12Weeks": 52.044,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-26T10:15:33.853+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T09:16:55.53+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-26T10:15:33.853+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							511,
+							2612,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:ECBF325B-0BEB-4F07-BE78-ECEB69EB8DEC@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 22,
+						"CollaborationIntensityScore": 5.915,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 1.523,
+						"ChatReceivedIntensity": 4.141,
+						"CallIntensity": 0.246,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 5.915,
+						"AggregatedTotalTimeCurrentWeek": 18.7,
+						"AggregatedTotalTimeLast2Weeks": 23.45,
+						"AggregatedTotalTimeLast4Weeks": 35.45,
+						"AggregatedTotalTimeLast12Weeks": 35.45,
+						"AggregatedTotalTime": 35.439,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 7.799,
+						"AggregatedTotalTimeChatReceived": 26.098,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 1.543,
+						"MaxAggregatedTotalTimeLast1Week": 18.7,
+						"MaxAggregatedTotalTimeLast2Weeks": 23.45,
+						"MaxAggregatedTotalTimeLast4Weeks": 35.45,
+						"MaxAggregatedTotalTimeLast12Weeks": 35.45,
+						"TotalWeeksWithCollaboration": 4,
+						"RecentWeekWithCollaboration": "2024-04-26T19:17:42.635+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T08:35:35.995+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-26T19:17:42.635+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-22T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							1122,
+							285,
+							450,
+							270,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:F39B94A0-A5CC-40DB-B2D7-E220D5C7075F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 21,
+						"CollaborationIntensityScore": 0.076,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.076,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.096,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0.75,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-03T20:37:42.207+00:00",
+						"FirstWeekWithCollaboration": "2024-04-03T20:37:42.207+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-03T20:37:42.207+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:AC736620-46BF-454F-8E93-534AE018696C@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 21,
+						"CollaborationIntensityScore": 0.095,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.095,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.119,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0.75,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-10T10:04:19.212+00:00",
+						"FirstWeekWithCollaboration": "2024-04-10T10:04:19.212+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-10T10:04:19.212+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:AB5951BE-6E0D-4D34-A0B7-8D6BADDF90D2@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 21,
+						"CollaborationIntensityScore": 0.786,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.786,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.983,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 3,
+						"AggregatedTotalTimeLast4Weeks": 6,
+						"AggregatedTotalTimeLast12Weeks": 6,
+						"AggregatedTotalTime": 6,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 6,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 3,
+						"MaxAggregatedTotalTimeLast2Weeks": 3,
+						"MaxAggregatedTotalTimeLast4Weeks": 6,
+						"MaxAggregatedTotalTimeLast12Weeks": 6,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-15T11:40:38.684+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T11:55:30.649+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T11:40:38.684+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							180,
+							0,
+							180,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:F50913C2-BE75-4BF5-8870-F3F8F52DC594@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 19,
+						"CollaborationIntensityScore": 1.196,
+						"EmailSentIntensity": 0.319,
+						"EmailViewedIntensity": 0.799,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.076,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 1.496,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 7,
+						"AggregatedTotalTimeLast4Weeks": 7.75,
+						"AggregatedTotalTimeLast12Weeks": 7.75,
+						"AggregatedTotalTime": 7.75,
+						"AggregatedTotalTimeEmailSent": 2,
+						"AggregatedTotalTimeEmailViewed": 5,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 7,
+						"MaxAggregatedTotalTimeLast2Weeks": 7,
+						"MaxAggregatedTotalTimeLast4Weeks": 7.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 7.75,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-15T15:40:27.154+00:00",
+						"FirstWeekWithCollaboration": "2024-04-02T12:07:04.633+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T15:40:27.154+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							420,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:E618A230-0EF1-49E5-8D3B-9BF311CB8702@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 20,
+						"CollaborationIntensityScore": 0.983,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.983,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 1.229,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0.75,
+						"AggregatedTotalTimeLast4Weeks": 8.25,
+						"AggregatedTotalTimeLast12Weeks": 8.25,
+						"AggregatedTotalTime": 8.25,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 8.25,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0.75,
+						"MaxAggregatedTotalTimeLast2Weeks": 4.5,
+						"MaxAggregatedTotalTimeLast4Weeks": 8.25,
+						"MaxAggregatedTotalTimeLast12Weeks": 8.25,
+						"TotalWeeksWithCollaboration": 3,
+						"RecentWeekWithCollaboration": "2024-04-15T15:58:48.09+00:00",
+						"FirstWeekWithCollaboration": "2024-04-02T16:35:21.018+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T15:58:48.09+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							45,
+							225,
+							225,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:B62F5749-9D91-4C8B-9D64-20B753A30E26@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 20,
+						"CollaborationIntensityScore": 0.613,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.613,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.767,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 5.25,
+						"AggregatedTotalTimeLast12Weeks": 5.25,
+						"AggregatedTotalTime": 5.25,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 5.25,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 3,
+						"MaxAggregatedTotalTimeLast4Weeks": 5.25,
+						"MaxAggregatedTotalTimeLast12Weeks": 5.25,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-10T14:50:40.709+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T11:51:19.588+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-10T14:50:40.709+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							180,
+							135,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:8E79AECA-F489-4B93-8566-D0B0B41D0352@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 20,
+						"CollaborationIntensityScore": 0.536,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.536,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.671,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 4.5,
+						"AggregatedTotalTimeLast12Weeks": 4.5,
+						"AggregatedTotalTime": 4.5,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 4.5,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 3,
+						"MaxAggregatedTotalTimeLast4Weeks": 4.5,
+						"MaxAggregatedTotalTimeLast12Weeks": 4.5,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-14T07:35:39.114+00:00",
+						"FirstWeekWithCollaboration": "2024-04-01T16:15:36.01+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-14T07:35:39.114+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							180,
+							90,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:F4EBBAE7-9FFD-443C-9355-39C21E958E9F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 20,
+						"CollaborationIntensityScore": 0.412,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.412,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.515,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 1.5,
+						"AggregatedTotalTimeLast4Weeks": 3,
+						"AggregatedTotalTimeLast12Weeks": 3,
+						"AggregatedTotalTime": 3,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 3,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 1.5,
+						"MaxAggregatedTotalTimeLast2Weeks": 2.25,
+						"MaxAggregatedTotalTimeLast4Weeks": 3,
+						"MaxAggregatedTotalTimeLast12Weeks": 3,
+						"TotalWeeksWithCollaboration": 3,
+						"RecentWeekWithCollaboration": "2024-04-15T11:40:48.049+00:00",
+						"FirstWeekWithCollaboration": "2024-04-03T16:50:28.438+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T11:40:48.049+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							90,
+							45,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:297B5CBD-57C4-465D-8A14-C44B1DE4C99E@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 20,
+						"CollaborationIntensityScore": 0.119,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.119,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.149,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0.75,
+						"AggregatedTotalTimeLast4Weeks": 0.75,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0.75,
+						"MaxAggregatedTotalTimeLast2Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-15T07:57:42.436+00:00",
+						"FirstWeekWithCollaboration": "2024-04-15T07:57:42.436+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T07:57:42.436+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:78545345-DEC2-441B-BBEC-C824679AEB54@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 20,
+						"CollaborationIntensityScore": 0.239,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.239,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.299,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 1.5,
+						"AggregatedTotalTimeLast4Weeks": 1.5,
+						"AggregatedTotalTimeLast12Weeks": 1.5,
+						"AggregatedTotalTime": 1.5,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 1.5,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 1.5,
+						"MaxAggregatedTotalTimeLast2Weeks": 1.5,
+						"MaxAggregatedTotalTimeLast4Weeks": 1.5,
+						"MaxAggregatedTotalTimeLast12Weeks": 1.5,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-19T10:09:21.863+00:00",
+						"FirstWeekWithCollaboration": "2024-04-19T10:07:06.186+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-19T10:09:21.863+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							90,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:BB8E4377-3FDE-4A40-85FD-AD8F9D94570F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 20,
+						"CollaborationIntensityScore": 2.812,
+						"EmailSentIntensity": 0.024,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0.319,
+						"ChatReceivedIntensity": 2.468,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 3.515,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 7.4,
+						"AggregatedTotalTimeLast4Weeks": 17.15,
+						"AggregatedTotalTimeLast12Weeks": 23.9,
+						"AggregatedTotalTime": 23.903,
+						"AggregatedTotalTimeEmailSent": 0.153,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 2,
+						"AggregatedTotalTimeChatReceived": 21.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 7.403,
+						"MaxAggregatedTotalTimeLast2Weeks": 10.403,
+						"MaxAggregatedTotalTimeLast4Weeks": 23.903,
+						"MaxAggregatedTotalTimeLast12Weeks": 23.903,
+						"TotalWeeksWithCollaboration": 4,
+						"RecentWeekWithCollaboration": "2024-04-15T15:05:03.178+00:00",
+						"FirstWeekWithCollaboration": "2024-03-28T19:14:03.042+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T15:05:03.178+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							444,
+							180,
+							405,
+							405,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:9AB3DDF8-096C-4E02-A02E-5F1A3B21D209@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 19,
+						"CollaborationIntensityScore": 0.839,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0.479,
+						"ChatReceivedIntensity": 0.359,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 1.049,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 5.25,
+						"AggregatedTotalTimeLast4Weeks": 5.25,
+						"AggregatedTotalTimeLast12Weeks": 5.25,
+						"AggregatedTotalTime": 5.25,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 3,
+						"AggregatedTotalTimeChatReceived": 2.25,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 5.25,
+						"MaxAggregatedTotalTimeLast2Weeks": 5.25,
+						"MaxAggregatedTotalTimeLast4Weeks": 5.25,
+						"MaxAggregatedTotalTimeLast12Weeks": 5.25,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-15T15:39:34.592+00:00",
+						"FirstWeekWithCollaboration": "2024-04-15T15:36:37.302+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T15:39:34.592+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							0,
+							315,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:ACC375DE-0417-402F-9D78-4385C91A04C6@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 19,
+						"CollaborationIntensityScore": 0.095,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.095,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.119,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0,
+						"AggregatedTotalTimeLast4Weeks": 0.75,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-12T08:21:24.569+00:00",
+						"FirstWeekWithCollaboration": "2024-04-12T08:21:24.569+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-12T08:21:24.569+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:4E30F945-41A7-4244-A2C3-EB18FCB46DE8@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 19,
+						"CollaborationIntensityScore": 0.199,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0.199,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.249,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 1.25,
+						"AggregatedTotalTimeLast4Weeks": 1.25,
+						"AggregatedTotalTimeLast12Weeks": 1.25,
+						"AggregatedTotalTime": 1.25,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 1.25,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 1.25,
+						"MaxAggregatedTotalTimeLast2Weeks": 1.25,
+						"MaxAggregatedTotalTimeLast4Weeks": 1.25,
+						"MaxAggregatedTotalTimeLast12Weeks": 1.25,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-16T14:05:58.335+00:00",
+						"FirstWeekWithCollaboration": "2024-04-16T14:05:58.335+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-16T14:05:58.335+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							75,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:2BD41C45-86C6-4147-851B-973514CFFD3F@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 19,
+						"CollaborationIntensityScore": 0.649,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0.199,
+						"ChatReceivedIntensity": 0.449,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.649,
+						"AggregatedTotalTimeCurrentWeek": 3.25,
+						"AggregatedTotalTimeLast2Weeks": 3.25,
+						"AggregatedTotalTimeLast4Weeks": 3.25,
+						"AggregatedTotalTimeLast12Weeks": 3.25,
+						"AggregatedTotalTime": 3.25,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 1,
+						"AggregatedTotalTimeChatReceived": 2.25,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 3.25,
+						"MaxAggregatedTotalTimeLast2Weeks": 3.25,
+						"MaxAggregatedTotalTimeLast4Weeks": 3.25,
+						"MaxAggregatedTotalTimeLast12Weeks": 3.25,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-23T09:01:51.405+00:00",
+						"FirstWeekWithCollaboration": "2024-04-23T08:59:34.202+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-23T09:01:51.405+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-22T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-22T00:00:00+00:00",
+						"IsTwoWayInteraction": true,
+						"Buckets": [
+							195,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:ABE10A51-FE48-4EE4-8EB6-44462525416C@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 15,
+						"CollaborationIntensityScore": 1.387,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 1.387,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 1.387,
+						"AggregatedTotalTimeCurrentWeek": 6.937,
+						"AggregatedTotalTimeLast2Weeks": 6.937,
+						"AggregatedTotalTimeLast4Weeks": 6.937,
+						"AggregatedTotalTimeLast12Weeks": 6.937,
+						"AggregatedTotalTime": 6.937,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 6.937,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 6.937,
+						"MaxAggregatedTotalTimeLast2Weeks": 6.937,
+						"MaxAggregatedTotalTimeLast4Weeks": 6.937,
+						"MaxAggregatedTotalTimeLast12Weeks": 6.937,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-18T20:21:52.549+00:00",
+						"FirstWeekWithCollaboration": "2024-04-18T18:37:48.45+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-18T20:21:52.549+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-15T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							416,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:E9F46F7B-C963-4134-8FA4-D59EDFFC1CC5@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 12,
+						"CollaborationIntensityScore": 0.119,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.119,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.119,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 0.75,
+						"AggregatedTotalTimeLast4Weeks": 0.75,
+						"AggregatedTotalTimeLast12Weeks": 0.75,
+						"AggregatedTotalTime": 0.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 0.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast4Weeks": 0.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 0.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-12T10:33:18.957+00:00",
+						"FirstWeekWithCollaboration": "2024-04-12T10:33:18.957+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-12T10:33:18.957+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-15T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:04B65591-1DC0-4984-9053-E7313D32E989@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 12,
+						"CollaborationIntensityScore": 0.436,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.436,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.436,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 2.25,
+						"AggregatedTotalTimeLast4Weeks": 3,
+						"AggregatedTotalTimeLast12Weeks": 3,
+						"AggregatedTotalTime": 3,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 3,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 2.25,
+						"MaxAggregatedTotalTimeLast4Weeks": 3,
+						"MaxAggregatedTotalTimeLast12Weeks": 3,
+						"TotalWeeksWithCollaboration": 2,
+						"RecentWeekWithCollaboration": "2024-04-11T11:25:33.208+00:00",
+						"FirstWeekWithCollaboration": "2024-03-31T17:22:36.426+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-11T11:25:33.208+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-15T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							135,
+							0,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:41837C01-B111-4810-8AB9-5434A6A1F6C4@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 12,
+						"CollaborationIntensityScore": 0.749,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.749,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.749,
+						"AggregatedTotalTimeCurrentWeek": 3.75,
+						"AggregatedTotalTimeLast2Weeks": 3.75,
+						"AggregatedTotalTimeLast4Weeks": 3.75,
+						"AggregatedTotalTimeLast12Weeks": 3.75,
+						"AggregatedTotalTime": 3.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 3.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 3.75,
+						"MaxAggregatedTotalTimeLast2Weeks": 3.75,
+						"MaxAggregatedTotalTimeLast4Weeks": 3.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 3.75,
+						"TotalWeeksWithCollaboration": 1,
+						"RecentWeekWithCollaboration": "2024-04-15T08:00:19.503+00:00",
+						"FirstWeekWithCollaboration": "2024-04-15T07:51:27.694+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-15T08:00:19.503+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "2024-04-15T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-15T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							225,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				},
+				{
+					"Id": "OID:08EA43F4-ED5C-46D4-B8FC-907B28990F0D@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"TransactionId": 12,
+						"CollaborationIntensityScore": 0.94,
+						"EmailSentIntensity": 0,
+						"EmailViewedIntensity": 0,
+						"ChatSentIntensity": 0,
+						"ChatReceivedIntensity": 0.94,
+						"CallIntensity": 0,
+						"MeetingIntensity": 0,
+						"CollaborationIntensityMaxLifetime": 0.94,
+						"AggregatedTotalTimeCurrentWeek": 0,
+						"AggregatedTotalTimeLast2Weeks": 3,
+						"AggregatedTotalTimeLast4Weeks": 6.75,
+						"AggregatedTotalTimeLast12Weeks": 6.75,
+						"AggregatedTotalTime": 6.75,
+						"AggregatedTotalTimeEmailSent": 0,
+						"AggregatedTotalTimeEmailViewed": 0,
+						"AggregatedTotalTimeChatSent": 0,
+						"AggregatedTotalTimeChatReceived": 6.75,
+						"AggregatedTotalTimeMeeting": 0,
+						"AggregatedTotalTimeCall": 0,
+						"MaxAggregatedTotalTimeLast1Week": 0,
+						"MaxAggregatedTotalTimeLast2Weeks": 3,
+						"MaxAggregatedTotalTimeLast4Weeks": 6.75,
+						"MaxAggregatedTotalTimeLast12Weeks": 6.75,
+						"TotalWeeksWithCollaboration": 3,
+						"RecentWeekWithCollaboration": "2024-04-12T13:06:30.987+00:00",
+						"FirstWeekWithCollaboration": "2024-03-28T20:38:28.077+00:00",
+						"CollaborationIntensityMaxLifetimeDate": "2024-04-12T13:06:30.987+00:00",
+						"MaxAggregatedTotalTimeLast1WeekDate": "0001-01-01T00:00:00+00:00",
+						"LastUpdatedWeek": "2024-04-15T00:00:00+00:00",
+						"IsTwoWayInteraction": false,
+						"Buckets": [
+							0,
+							180,
+							180,
+							45,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "ViewsLivePersonaCard",
+			"data": [
+				{
+					"Id": "OID:AA1EEFAD-3898-478F-BCB3-CA18CD0D5002@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-23T12:42:53+00:00",
+						"LastDateTime": "2024-04-23T12:42:53+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "OID:751F4801-CBB9-4F93-A946-4F272D669ADD@9BDBDE96-D364-446C-8223-9F6D7527F3F5",
+					"Properties": {
+						"FirstDateTime": "2024-04-16T08:38:21+00:00",
+						"LastDateTime": "2024-04-16T08:38:21+00:00",
+						"FrequencyList": "1",
+						"FrequencyTotalCount": 1
+					}
+				},
+				{
+					"Id": "V2ID:AAkALgAAAAAAHYQDEapmEc2byACqAC-EWg0AC_MFhbBoz0_sRy1_hd5dbAAABhV4HwAA",
+					"Properties": {
+						"FirstDateTime": "2024-04-15T14:30:00+00:00",
+						"LastDateTime": "2024-04-16T11:54:18+00:00",
+						"FrequencyList": "3,6",
+						"FrequencyTotalCount": 9
+					}
+				}
+			]
+		},
+		{
+			"name": "collaborationNetworks",
+			"data": {
+				"Value": [
+					{
+						"displayName": "Glow Name",
+						"people": [
+							{
+								"id": "e29f4268-5d6b-4beb-8c29-abe4dd593e4a",
+								"type": null
+							},
+							{
+								"id": "869417f6-e8c1-41f5-bc58-231e12222a22",
+								"type": null
+							}
+						],
+						"entities": [
+							{
+								"id": "AAMkAGE4MTljNDI4LTNjNmMtNDc3Yi05OWY0LWQwYjUxZDc3YjJiMwBGAAAAAAA0uTpfBz5qRag4vE7HFAneBwAL4wWFsGjPT6xHLX6F3l1sAAAAAAENAAAL4wWFsGjPT6xHLX6F3l1sAAAEUtDkAAA=",
+								"type": "Meeting"
+							},
+							{
+								"id": "AAMkAGE4MTljNDI4LTNjNmMtNDc3Yi05OWY0LWQwYjUxZDc3YjJiMwBGAAAAAAA0uTpfBz5qRag4vE7HFAneBwAL4wWFsGjPT6xHLX6F3l1sAAAAAAENAAAL4wWFsGjPT6xHLX6F3l1sAAAMNaB8AAA=",
+								"type": "Meeting"
+							},
+							{
+								"id": "19:meeting_ODhiYjRkMzUtNWIyYi00OGQwLTk5YWMtNzVkNTk4Y2NjZjRk@thread.v2",
+								"type": "ChatThread"
+							},
+							{
+								"id": "CA_LgAAAAAdhAMRqmYRzZvIAKoAL8RaDQAL4wWFsGjPT6xHLX6F3l1sAAAGFnn0AAAJEABuZL7AkMvrR7g31TeUigMY",
+								"type": "Document"
+							}
+						],
+						"keyPhrases": [
+							"grupo id",
+							"id4service",
+							"tickets internos",
+							"horas",
+							"registo"
+						]
+					},
+					{
+						"displayName": "Glow Name",
+						"people": [
+							{
+								"id": "751f4801-cbb9-4f93-a946-4f272d669add",
+								"type": null
+							},
+							{
+								"id": "869417f6-e8c1-41f5-bc58-231e12222a22",
+								"type": null
+							}
+						],
+						"entities": [
+							{
+								"id": "AAMkAGE4MTljNDI4LTNjNmMtNDc3Yi05OWY0LWQwYjUxZDc3YjJiMwBGAAAAAAA0uTpfBz5qRag4vE7HFAneBwAL4wWFsGjPT6xHLX6F3l1sAAAAAAENAAAL4wWFsGjPT6xHLX6F3l1sAAAAACqSAAA=",
+								"type": "Meeting"
+							}
+						],
+						"keyPhrases": []
+					}
+				]
+			}
+		},
+		{
+			"name": "UserProfileInfo",
+			"data": {
+				"@odata.context": "https://substrate.office.com/profileb2/v2.0/users/36d04497-c664-47d5-ba3a-0bd9c62813ad@9bdbde96-d364-446c-8223-9f6d7527f3f5/$metadata#profile(accounts(),addresses(),anniversaries(),directoryExtensionAttributes(),educationalActivities(),names(),emails(),notes(),interests(),languages(),phones(),positions(),projects(),responsibilities(),skills(),topics(),webAccounts(),websites(),awards(),publications(),patents(),certifications(),pronouns(),extensions(),photos(),profileVideoMetadata(),summary())",
+				"profileId": "profileId",
+				"lastModifiedDateTime": "2024-04-17T10:06:23.6073829Z",
+				"activities": [],
+				"lastSyncs": [
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{},
+					{}
+				],
+				"accounts": [
+					{
+						"ageGroup": "",
+						"countryCode": "",
+						"userPrincipalName": "isaac.bunga@ideiasdinamicas.com",
+						"externalDirectoryObjectId": "36d04497-c664-47d5-ba3a-0bd9c62813ad",
+						"alias": "issac.bunga",
+						"exchangeAccountType": "UserMailbox",
+						"exchangeAccountTypeDetails": "UserMailbox",
+						"cid": null,
+						"puid": 1153801128614178800,
+						"userType": "Member",
+						"accountEnabled": true,
+						"isSipEnabled": true,
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2759957Z",
+						"lastModifiedDateTime": "2024-04-15T12:43:45.5224792Z",
+						"id": "692f546f-a657-4c05-a5d2-5b513cde7176",
+						"isSearchable": false,
+						"preferredLanguageTag": {
+							"locale": null,
+							"displayName": null
+						},
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD",
+								"MsGraph"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d",
+								"isDefaultSource": true
+							},
+							{
+								"id": "0024a795-114d-4031-95c7-5fb543e00e80",
+								"properties": [
+									"isSipEnabled"
+								]
+							}
+						]
+					},
+					{
+						"ageGroup": "",
+						"countryCode": "",
+						"userPrincipalName": "",
+						"externalDirectoryObjectId": "",
+						"alias": "",
+						"exchangeAccountType": "UserMailbox",
+						"exchangeAccountTypeDetails": "UserMailbox",
+						"cid": null,
+						"puid": null,
+						"userType": null,
+						"accountEnabled": null,
+						"isSipEnabled": true,
+						"allowedAudiences": "federatedOrganizations",
+						"createdDateTime": "2024-04-04T16:58:49.2759958Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.4539425Z",
+						"id": "706bf6fd-8657-4260-9e3e-cb71c4eb7900",
+						"isSearchable": false,
+						"preferredLanguageTag": {
+							"locale": null,
+							"displayName": null
+						},
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "MsGraph",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD",
+								"MsGraph"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d",
+								"isDefaultSource": true
+							},
+							{
+								"id": "0024a795-114d-4031-95c7-5fb543e00e80",
+								"properties": [
+									"isSipEnabled"
+								]
+							}
+						]
+					}
+				],
+				"addresses": [],
+				"anniversaries": [],
+				"directoryExtensionAttributes": [
+					{
+						"displayName": "CustomAttribute1",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760007Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760008Z",
+						"id": "469c15eb-da95-49d4-8fa6-453e149d54db",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute2",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760008Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760009Z",
+						"id": "995c439d-c546-4346-84ab-363c66903141",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute3",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760009Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.276001Z",
+						"id": "fcc02e17-0355-4c8e-8dd9-918eb5940c4c",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute4",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.276001Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760011Z",
+						"id": "b9eb2fe6-c309-4838-9fc9-d9cd481d3a8a",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute5",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760011Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760012Z",
+						"id": "4a1cd222-e7e1-4eb9-9266-86832b70d204",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute6",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760012Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760013Z",
+						"id": "564a2ffc-f105-4c64-967e-561377e98872",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute7",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760013Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760014Z",
+						"id": "ae48c223-3778-4af5-b172-a308e36c7663",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute8",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760015Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760015Z",
+						"id": "3c8feb95-2028-465d-9584-6498dc8e9d76",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute9",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760016Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760016Z",
+						"id": "f06665da-bd2e-4552-ace4-3a60e9deb14a",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute10",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760017Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760017Z",
+						"id": "40c6a0d5-25d3-49d7-9167-0fced686612c",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute11",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760018Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760018Z",
+						"id": "b0815ca6-f749-4386-a1ec-3bc721e7da56",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute12",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760019Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760019Z",
+						"id": "c023065a-ed8e-4857-8072-ec2e87cab003",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute13",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.276002Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.276002Z",
+						"id": "af1e05e0-a5b8-4178-83f0-ac7f2f8b8a54",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute14",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760021Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760021Z",
+						"id": "e8a79d51-6614-4d96-afe6-899a2efc1ace",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"displayName": "CustomAttribute15",
+						"value": "",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2760022Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760022Z",
+						"id": "854855d5-1cbc-4068-bdf4-adbde6b92485",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					}
+				],
+				"educationalActivities": [],
+				"names": [
+					{
+						"displayName": "Isaac Bunga",
+						"first": "Isaac",
+						"initials": "",
+						"last": "Bunga",
+						"languageTag": null,
+						"maiden": null,
+						"middle": null,
+						"nickname": null,
+						"suffix": null,
+						"title": null,
+						"allowedAudiences": "organization, federatedOrganizations",
+						"createdDateTime": "2024-04-04T16:58:49.2759975Z",
+						"lastModifiedDateTime": "2024-04-15T12:43:45.5224814Z",
+						"id": "AadSource",
+						"isSearchable": false,
+						"pronunciation": null,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					}
+				],
+				"emails": [
+					{
+						"address": "isaac.bunga@ideiasdinamicas.com",
+						"displayName": null,
+						"type": "main",
+						"allowedAudiences": "organization, federatedOrganizations",
+						"createdDateTime": "2024-04-15T12:43:45.5224816Z",
+						"lastModifiedDateTime": "2024-04-15T12:43:45.5224817Z",
+						"id": "597a593a-4fa5-4fa0-99cf-763bb0dc33f5",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"address": "issac.bunga@ITGCLOUD.onmicrosoft.com",
+						"displayName": null,
+						"type": "work",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2759982Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2759983Z",
+						"id": "86b1545b-58ac-426a-b7cd-acc85edfb799",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					}
+				],
+				"notes": [],
+				"interests": [],
+				"languages": [
+					{
+						"displayName": "Portuguese (Portugal)",
+						"tag": "pt-PT",
+						"spoken": null,
+						"written": null,
+						"reading": null,
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-13T02:20:50.4894796Z",
+						"lastModifiedDateTime": "2024-04-13T02:20:50.4894796Z",
+						"id": "b68e8dbc-7e72-445c-8184-9fa651068bc2",
+						"isSearchable": false,
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					}
+				],
+				"phones": [],
+				"positions": [
+					{
+						"categories": [],
+						"isCurrent": true,
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-04T16:58:49.2759996Z",
+						"lastModifiedDateTime": "2024-04-04T16:58:49.2760005Z",
+						"id": "35f8ebfc-16ff-474c-bc65-299aa90060aa",
+						"isSearchable": false,
+						"detail": {
+							"description": null,
+							"endMonthYear": "0001-01-01T00:00:00Z",
+							"jobTitle": "",
+							"role": null,
+							"startMonthYear": "0001-01-01T00:00:00Z",
+							"summary": null,
+							"level": "",
+							"layer": null,
+							"secondaryJobTitle": null,
+							"secondaryRole": null,
+							"company": {
+								"displayName": "",
+								"pronunciation": null,
+								"department": "",
+								"officeLocation": "",
+								"webUrl": null,
+								"secondaryDepartment": null,
+								"address": {
+									"type": "business",
+									"postOfficeBox": null,
+									"street": "",
+									"city": "",
+									"state": "",
+									"countryOrRegion": "",
+									"postalCode": ""
+								}
+							}
+						},
+						"manager": null,
+						"colleagues": [],
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					}
+				],
+				"projects": [],
+				"responsibilities": [],
+				"skills": [],
+				"topics": [],
+				"webAccounts": [
+					{
+						"userId": "SIP:isaac.bunga@ideiasdinamicas.com",
+						"description": "Address used for interacting with a user through instant messaging services",
+						"statusMessage": null,
+						"webUrl": null,
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-15T12:43:45.5224822Z",
+						"lastModifiedDateTime": "2024-04-15T12:43:45.5224823Z",
+						"id": "55ad9921-5c73-40d9-8270-6335543019c6",
+						"isSearchable": false,
+						"service": {
+							"name": "Microsoft Teams for Business",
+							"webUrl": "graph.microsoft.com/teams"
+						},
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "AAD",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"AAD"
+							]
+						},
+						"sources": [
+							{
+								"id": "4ce763dd-9214-4eff-af7c-da491cc3782d"
+							}
+						]
+					},
+					{
+						"userId": "",
+						"description": null,
+						"statusMessage": null,
+						"webUrl": "https://itgcloud-my.sharepoint.com/personal/isaac_bunga_ideiasdinamicas_com",
+						"allowedAudiences": "organization",
+						"createdDateTime": "2024-04-17T10:06:13.5567305Z",
+						"lastModifiedDateTime": "2024-04-17T10:06:13.5567306Z",
+						"id": "9c45dcfa-e05a-47e5-9161-5a2d00de1ce1",
+						"isSearchable": false,
+						"service": {
+							"name": "",
+							"webUrl": ""
+						},
+						"createdBy": {
+							"user": null,
+							"application": {
+								"displayName": "UPA",
+								"id": null
+							},
+							"device": null
+						},
+						"inference": null,
+						"lastModifiedBy": {
+							"user": null,
+							"application": {
+								"displayName": "UPA",
+								"id": null
+							},
+							"device": null
+						},
+						"source": {
+							"type": [
+								"UPA"
+							]
+						},
+						"sources": [
+							{
+								"id": "6cdc4422-8c05-40c5-902e-8ade707725ab"
+							}
+						]
+					}
+				],
+				"websites": [],
+				"awards": [],
+				"publications": [],
+				"patents": [],
+				"certifications": [],
+				"pronouns": [],
+				"extensions": [],
+				"photos": [],
+				"profileVideoMetadata": {
+					"profileVideoUrl": null,
+					"allowedAudiences": "organization",
+					"createdDateTime": "2024-04-04T16:58:48.8553023Z",
+					"lastModifiedDateTime": "2024-04-04T16:58:48.8553023Z",
+					"id": "105f173d-899d-41d9-9fdd-7e97f286d7d7",
+					"isSearchable": false,
+					"createdBy": {
+						"user": null,
+						"application": null,
+						"device": null
+					},
+					"inference": null,
+					"lastModifiedBy": {
+						"user": null,
+						"application": null,
+						"device": null
+					},
+					"source": {
+						"type": [
+							"User"
+						]
+					},
+					"sources": [
+						{
+							"id": "46a57efc-33f8-4eec-a512-b90039ad6187"
+						}
+					]
+				},
+				"summary": null
+			}
+		}
+	]
+}
