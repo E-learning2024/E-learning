@@ -103,7 +103,8 @@ export class EnrollmentRepository {
     });
   }
   async findAllEnrollment() {
-    return await prisma.enrollment.findMany({
+    const _count = await prisma.enrollment.count();
+    const enrollments =  await prisma.enrollment.findMany({
       include: {
         student: {
           select: {
@@ -126,5 +127,9 @@ export class EnrollmentRepository {
         
       },
     });
+    return {
+      _count,
+      enrollments
+    }
   }
 }
