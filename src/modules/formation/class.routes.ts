@@ -17,7 +17,7 @@ import multer from "multer";
 import configureMulter from "../../utils/middlewares/fileUpload";
 import { createMaterialRules } from "./validation/material.validation";
 import { EnrollmentRepository } from "../students/repository/enrollment.repository";
-import { StudentService } from "../students/service/student.service";
+
 const upload = multer(configureMulter("material"));
 
 const classRepository = new ClassRepository();

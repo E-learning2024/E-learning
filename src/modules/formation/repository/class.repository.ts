@@ -18,7 +18,8 @@ export class ClassRepository {
          });
     }
     async findAll() {
-        return await prisma.class.findMany({select: {
+        const _count = await prisma.class.count();
+       const turma =     await prisma.class.findMany({select: {
             id: true,
             formationId: true,
             name: true,
@@ -30,8 +31,13 @@ export class ClassRepository {
             formation: true,
             material: true,
             enrollment: true,
-            _count: true
+          
             } })
+        return {
+            _count,
+            class:turma,
+           
+        }
     }
     async findAllClassByIdInstructor(id:number) {
         return await prisma.class.findMany({

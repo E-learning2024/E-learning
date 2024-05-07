@@ -6,7 +6,8 @@ export class MaterialRepository {
         return await prisma.material.create({ data: createMaterialDTO });
     }
     async findAll() {
-        return await prisma.material.findMany({ select: {
+        const _count = await prisma.material.count();
+        const m =await prisma.material.findMany({ select: {
             id: true,
             title: true,
             description: true,
@@ -14,6 +15,11 @@ export class MaterialRepository {
             classId: true,
             class: true
            }})
+        return {
+            _count ,
+           material:m
+
+        }
     }
     async findById(Id: number) {
         return await prisma.material.findUnique({ where: { id: Id } , select: {

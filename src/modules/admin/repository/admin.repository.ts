@@ -8,25 +8,30 @@ export class AdminRepository {
     return await prisma.administrator.create({ data: createAdministratorDTO });
   }
   async findAll() {
-    return await prisma.administrator.findMany({  
-       select: {
-         id: true,
-         name: true,
-         email: true,
-         nif: true,
-         phone: true,
-         password: false,
-         accessLevelId: true,
-         isActive: true,
-         avatarUrl: true,
-         createdAt: true,
-         updatedAt: true,
-         accessLevel: true,
-         activityHistoryAdmin: true,
-         teamLeader: true,
-         teamMembers: true,
-         _count: true
-        }});
+    const count = await prisma.administrator.count();
+ const admin=   await prisma.administrator.findMany({  
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        nif: true,
+        phone: true,
+        password: false,
+        accessLevelId: true,
+        isActive: true,
+        avatarUrl: true,
+        createdAt: true,
+        updatedAt: true,
+        accessLevel: true,
+        activityHistoryAdmin: true,
+        teamLeader: true,
+        teamMembers: true,
+        _count: true
+       }})
+    return{
+      count,
+      admin
+    };
   }
   async findById(Id: number) {
     return await prisma.administrator.findFirst({ where: { id: Id }, select: {

@@ -21,7 +21,8 @@ export class StudentRepository {
              } });
     }
     async findAll() {
-        return await prisma.student.findMany({ where: { isActive: true },  select: {
+        const _count = await prisma.student.count();
+        const students = await prisma.student.findMany({ where: { isActive: true },  select: {
             id: true,
             Studentname: true,
             email: true,
@@ -38,6 +39,10 @@ export class StudentRepository {
             enrollment: true,
             _count: true
              } })
+        return {
+            _count,
+            students
+        }
     }
     async findById(Id: number) {
         return await prisma.student.findFirst({ where: { id: Id },  select: {
