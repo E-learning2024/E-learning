@@ -1,22 +1,13 @@
 import * as nodemailer from 'nodemailer';
+import emailConfig from '../../config/lib/emailConfig';
 
 export async function enviarEmail(destinatario: string, assunto: string, corpo: string,anexo: string) {
-  const transporter = nodemailer.createTransport({
-    host: 'mail.achei.ao',
-    port: 465,
-    secure: true,
-    auth: {
-      user: 'elearning@achei.ao',
-      pass: '123456789ISAAC@234'
-    }
-  });
-
+  const transporter = nodemailer.createTransport(emailConfig as any);
   const mailOptions = {
-    from: 'elearning@achei.ao',
+    from:  process.env.SMTP_HOST_USER,
     to: destinatario,
     subject: assunto,
     html: corpo,
-    
     attachments: [
         {
           filename: 'fatura.pdf',
@@ -35,18 +26,9 @@ export async function enviarEmail(destinatario: string, assunto: string, corpo: 
 }
 
 export async function sendBroadcastingEmail(destinatarios: string[], assunto: string, corpo: string,description: string) {
-  const transporter = nodemailer.createTransport({
-    host: 'mail.achei.ao',
-    port: 465,
-    secure: true,
-    auth: {
-      user: 'elearning@achei.ao',
-      pass: '123456789ISAAC@234'
-    }
-  });
-
+  const transporter = nodemailer.createTransport(emailConfig as any);
   const mailOptions = {
-    from: 'elearning@achei.ao',
+    from:  process.env.SMTP_HOST_USER,
     to: destinatarios.join(', '),
     subject: assunto,
     html: corpo,
