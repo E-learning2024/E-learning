@@ -41,10 +41,3 @@ export async function sendBroadcastingEmail(destinatarios: string[], assunto: st
     console.log('Erro ao enviar email: ' + error);
   }
 }
-
-// const destinatario = 'exemplo@example.com';
-// const assunto = 'Confirmação de Inscrição';
-// const corpo = 'Agradecemos por se inscrever em nosso programa de formação...'; 
-// const anexo = 'fatura.pdf'; // Caminho para o arquivo PDF
-
-// enviarEmail(destinatario, assunto, corpo, anexo);
