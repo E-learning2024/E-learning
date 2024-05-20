@@ -1,8 +1,6 @@
 import {prisma} from "../../../config/lib/prisma";
 import { CreateMaterialDTO } from "../dto/create-material.dto";
 import { UpdateMaterialDTO } from "../dto/update-material.dto";
-
-
 export class MaterialRepository {
     async create(createMaterialDTO: CreateMaterialDTO) {
         return await prisma.material.create({ data: createMaterialDTO });
