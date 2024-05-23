@@ -1,7 +1,7 @@
 import { prisma } from "../../../config/lib/prisma";
 import { CreateAvaliationDTO } from "../dto/create-avaliation.dto";
 
-export class AvaluationRepository {
+export class AvaliationRepository {
       async create(data: CreateAvaliationDTO) {
         return await prisma.avaliation.create({ data });
      }

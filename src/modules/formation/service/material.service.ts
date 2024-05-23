@@ -9,17 +9,18 @@ import { supabase } from "../../../config/lib/supabaseClient";
     console.log('MaterialRepository constructor - materialRepository:', this.materialRepository);
   }
 
- /* async create(createClassDTO: CreateMaterialDTO) {
+  async create(createClassDTO: CreateMaterialDTO) {
     return await this.materialRepository.create(createClassDTO)
   }  
 
-  */
-
+ 
+/*
   async create(createMaterialDTO: CreateMaterialDTO, filePath: string, file: File) {
     const { error } = await supabase.storage.from('arquivo').upload(filePath, file);
     if (error) throw new Error(error.message);
     return await this.materialRepository.create(createMaterialDTO);
   }
+   */
   
 
   async findAll() {
