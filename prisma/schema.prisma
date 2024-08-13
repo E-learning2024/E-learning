@@ -149,29 +149,61 @@ model Program_Content {
   formationId  Int
   name         String?
   description  String?
-  week       String?
-  duration      String?
+  week         String?
+  duration     String?
   data         String?
   time         String?
   instructor   Instructor @relation(fields: [instructorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   instructorId Int
+
   @@map("program_content")
 }
 
 model Class {
-  id               Int          @id @default(autoincrement())
-  formation        Formations   @relation(fields: [formationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  formationId      Int
-  name             String?
-  description      String?
-  time             String?
-  student_quantity Int?
-  current_student_number Int? @default(0)
-  material         Material[]
-  enrollment       Enrollment[]
-  instructors      Instructor[] @relation("instructors")
+  id                     Int          @id @default(autoincrement())
+  formation              Formations   @relation(fields: [formationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  formationId            Int
+  name                   String?
+  description            String?
+  time                   String?
+  student_quantity       Int?
+  current_student_number Int?         @default(0)
+  material               Material[]
+  enrollment             Enrollment[]
+  instructors            Instructor[] @relation("instructors")
+  avaliation             Avaliation[]
 
   @@map("class")
+}
+
+model TypeAvaliation {
+  id         Int          @id @default(autoincrement())
+  type       String
+  avaliation Avaliation[]
+}
+
+model Avaliation {
+  id                     Int                  @id @default(autoincrement())
+  title                  String
+  description            String?
+  delivery_date_and_time String?
+  class                  Class                @relation(fields: [classId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  classId                Int
+  typeAvaliation         TypeAvaliation       @relation(fields: [typeId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  typeId                 Int
+  questionAvaliation     QuestionAvaliation[]
+  isActive               Boolean              @default(true)
+  createdAt              DateTime             @default(now())
+  updatedAt              DateTime             @updatedAt
+}
+
+model QuestionAvaliation {
+  id           Int        @id @default(autoincrement())
+  title        String?
+  description  String?
+  fileUrl      String?
+  Avaliation   Avaliation @relation(fields: [avaliationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  avaliationId Int
 }
 
 model Material {
@@ -191,7 +223,18 @@ model Enrollment {
   classId   Int
   status    Status  @default(PENDENTE)
 }
+
 enum Status {
   PENDENTE
   CONFIRMADO
+}
+
+model Leads {
+  id      Int     @id @default(autoincrement())
+  name    String?
+  email   String?
+  message String?
+  phone String?
+
+  @@map("leads")
 }
