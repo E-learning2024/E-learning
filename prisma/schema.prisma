@@ -177,32 +177,33 @@ model Class {
 }
 
 model TypeAvaliation {
-  id          Int          @id @default(autoincrement())
+  id         Int          @id @default(autoincrement())
   type       String
-  avaliation  Avaliation[]
+  avaliation Avaliation[]
 }
 
 model Avaliation {
-  id             Int            @id @default(autoincrement())
-  title          String
-  description    String?
-  delivery_date_and_time       String?
-  class          Class          @relation(fields: [classId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  classId        Int
-  typeAvaliation TypeAvaliation @relation(fields: [typeId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  typeId         Int
-   questionAvaliation QuestionAvaliation[]
-   isActive        Boolean           @default(true)
-   createdAt       DateTime          @default(now())
-   updatedAt       DateTime          @updatedAt
+  id                     Int                  @id @default(autoincrement())
+  title                  String
+  description            String?
+  delivery_date_and_time String?
+  class                  Class                @relation(fields: [classId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  classId                Int
+  typeAvaliation         TypeAvaliation       @relation(fields: [typeId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  typeId                 Int
+  questionAvaliation     QuestionAvaliation[]
+  isActive               Boolean              @default(true)
+  createdAt              DateTime             @default(now())
+  updatedAt              DateTime             @updatedAt
 }
+
 model QuestionAvaliation {
-  id             Int            @id @default(autoincrement())
-  title          String?
-  description    String?
-  fileUrl        String?
-  Avaliation Avaliation @relation(fields: [avaliationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
-  avaliationId         Int
+  id           Int        @id @default(autoincrement())
+  title        String?
+  description  String?
+  fileUrl      String?
+  Avaliation   Avaliation @relation(fields: [avaliationId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  avaliationId Int
 }
 
 model Material {
@@ -226,4 +227,14 @@ model Enrollment {
 enum Status {
   PENDENTE
   CONFIRMADO
+}
+
+model Leads {
+  id      Int     @id @default(autoincrement())
+  name    String?
+  email   String?
+  message String?
+  phone String?
+
+  @@map("leads")
 }
